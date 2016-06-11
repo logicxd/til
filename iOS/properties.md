@@ -7,7 +7,7 @@ Properties are variables that belong to a class.
 
 Suppose you're defining the class for a Person
 
-```
+```Objective-C
 // Person.h
 
 @interface Person : NSObject
@@ -18,7 +18,7 @@ Suppose you're defining the class for a Person
 The properties of this person are defined in the Person interface, 
 indicating the attributes of the property and what type of object this property defines.
 
-```
+```Objective-C
 // Person.h
 
 @interface Person : NSObject
@@ -32,21 +32,34 @@ indicating the attributes of the property and what type of object this property 
 @end
 ```
 *What's happening?*
-- ```@property``` is just the way properties are first declared
-- ```(nonatomic, strong)``` These are the attributes (settings, in other words) of the property. By default, 
-properties are atomic, which is thorough and ensures the getter will be completed, however often seen as too slow.
-  *  This is why we often indicate that we want our object to have a ```nonatomic``` setting, 
-we want things to be done fast and efficient *enough*. 
-  * ```strong``` means the object will exist as long as the reference of the object is held. This is a default attribute.
-  * ```copy``` indicates that the object is copied so modifications don't affect others.
+* `@property` is just the way properties are first declared.
+* `(nonatomic, strong)` These are the attributes (settings, in other words) of the property. The default properties are `atomic`, `strong`, and `readwrite`.
+
+#####What are these properties?
+
+* `atomic` vs `nonatomic`
+   * `atomic` guarantees that the getter method will return the *whole* value and the setter method will make sure the new value is set. Because of this, it performs *slower than* `nonatomic`. Note: While it ensures the return or set of the value, it is does not make it thread-safe. Thread-safe should be done through other methods.  
+   * `nonatomic` doesn't provide the guarantees that `atomic` has, therefore making it *perform much faster* without the checks. The getter method also breaks the whole value into smaller parts so it is often used in GUI applications to make it perform without freezing while loading.
+
+* `strong` vs `weak`
+   * A `strong` object will continue to exist in memory as long as it points to it. It takes ownership of the object. 
+   * A `weak` object points to an object as long as there is another `strong` property pointing to it. When there are no `strong` properties pointing to the object, the `weak` property will automically point to `nil`.
+
+* `readwrite` vs `readonly`
+   * `readwrite` sets the compiler to automatically generate getter and setter methods.
+   * `readonly` only generates the getter method.
+ 
+* `copy`
+   * It copies the value of the object that it assigns to, makes a new instance with those values to make a clone, and takes strong ownership of that copy. So modifications to the copied object doesn't affect the original object. 
+   * User must implement `<NSCopying>` in order to use `copy`. 
 
 ####How would you make use of these Properties?
 
-You would make use of these properties as you are implementing your methods in ```Person.m```.
+You would make use of these properties as you are implementing your methods in `Person.m`.
   * Again, recall that properties are just variables that you can use 
   to define features of an object with a certain type of class.
 
-```
+```Ojective-C
 // Person.m
 @implementation Person
 - (void) fullName {
@@ -58,7 +71,7 @@ In this example, I'm making the fullName method log "What's cookin " and whateve
 
 So, if I wrote the following in main:
 
-```
+```Objective-C
 Person *myName = [[Person alloc] init];
 
 myName.firstName = @"Banana";
@@ -70,14 +83,14 @@ myName.firstName = @"Banana";
 The output would be "What's cookin banana".
 
 *What's happening in the above code?*
-* ```Person *myName = [[Person alloc] init];``` I'm allocating space for an object in class Person and I'm indicating that 
+* `Person *myName = [[Person alloc] init];` I'm allocating space for an object in class Person and I'm indicating that 
 it'll be initialized with something.
 
-* ```myName.firstName = @"Banana";``` I'm saying that myName will have the firstName property, 
+* `myName.firstName = @"Banana";` I'm saying that myName will have the firstName property, 
 which will be of the string "Banana".
 
-* ```[myName fullName];``` Now, I'm sending the ```fullName``` message (or method) to the ```myName``` object,
-which means the ```fullName``` will run and use my definition of firstName.
+* `[myName fullName];` Now, I'm sending the `fullName` message (or method) to the `myName` object,
+which means the `fullName` will run and use my definition of firstName.
 
 
 
@@ -88,25 +101,25 @@ Properties will generate a **Getter**, **Setter**, and **Instance Variable**.
 ####The Getter
 * This is an *accessor method* that gets called every time you read a value from a property, and whatever that method returns is considered 
 that property's value.
-* So, if I were to declare a property: ```@property NSNumber *someNumber = 21;```, accessing ```someNumber``
+* So, if I were to declare a property: `@property NSNumber *someNumber = 21;`, accessing `someNumber`
 is achieved by using a **getter**.
 * **Getters**, by convention, are given the same name as the property.
-  * Example: The getter method of ```@property(nonatomic, strong) NSNumber *myBirthday;``` is ```myBirthday```
+  * Example: The getter method of `@property(nonatomic, strong) NSNumber *myBirthday;` is `myBirthday`
 
 ####The Setter
 * This is an *accessor method* that gets called every time you change the value of a property.
-* **Setters**, by convention, are given the name of the property prefixed by "```set```" and suffixed by "```:```".
-  * Example: The setter method of ```@property(nonatomic, strong) NSNumber *myBirthday;``` is ```setMyBirthday:```
-* If you do not want the **setter** to change ```myBirthday```, you would have to define the property with the ```readonly``` 
-attribute. The property by default is defined with a ```readwrite``` attribute.
+* **Setters**, by convention, are given the name of the property prefixed by "`set`" and suffixed by "`:`".
+  * Example: The setter method of `@property(nonatomic, strong) NSNumber *myBirthday;` is `setMyBirthday:`
+* If you do not want the **setter** to change `myBirthday`, you would have to define the property with the `readonly` 
+attribute. The property by default is defined with a `readwrite` attribute.
 
 ####Instance Variables
-* Instance variables are generated by the compiler if the property is set to ```readwrite``` (which is already set by default).
+* Instance variables are generated by the compiler if the property is set to `readwrite` (which is already set by default).
 
-  * These variables hold their value for the life of the object. When the first object is created (through ```alloc```),
+  * These variables hold their value for the life of the object. When the first object is created (through `alloc`),
 the memory used for the instance variable is allocated, and then freed when the object is deallocated.
 
-  * Instance variables, by convention, are given the same name of the property prexied by an underscore ```_```
+  * Instance variables, by convention, are given the same name of the property prexied by an underscore `_`
   
 **How do you access Instance Variables?**
 * Instance variables are accessed directly in the implementation of any of the methods the instance variable belongs to.
@@ -116,7 +129,7 @@ the memory used for the instance variable is allocated, and then freed when the 
 * The **setter** takes an object of the property's defined class as a parameter and changes the instance variable to be that object.
 
 
-```
+```Objective-C
 #import <Foundation/Foundation.h>
 
 // Person.h
@@ -148,27 +161,27 @@ int main(int argc, const char * argv[]) {
 ```
 *What's happening? [2]*
 
-* ```@property(nonatomic, strong) NSString *firstName;```  Declaring ```*firstName``` as an object of type ```NSString```
+* `@property(nonatomic, strong) NSString *firstName;`  Declaring `*firstName` as an object of type `NSString`
 as a property for Person.
 
 
-``` 
+```Objective-C
 -(void) fullName {
     NSLog(@"What's cookin %@", _firstName);
     
 }
 ``` 
-* This is implementing the ```fullName``` to make it print "What's cookin" with an **instance** of ```firstName```.
+* This is implementing the `fullName` to make it print "What's cookin" with an **instance** of `firstName`.
 
-```
+```Objective-C
 [myName setFirstName:@"Herro"];
 
 [myName fullName];
 ``` 
 
-* This is using the **setter** of ```firstName``` to set the **instance** **variable** ```_firstName``` to "Herro",
-  then sending the **getter** method ```fullName``` to ```myName```, which reads the value of ```myName``` and returns whatever 
-  value ```myName``` is.
+* This is using the **setter** of `firstName` to set the **instance** **variable** `_firstName` to "Herro",
+  then sending the **getter** method `fullName` to `myName`, which reads the value of `myName` and returns whatever 
+  value `myName` is.
 
 **Links to quick overview of property types and attributes of properties**
 
