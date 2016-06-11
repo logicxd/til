@@ -33,7 +33,7 @@ indicating the attributes of the property and what type of object this property 
 ```
 *What's happening?*
 * `@property` is just the way properties are first declared.
-* `(nonatomic, strong)` These are the attributes (settings, in other words) of the property. The default properties are `atomic`, `strong`, and `readwrite`.
+* `(nonatomic, strong)` These are the attributes (settings, in other words) of the property. The default properties are `atomic`, `assign`, `readwrite`, and `strong`. 
 
 #####What are these properties?
 
@@ -53,6 +53,12 @@ indicating the attributes of the property and what type of object this property 
    * It copies the value of the object that it assigns to, makes a new instance with those values to make a clone, and takes strong ownership of that copy. So modifications to the copied object doesn't affect the original object. 
    * User must implement `<NSCopying>` in order to use `copy`. 
 
+* `assign`
+   * This is used for primitives. Tells compiler how to set the setter method for assignment. 
+
+* `retain` (Might not be used anymore after ARC-Auto Reference Counting)
+   * This is used when the attribute is a pointer to an object.
+   
 ####How would you make use of these Properties?
 
 You would make use of these properties as you are implementing your methods in `Person.m`.
