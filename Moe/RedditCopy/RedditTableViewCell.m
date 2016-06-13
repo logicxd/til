@@ -42,37 +42,12 @@
 - (void)updateConstraints {
     // Set constraints over here
     
-    /*
-    [self.contentView mas_remakeConstraints:^(MASConstraintMaker *make) {
-        make.top.left.right.equalTo(self);
-        
-        [self mas_remakeConstraints:^(MASConstraintMaker *make) {
-            make.height.equalTo(@100);
-            
-        }];
-       
-    }];
-     */
-    
     [_bodyText mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self);
         make.left.equalTo(self);
         make.right.equalTo(self).offset(-40);
     }];
-    
-  
-    
-    /*
-    [self mas_remakeConstraints:^(MASConstraintMaker *make) {
-        //make.height.equalTo(@100);
-        
-    }];
-    
-    [_upvoteTag mas_remakeConstraints:^(MASConstraintMaker *make) {
-        
-        make.width.height.equalTo(@30);
-    }];
-    */
+
     [super updateConstraints];
 }
 @end

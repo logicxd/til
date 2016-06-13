@@ -7,7 +7,7 @@
 //
 
 #import "SkyScannerTableViewController.h"
-#import "SkyScannerTableViewCell.h"
+#import "TwoPlaneFlightTableViewCell.h"
 
 @interface SkyScannerTableViewController ()
 
@@ -20,7 +20,7 @@
 - (void) loadView {
     self.view = [[UITableView alloc] init];
     
-    [self.view registerClass:[SkyScannerTableViewCell class] forCellReuseIdentifier:@"TwoWayFlightCell"];
+    [self.view registerClass:[TwoPlaneFlightTableViewCell class] forCellReuseIdentifier:@"TwoPlaneFlight"];
 
 }
 
@@ -50,7 +50,7 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TwoWayFlightCell" forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TwoPlaneFlight" forIndexPath:indexPath];
     
     cell.textLabel.text = @"efeaf";
     

@@ -14,7 +14,7 @@
 		6847A35D1D0F4D68009B95FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6847A35C1D0F4D68009B95FD /* Assets.xcassets */; };
 		6847A3601D0F4D68009B95FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6847A35E1D0F4D68009B95FD /* LaunchScreen.storyboard */; };
 		68E34CC11D0F538500AEE5C6 /* SkyScannerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E34CC01D0F538500AEE5C6 /* SkyScannerTableViewController.m */; };
-		68E34CC41D0F544300AEE5C6 /* SkyScannerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E34CC31D0F544300AEE5C6 /* SkyScannerTableViewCell.m */; };
+		68E34CC71D0F63B200AEE5C6 /* TwoPlaneFlightTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E34CC61D0F63B200AEE5C6 /* TwoPlaneFlightTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,8 +30,8 @@
 		6847A3611D0F4D68009B95FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		68E34CBF1D0F538500AEE5C6 /* SkyScannerTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkyScannerTableViewController.h; sourceTree = "<group>"; };
 		68E34CC01D0F538500AEE5C6 /* SkyScannerTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SkyScannerTableViewController.m; sourceTree = "<group>"; };
-		68E34CC21D0F544300AEE5C6 /* SkyScannerTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkyScannerTableViewCell.h; sourceTree = "<group>"; };
-		68E34CC31D0F544300AEE5C6 /* SkyScannerTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SkyScannerTableViewCell.m; sourceTree = "<group>"; };
+		68E34CC51D0F63B200AEE5C6 /* TwoPlaneFlightTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwoPlaneFlightTableViewCell.h; sourceTree = "<group>"; };
+		68E34CC61D0F63B200AEE5C6 /* TwoPlaneFlightTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwoPlaneFlightTableViewCell.m; sourceTree = "<group>"; };
 		EAEC808992365887784152C4 /* Pods-SkyScannerClone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkyScannerClone.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SkyScannerClone/Pods-SkyScannerClone.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -81,8 +81,8 @@
 				6847A3541D0F4D68009B95FD /* AppDelegate.m */,
 				68E34CBF1D0F538500AEE5C6 /* SkyScannerTableViewController.h */,
 				68E34CC01D0F538500AEE5C6 /* SkyScannerTableViewController.m */,
-				68E34CC21D0F544300AEE5C6 /* SkyScannerTableViewCell.h */,
-				68E34CC31D0F544300AEE5C6 /* SkyScannerTableViewCell.m */,
+				68E34CC51D0F63B200AEE5C6 /* TwoPlaneFlightTableViewCell.h */,
+				68E34CC61D0F63B200AEE5C6 /* TwoPlaneFlightTableViewCell.m */,
 				6847A3591D0F4D68009B95FD /* Main.storyboard */,
 				6847A35C1D0F4D68009B95FD /* Assets.xcassets */,
 				6847A35E1D0F4D68009B95FD /* LaunchScreen.storyboard */,
@@ -229,10 +229,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				68E34CC41D0F544300AEE5C6 /* SkyScannerTableViewCell.m in Sources */,
 				6847A3551D0F4D68009B95FD /* AppDelegate.m in Sources */,
 				6847A3521D0F4D68009B95FD /* main.m in Sources */,
 				68E34CC11D0F538500AEE5C6 /* SkyScannerTableViewController.m in Sources */,
+				68E34CC71D0F63B200AEE5C6 /* TwoPlaneFlightTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
