@@ -8,10 +8,22 @@
 
 #import "TwoPlaneFlightTableViewCell.h"
 
+@interface TwoPlaneFlightTableViewCell()
+
+@property (readonly) CGFloat x_floatImageIcon;
+@property (readonly) CGSize sizeImageIcon;
+
+@end
+
+
 @implementation TwoPlaneFlightTableViewCell
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     if ((self = [super initWithStyle:style reuseIdentifier:reuseIdentifier])) {
+        self.first_ImageIcon = [[UIView alloc] init];
+        self.first_ImageIcon.backgroundColor = [UIColor blueColor];
+        [self.contentView addSubview:self.first_ImageIcon];
+        
         
     }
     
@@ -22,15 +34,6 @@
     return YES;
 }
 
-- (void)awakeFromNib {
-    [super awakeFromNib];
-    // Initialization code
-}
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
-}
 
 @end

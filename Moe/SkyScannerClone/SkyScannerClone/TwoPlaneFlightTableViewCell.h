@@ -22,8 +22,9 @@
 @property (strong, nonatomic) UILabel *second_NumOfStops;
 @property (strong, nonatomic) UILabel *second_timeEstimate;
 
-@property (strong, nonatomic) UILabel *ratingOutOf10;
+@property (strong, nonatomic) UILabel *ratingHappyness;
 @property (strong, nonatomic) UILabel *ratingForCheapest;
 @property (strong, nonatomic) UILabel *cost;
 @property (strong, nonatomic) UILabel *flightProvider;
+
 @end

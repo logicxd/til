@@ -21,7 +21,7 @@
     self.view = [[UITableView alloc] init];
     
     [self.view registerClass:[TwoPlaneFlightTableViewCell class] forCellReuseIdentifier:@"TwoPlaneFlight"];
-
+    
 }
 
 - (void)viewDidLoad {
