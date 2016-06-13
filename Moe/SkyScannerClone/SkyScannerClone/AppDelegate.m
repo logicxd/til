@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "ViewController.h"
+#import "SkyScannerTableViewController.h"
 
 @interface AppDelegate ()
 
@@ -18,10 +18,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     CGRect screenRect = [[UIScreen mainScreen] bounds];
-    _window = [[UIWindow alloc] initWithFrame:screenRect];
-    _viewController = [[ViewController alloc] init];
-    [_window setRootViewController:_viewController];
-    [_window makeKeyAndVisible];
+    self.window = [[UIWindow alloc] initWithFrame:screenRect];
+    self.viewController = [[SkyScannerTableViewController alloc] initWithStyle:UITableViewStylePlain];
+    [self.viewController setSkyScannerRect:screenRect];
+    [self.window setRootViewController:self.viewController];
+    [self.window makeKeyAndVisible];
     return YES;
 }
 

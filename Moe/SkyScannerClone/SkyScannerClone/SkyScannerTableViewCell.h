@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  SkyScannerTableViewCell.h
 //  SkyScannerClone
 //
 //  Created by Aung Moe on 6/13/16.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface SkyScannerTableViewCell : UITableViewCell
 
 @end
-
