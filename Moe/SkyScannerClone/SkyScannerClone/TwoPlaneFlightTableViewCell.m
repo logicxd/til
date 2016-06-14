@@ -7,6 +7,8 @@
 //
 
 #import "TwoPlaneFlightTableViewCell.h"
+#import "Masonry.h"
+#import "TTTAttributedLabel.h"
 
 @interface TwoPlaneFlightTableViewCell()
 
@@ -23,9 +25,8 @@
         self.first_ImageIcon = [[UIView alloc] init];
         self.first_ImageIcon.backgroundColor = [UIColor blueColor];
         [self.contentView addSubview:self.first_ImageIcon];
-        
-        
     }
+    
     
     return self;
 }
