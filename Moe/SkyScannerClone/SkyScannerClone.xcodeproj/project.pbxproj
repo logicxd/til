@@ -10,9 +10,11 @@
 		2F17BC8F6B9543D60C27A845 /* libPods-SkyScannerClone.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3077DE0EDB544C6C3D45F391 /* libPods-SkyScannerClone.a */; };
 		6847A3521D0F4D68009B95FD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6847A3511D0F4D68009B95FD /* main.m */; };
 		6847A3551D0F4D68009B95FD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6847A3541D0F4D68009B95FD /* AppDelegate.m */; };
-		6847A35B1D0F4D68009B95FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6847A3591D0F4D68009B95FD /* Main.storyboard */; };
 		6847A35D1D0F4D68009B95FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6847A35C1D0F4D68009B95FD /* Assets.xcassets */; };
-		6847A3601D0F4D68009B95FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6847A35E1D0F4D68009B95FD /* LaunchScreen.storyboard */; };
+		68CAC7691D10722100879F92 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68CAC7651D10722100879F92 /* LaunchScreen.storyboard */; };
+		68CAC76A1D10722100879F92 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68CAC7671D10722100879F92 /* Main.storyboard */; };
+		68CAC76D1D107AB700879F92 /* FlightData.m in Sources */ = {isa = PBXBuildFile; fileRef = 68CAC76C1D107AB700879F92 /* FlightData.m */; };
+		68CAC7701D107DC600879F92 /* EmptyCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 68CAC76F1D107DC600879F92 /* EmptyCellTableViewCell.m */; };
 		68E34CC11D0F538500AEE5C6 /* SkyScannerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E34CC01D0F538500AEE5C6 /* SkyScannerTableViewController.m */; };
 		68E34CC71D0F63B200AEE5C6 /* TwoPlaneFlightTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E34CC61D0F63B200AEE5C6 /* TwoPlaneFlightTableViewCell.m */; };
 /* End PBXBuildFile section */
@@ -24,10 +26,14 @@
 		6847A3511D0F4D68009B95FD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6847A3531D0F4D68009B95FD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6847A3541D0F4D68009B95FD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		6847A35A1D0F4D68009B95FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6847A35C1D0F4D68009B95FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		6847A35F1D0F4D68009B95FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6847A3611D0F4D68009B95FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		68CAC7661D10722100879F92 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		68CAC7681D10722100879F92 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		68CAC76B1D107AB600879F92 /* FlightData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlightData.h; sourceTree = "<group>"; };
+		68CAC76C1D107AB700879F92 /* FlightData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlightData.m; sourceTree = "<group>"; };
+		68CAC76E1D107DC600879F92 /* EmptyCellTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmptyCellTableViewCell.h; sourceTree = "<group>"; };
+		68CAC76F1D107DC600879F92 /* EmptyCellTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmptyCellTableViewCell.m; sourceTree = "<group>"; };
 		68E34CBF1D0F538500AEE5C6 /* SkyScannerTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkyScannerTableViewController.h; sourceTree = "<group>"; };
 		68E34CC01D0F538500AEE5C6 /* SkyScannerTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SkyScannerTableViewController.m; sourceTree = "<group>"; };
 		68E34CC51D0F63B200AEE5C6 /* TwoPlaneFlightTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwoPlaneFlightTableViewCell.h; sourceTree = "<group>"; };
@@ -83,9 +89,13 @@
 				68E34CC01D0F538500AEE5C6 /* SkyScannerTableViewController.m */,
 				68E34CC51D0F63B200AEE5C6 /* TwoPlaneFlightTableViewCell.h */,
 				68E34CC61D0F63B200AEE5C6 /* TwoPlaneFlightTableViewCell.m */,
-				6847A3591D0F4D68009B95FD /* Main.storyboard */,
+				68CAC76E1D107DC600879F92 /* EmptyCellTableViewCell.h */,
+				68CAC76F1D107DC600879F92 /* EmptyCellTableViewCell.m */,
+				68CAC76B1D107AB600879F92 /* FlightData.h */,
+				68CAC76C1D107AB700879F92 /* FlightData.m */,
+				68CAC7651D10722100879F92 /* LaunchScreen.storyboard */,
+				68CAC7671D10722100879F92 /* Main.storyboard */,
 				6847A35C1D0F4D68009B95FD /* Assets.xcassets */,
-				6847A35E1D0F4D68009B95FD /* LaunchScreen.storyboard */,
 				6847A3611D0F4D68009B95FD /* Info.plist */,
 				6847A3501D0F4D68009B95FD /* Supporting Files */,
 			);
@@ -168,9 +178,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6847A3601D0F4D68009B95FD /* LaunchScreen.storyboard in Resources */,
+				68CAC76A1D10722100879F92 /* Main.storyboard in Resources */,
 				6847A35D1D0F4D68009B95FD /* Assets.xcassets in Resources */,
-				6847A35B1D0F4D68009B95FD /* Main.storyboard in Resources */,
+				68CAC7691D10722100879F92 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,8 +240,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				6847A3551D0F4D68009B95FD /* AppDelegate.m in Sources */,
+				68CAC7701D107DC600879F92 /* EmptyCellTableViewCell.m in Sources */,
 				6847A3521D0F4D68009B95FD /* main.m in Sources */,
 				68E34CC11D0F538500AEE5C6 /* SkyScannerTableViewController.m in Sources */,
+				68CAC76D1D107AB700879F92 /* FlightData.m in Sources */,
 				68E34CC71D0F63B200AEE5C6 /* TwoPlaneFlightTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -239,20 +251,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		6847A3591D0F4D68009B95FD /* Main.storyboard */ = {
+		68CAC7651D10722100879F92 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				6847A35A1D0F4D68009B95FD /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		6847A35E1D0F4D68009B95FD /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6847A35F1D0F4D68009B95FD /* Base */,
+				68CAC7661D10722100879F92 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		68CAC7671D10722100879F92 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				68CAC7681D10722100879F92 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

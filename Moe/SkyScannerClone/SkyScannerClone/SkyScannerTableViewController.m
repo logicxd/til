@@ -17,7 +17,7 @@
 
 @implementation SkyScannerTableViewController
 
-- (void) loadView {
+- (void)loadView {
     self.view = [[UITableView alloc] init];
     
     [self.view registerClass:[TwoPlaneFlightTableViewCell class] forCellReuseIdentifier:@"TwoPlaneFlight"];
@@ -46,11 +46,13 @@
     return 20;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    return 158;
+}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TwoPlaneFlight" forIndexPath:indexPath];
-    
-    cell.textLabel.text = @"efeaf";
     
     return cell;
 }
