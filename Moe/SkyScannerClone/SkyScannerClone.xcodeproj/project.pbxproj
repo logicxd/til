@@ -16,6 +16,20 @@
 		68CAC76D1D107AB700879F92 /* FlightData.m in Sources */ = {isa = PBXBuildFile; fileRef = 68CAC76C1D107AB700879F92 /* FlightData.m */; };
 		68CAC7701D107DC600879F92 /* EmptyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 68CAC76F1D107DC600879F92 /* EmptyTableViewCell.m */; };
 		68E049771D10BB2A00A49FF7 /* SkyShimmerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E049761D10BB2A00A49FF7 /* SkyShimmerTableViewCell.m */; };
+		68E0497C1D11D7FD00A49FF7 /* SkyScannerRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E0497B1D11D7FD00A49FF7 /* SkyScannerRequest.m */; };
+		68E049811D11EC2D00A49FF7 /* SkyScannerDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E049801D11EC2D00A49FF7 /* SkyScannerDate.m */; };
+		68E049841D11EC5D00A49FF7 /* SkyScannerQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E049831D11EC5D00A49FF7 /* SkyScannerQuery.m */; };
+		68E049871D11ECC200A49FF7 /* SkyScannerId.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E049861D11ECC200A49FF7 /* SkyScannerId.m */; };
+		68E0498A1D11F1D200A49FF7 /* SkyScannerPricingOption.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E049891D11F1D200A49FF7 /* SkyScannerPricingOption.m */; };
+		68E0498D1D11F27700A49FF7 /* SkyScannerBookingDetailsLink.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E0498C1D11F27700A49FF7 /* SkyScannerBookingDetailsLink.m */; };
+		68E049931D11F2FD00A49FF7 /* SkyScannerItinerary.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E049921D11F2FD00A49FF7 /* SkyScannerItinerary.m */; };
+		68E049961D11F3C200A49FF7 /* SkyScannerLeg.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E049951D11F3C200A49FF7 /* SkyScannerLeg.m */; };
+		68E049A21D12088800A49FF7 /* SkyScannerSegment.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E049A11D12088800A49FF7 /* SkyScannerSegment.m */; };
+		68E049A51D120A0B00A49FF7 /* SkyScannerCarrier.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E049A41D120A0B00A49FF7 /* SkyScannerCarrier.m */; };
+		68E049A81D120B8900A49FF7 /* SkyScannerAgents.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E049A71D120B8900A49FF7 /* SkyScannerAgents.m */; };
+		68E049AB1D120CF800A49FF7 /* BooleanArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E049AA1D120CF800A49FF7 /* BooleanArray.m */; };
+		68E049AE1D120D5E00A49FF7 /* SkyScannerPlace.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E049AD1D120D5E00A49FF7 /* SkyScannerPlace.m */; };
+		68E049B11D120DC900A49FF7 /* SkyScannerCurrency.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E049B01D120DC900A49FF7 /* SkyScannerCurrency.m */; };
 		68E34CC11D0F538500AEE5C6 /* SkyScannerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E34CC01D0F538500AEE5C6 /* SkyScannerTableViewController.m */; };
 		68E34CC71D0F63B200AEE5C6 /* TwoPlaneFlightTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E34CC61D0F63B200AEE5C6 /* TwoPlaneFlightTableViewCell.m */; };
 /* End PBXBuildFile section */
@@ -37,6 +51,34 @@
 		68CAC76F1D107DC600879F92 /* EmptyTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmptyTableViewCell.m; sourceTree = "<group>"; };
 		68E049751D10BB2A00A49FF7 /* SkyShimmerTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkyShimmerTableViewCell.h; sourceTree = "<group>"; };
 		68E049761D10BB2A00A49FF7 /* SkyShimmerTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SkyShimmerTableViewCell.m; sourceTree = "<group>"; };
+		68E0497A1D11D7FD00A49FF7 /* SkyScannerRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkyScannerRequest.h; sourceTree = "<group>"; };
+		68E0497B1D11D7FD00A49FF7 /* SkyScannerRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SkyScannerRequest.m; sourceTree = "<group>"; };
+		68E0497F1D11EC2D00A49FF7 /* SkyScannerDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkyScannerDate.h; sourceTree = "<group>"; };
+		68E049801D11EC2D00A49FF7 /* SkyScannerDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SkyScannerDate.m; sourceTree = "<group>"; };
+		68E049821D11EC5D00A49FF7 /* SkyScannerQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkyScannerQuery.h; sourceTree = "<group>"; };
+		68E049831D11EC5D00A49FF7 /* SkyScannerQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SkyScannerQuery.m; sourceTree = "<group>"; };
+		68E049851D11ECC200A49FF7 /* SkyScannerId.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkyScannerId.h; sourceTree = "<group>"; };
+		68E049861D11ECC200A49FF7 /* SkyScannerId.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SkyScannerId.m; sourceTree = "<group>"; };
+		68E049881D11F1D200A49FF7 /* SkyScannerPricingOption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkyScannerPricingOption.h; sourceTree = "<group>"; };
+		68E049891D11F1D200A49FF7 /* SkyScannerPricingOption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SkyScannerPricingOption.m; sourceTree = "<group>"; };
+		68E0498B1D11F27700A49FF7 /* SkyScannerBookingDetailsLink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkyScannerBookingDetailsLink.h; sourceTree = "<group>"; };
+		68E0498C1D11F27700A49FF7 /* SkyScannerBookingDetailsLink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SkyScannerBookingDetailsLink.m; sourceTree = "<group>"; };
+		68E049911D11F2FD00A49FF7 /* SkyScannerItinerary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkyScannerItinerary.h; sourceTree = "<group>"; };
+		68E049921D11F2FD00A49FF7 /* SkyScannerItinerary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SkyScannerItinerary.m; sourceTree = "<group>"; };
+		68E049941D11F3C200A49FF7 /* SkyScannerLeg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkyScannerLeg.h; sourceTree = "<group>"; };
+		68E049951D11F3C200A49FF7 /* SkyScannerLeg.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SkyScannerLeg.m; sourceTree = "<group>"; };
+		68E049A01D12088800A49FF7 /* SkyScannerSegment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkyScannerSegment.h; sourceTree = "<group>"; };
+		68E049A11D12088800A49FF7 /* SkyScannerSegment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SkyScannerSegment.m; sourceTree = "<group>"; };
+		68E049A31D120A0B00A49FF7 /* SkyScannerCarrier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkyScannerCarrier.h; sourceTree = "<group>"; };
+		68E049A41D120A0B00A49FF7 /* SkyScannerCarrier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SkyScannerCarrier.m; sourceTree = "<group>"; };
+		68E049A61D120B8900A49FF7 /* SkyScannerAgents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkyScannerAgents.h; sourceTree = "<group>"; };
+		68E049A71D120B8900A49FF7 /* SkyScannerAgents.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SkyScannerAgents.m; sourceTree = "<group>"; };
+		68E049A91D120CF800A49FF7 /* BooleanArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BooleanArray.h; sourceTree = "<group>"; };
+		68E049AA1D120CF800A49FF7 /* BooleanArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BooleanArray.m; sourceTree = "<group>"; };
+		68E049AC1D120D5E00A49FF7 /* SkyScannerPlace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkyScannerPlace.h; sourceTree = "<group>"; };
+		68E049AD1D120D5E00A49FF7 /* SkyScannerPlace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SkyScannerPlace.m; sourceTree = "<group>"; };
+		68E049AF1D120DC900A49FF7 /* SkyScannerCurrency.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkyScannerCurrency.h; sourceTree = "<group>"; };
+		68E049B01D120DC900A49FF7 /* SkyScannerCurrency.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SkyScannerCurrency.m; sourceTree = "<group>"; };
 		68E34CBF1D0F538500AEE5C6 /* SkyScannerTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkyScannerTableViewController.h; sourceTree = "<group>"; };
 		68E34CC01D0F538500AEE5C6 /* SkyScannerTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SkyScannerTableViewController.m; sourceTree = "<group>"; };
 		68E34CC51D0F63B200AEE5C6 /* TwoPlaneFlightTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwoPlaneFlightTableViewCell.h; sourceTree = "<group>"; };
@@ -102,6 +144,7 @@
 				68CAC7671D10722100879F92 /* Main.storyboard */,
 				6847A35C1D0F4D68009B95FD /* Assets.xcassets */,
 				6847A3611D0F4D68009B95FD /* Info.plist */,
+				68E0497D1D11E92400A49FF7 /* Model */,
 				6847A3501D0F4D68009B95FD /* Supporting Files */,
 			);
 			path = SkyScannerClone;
@@ -113,6 +156,49 @@
 				6847A3511D0F4D68009B95FD /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		68E0497D1D11E92400A49FF7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				68E0497A1D11D7FD00A49FF7 /* SkyScannerRequest.h */,
+				68E0497B1D11D7FD00A49FF7 /* SkyScannerRequest.m */,
+				68E049821D11EC5D00A49FF7 /* SkyScannerQuery.h */,
+				68E049831D11EC5D00A49FF7 /* SkyScannerQuery.m */,
+				68E049911D11F2FD00A49FF7 /* SkyScannerItinerary.h */,
+				68E049921D11F2FD00A49FF7 /* SkyScannerItinerary.m */,
+				68E049941D11F3C200A49FF7 /* SkyScannerLeg.h */,
+				68E049951D11F3C200A49FF7 /* SkyScannerLeg.m */,
+				68E049A01D12088800A49FF7 /* SkyScannerSegment.h */,
+				68E049A11D12088800A49FF7 /* SkyScannerSegment.m */,
+				68E049A31D120A0B00A49FF7 /* SkyScannerCarrier.h */,
+				68E049A41D120A0B00A49FF7 /* SkyScannerCarrier.m */,
+				68E049A61D120B8900A49FF7 /* SkyScannerAgents.h */,
+				68E049A71D120B8900A49FF7 /* SkyScannerAgents.m */,
+				68E049AC1D120D5E00A49FF7 /* SkyScannerPlace.h */,
+				68E049AD1D120D5E00A49FF7 /* SkyScannerPlace.m */,
+				68E049AF1D120DC900A49FF7 /* SkyScannerCurrency.h */,
+				68E049B01D120DC900A49FF7 /* SkyScannerCurrency.m */,
+				68E0497E1D11EC1100A49FF7 /* Support Data Files */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		68E0497E1D11EC1100A49FF7 /* Support Data Files */ = {
+			isa = PBXGroup;
+			children = (
+				68E049881D11F1D200A49FF7 /* SkyScannerPricingOption.h */,
+				68E049891D11F1D200A49FF7 /* SkyScannerPricingOption.m */,
+				68E0497F1D11EC2D00A49FF7 /* SkyScannerDate.h */,
+				68E049801D11EC2D00A49FF7 /* SkyScannerDate.m */,
+				68E049851D11ECC200A49FF7 /* SkyScannerId.h */,
+				68E049861D11ECC200A49FF7 /* SkyScannerId.m */,
+				68E0498B1D11F27700A49FF7 /* SkyScannerBookingDetailsLink.h */,
+				68E0498C1D11F27700A49FF7 /* SkyScannerBookingDetailsLink.m */,
+				68E049A91D120CF800A49FF7 /* BooleanArray.h */,
+				68E049AA1D120CF800A49FF7 /* BooleanArray.m */,
+			);
+			name = "Support Data Files";
 			sourceTree = "<group>";
 		};
 		9864C83DFDCA6AB898689A3A /* Frameworks */ = {
@@ -245,12 +331,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				6847A3551D0F4D68009B95FD /* AppDelegate.m in Sources */,
+				68E0497C1D11D7FD00A49FF7 /* SkyScannerRequest.m in Sources */,
+				68E049AE1D120D5E00A49FF7 /* SkyScannerPlace.m in Sources */,
+				68E049A21D12088800A49FF7 /* SkyScannerSegment.m in Sources */,
+				68E049AB1D120CF800A49FF7 /* BooleanArray.m in Sources */,
+				68E049931D11F2FD00A49FF7 /* SkyScannerItinerary.m in Sources */,
+				68E049871D11ECC200A49FF7 /* SkyScannerId.m in Sources */,
+				68E049811D11EC2D00A49FF7 /* SkyScannerDate.m in Sources */,
+				68E049B11D120DC900A49FF7 /* SkyScannerCurrency.m in Sources */,
+				68E049A81D120B8900A49FF7 /* SkyScannerAgents.m in Sources */,
+				68E049A51D120A0B00A49FF7 /* SkyScannerCarrier.m in Sources */,
 				68CAC7701D107DC600879F92 /* EmptyTableViewCell.m in Sources */,
 				6847A3521D0F4D68009B95FD /* main.m in Sources */,
+				68E049961D11F3C200A49FF7 /* SkyScannerLeg.m in Sources */,
 				68E34CC11D0F538500AEE5C6 /* SkyScannerTableViewController.m in Sources */,
 				68E049771D10BB2A00A49FF7 /* SkyShimmerTableViewCell.m in Sources */,
 				68CAC76D1D107AB700879F92 /* FlightData.m in Sources */,
 				68E34CC71D0F63B200AEE5C6 /* TwoPlaneFlightTableViewCell.m in Sources */,
+				68E0498A1D11F1D200A49FF7 /* SkyScannerPricingOption.m in Sources */,
+				68E0498D1D11F27700A49FF7 /* SkyScannerBookingDetailsLink.m in Sources */,
+				68E049841D11EC5D00A49FF7 /* SkyScannerQuery.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
