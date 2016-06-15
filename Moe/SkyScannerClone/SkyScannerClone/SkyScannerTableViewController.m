@@ -77,7 +77,8 @@
     } else if (indexPath.row == 0 || indexPath.row == 2) {
         return 160;
     }
-    return 60;
+    //return 60;
+    return 160;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -138,7 +139,6 @@
     }
     
     SkyShimmerTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"SkyShimmer" forIndexPath:indexPath];
-    
     
     return cell;
 }

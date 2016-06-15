@@ -19,6 +19,6 @@
 
 @interface SkyShimmerTableViewCell : UITableViewCell
 
-@property (strong, nonatomic) FBShimmeringView *shimmeringView;
+@property (nonatomic, strong) NSMutableArray *shimmeringViews;
 
 @end
