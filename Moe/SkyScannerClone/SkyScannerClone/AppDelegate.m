@@ -20,7 +20,6 @@
     CGRect screenRect = [[UIScreen mainScreen] bounds];
     self.window = [[UIWindow alloc] initWithFrame:screenRect];
     self.viewController = [[SkyScannerTableViewController alloc] initWithStyle:UITableViewStylePlain];
-    [self.viewController setSkyScannerRect:screenRect];
     [self.window setRootViewController:self.viewController];
     [self.window makeKeyAndVisible];
     return YES;

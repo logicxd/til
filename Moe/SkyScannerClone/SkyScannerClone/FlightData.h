@@ -10,20 +10,20 @@
 
 @interface FlightData : NSObject
 
-@property (strong, readonly) NSString *first_TravelTime;
-@property (strong, readonly) NSString *first_Destination;
-@property (strong, readonly) NSString *first_NumOfStops;
-@property (strong, readonly) NSString *first_TimeEstimate;
+@property (strong, readonly) NSArray *first_TravelTime;
+@property (strong, readonly) NSArray *first_Destination;
+@property (strong, readonly) NSArray *first_NumOfStops;
+@property (strong, readonly) NSArray *first_TimeEstimate;
 
-@property (strong, readonly) NSString *second_TravelTime;
-@property (strong, readonly) NSString *second_Destination;
-@property (strong, readonly) NSString *second_NumOfStops;
-@property (strong, readonly) NSString *second_TimeEstimate;
+@property (strong, readonly) NSArray *second_TravelTime;
+@property (strong, readonly) NSArray *second_Destination;
+@property (strong, readonly) NSArray *second_NumOfStops;
+@property (strong, readonly) NSArray *second_TimeEstimate;
 
-@property (strong, readonly) NSNumber *ratingHappyness;
-@property (strong, readonly) NSString *ratingForCheapest;
-@property (strong, readonly) NSString *cost;
-@property (strong, readonly) NSString *flightProvider;
+@property (strong, readonly) NSArray *ratingHappyness;
+@property (strong, readonly) NSArray *ratingForCheapest;
+@property (strong, readonly) NSArray *cost;
+@property (strong, readonly) NSArray *flightProvider;
 
 
 @end

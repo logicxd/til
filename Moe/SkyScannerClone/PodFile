@@ -3,4 +3,5 @@ platform :ios, '8.2'
 target 'SkyScannerClone' do
 	pod 'Masonry'
 	pod 'TTTAttributedLabel'
+	pod 'Shimmer'
 end

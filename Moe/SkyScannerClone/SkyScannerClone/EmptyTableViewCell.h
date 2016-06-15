@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface EmptyCellTableViewCell : UITableViewCell
+@interface EmptyTableViewCell : UITableViewCell
 
 @end

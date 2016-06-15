@@ -10,6 +10,4 @@
 
 @interface SkyScannerTableViewController : UITableViewController
 
-@property CGRect skyScannerRect;
-
 @end

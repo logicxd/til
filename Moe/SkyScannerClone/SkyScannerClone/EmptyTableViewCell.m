@@ -6,13 +6,13 @@
 //  Copyright © 2016 Aung Moe. All rights reserved.
 //
 
-#import "EmptyCellTableViewCell.h"
+#import "EmptyTableViewCell.h"
 
-@implementation EmptyCellTableViewCell
+@implementation EmptyTableViewCell
 
 - (instancetype) initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
-        
+        self.backgroundColor = [UIColor colorWithRed:244.f/255.f green:245.f/255.f blue:241/255.f alpha:1];
     }
         
     return self;
