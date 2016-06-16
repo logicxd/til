@@ -12,32 +12,16 @@
 @class SkyScannerAgent;
 @class SkyScannerItinerary;
 @class SkyScannerLeg;
-
-@interface SkyScannerSegment :NSObject
-
-@end
-
-@interface SkyScannerCarrier : NSObject
-
-@end
-
-@interface SkyScannerAgent : NSObject
-
-@end
-
-@interface SkyScannerPlace : NSObject
-
-@end
-
-@interface SkyScannerCurrency : NSObject
-
-@end
+@class SkyScannerSegment;
+@class SkyScannerCarrier;
+@class SkyScannerPlace;
+@class SkyScannerCurrency;
 
 @interface SkyScannerRequest : NSObject <NSCopying>
 
 @property (nonatomic, copy) NSString *sessionKey;
-@property (nonatomic, strong) SkyScannerQuery *query;
 @property (nonatomic, copy) NSString *status;
+@property (nonatomic, strong) SkyScannerQuery *query;
 @property (nonatomic, strong) SkyScannerItinerary *itinerary;
 @property (nonatomic, strong) SkyScannerLeg *leg;
 @property (nonatomic, strong) SkyScannerSegment *segment;

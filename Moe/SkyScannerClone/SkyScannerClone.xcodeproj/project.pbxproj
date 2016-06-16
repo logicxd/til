@@ -11,6 +11,7 @@
 		6847A3521D0F4D68009B95FD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6847A3511D0F4D68009B95FD /* main.m */; };
 		6847A3551D0F4D68009B95FD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6847A3541D0F4D68009B95FD /* AppDelegate.m */; };
 		6847A35D1D0F4D68009B95FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6847A35C1D0F4D68009B95FD /* Assets.xcassets */; };
+		68720E531D130A9400C0CAC2 /* SkyscannerJSON.txt in Resources */ = {isa = PBXBuildFile; fileRef = 68720E521D130A9400C0CAC2 /* SkyscannerJSON.txt */; };
 		68CAC7691D10722100879F92 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68CAC7651D10722100879F92 /* LaunchScreen.storyboard */; };
 		68CAC76A1D10722100879F92 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68CAC7671D10722100879F92 /* Main.storyboard */; };
 		68CAC76D1D107AB700879F92 /* FlightData.m in Sources */ = {isa = PBXBuildFile; fileRef = 68CAC76C1D107AB700879F92 /* FlightData.m */; };
@@ -43,6 +44,7 @@
 		6847A3541D0F4D68009B95FD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		6847A35C1D0F4D68009B95FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6847A3611D0F4D68009B95FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		68720E521D130A9400C0CAC2 /* SkyscannerJSON.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SkyscannerJSON.txt; sourceTree = "<group>"; };
 		68CAC7661D10722100879F92 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		68CAC7681D10722100879F92 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		68CAC76B1D107AB600879F92 /* FlightData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlightData.h; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 				68E049751D10BB2A00A49FF7 /* SkyShimmerTableViewCell.h */,
 				68E049761D10BB2A00A49FF7 /* SkyShimmerTableViewCell.m */,
 				68CAC76E1D107DC600879F92 /* EmptyTableViewCell.h */,
+				68720E521D130A9400C0CAC2 /* SkyscannerJSON.txt */,
 				68CAC76F1D107DC600879F92 /* EmptyTableViewCell.m */,
 				68CAC76B1D107AB600879F92 /* FlightData.h */,
 				68CAC76C1D107AB700879F92 /* FlightData.m */,
@@ -271,6 +274,7 @@
 			files = (
 				68CAC76A1D10722100879F92 /* Main.storyboard in Resources */,
 				6847A35D1D0F4D68009B95FD /* Assets.xcassets in Resources */,
+				68720E531D130A9400C0CAC2 /* SkyscannerJSON.txt in Resources */,
 				68CAC7691D10722100879F92 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

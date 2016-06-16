@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 #import "SkyScannerTableViewController.h"
+#import "RPJSONMapper.h"
+#import "SkyScannerRequest.h"
 
 @interface AppDelegate ()
 
@@ -22,6 +24,9 @@
     self.viewController = [[SkyScannerTableViewController alloc] initWithStyle:UITableViewStylePlain];
     [self.window setRootViewController:self.viewController];
     [self.window makeKeyAndVisible];
+    
+    [self parseJson];
+    
     return YES;
 }
 
@@ -45,6 +50,20 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+- (void)parseJson {
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"SkyscannerJSON" ofType:@"txt"];
+    NSData *data = [NSData dataWithContentsOfFile:filePath];
+    NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
+    
+    SkyScannerRequest *request = [[SkyScannerRequest alloc] init];
+    [[RPJSONMapper sharedInstance] mapJSONValuesFrom:json
+                                          toInstance:request
+                                        usingMapping:@{
+                                                       @"SessionKey" : @"sessionKey",
+                                                       @"Status" : @"status"
+                                                       }];
 }
 
 @end

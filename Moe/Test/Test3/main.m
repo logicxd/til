@@ -7,14 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "EmptyFile.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        EmptyFile *obj1 = [[EmptyFile alloc] init];
-        EmptyFile *obj2 = [[EmptyFile alloc] init];
         
-        NSLog(@"%@\n%@", obj1, obj2);
         
         
     }

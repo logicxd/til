@@ -72,9 +72,10 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    int index;
     if (indexPath.row%2 == 1) {
         return 7;
-    } else if (indexPath.row == 0 || indexPath.row == 2) {
+    } else if ((index = indexPath.row / 2) == 0 || index == 1) {
         return 160;
     }
     //return 60;
@@ -82,17 +83,18 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    int index;
     if (indexPath.row%2 == 1) {
         EmptyTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"EmptyCell" forIndexPath:indexPath];
         return cell;
-    } else if (indexPath.row == 0 || indexPath.row == 2) {
+    } else if ((index = indexPath.row / 2) == 0 || index == 1) {
         TwoPlaneFlightTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TwoPlaneFlight" forIndexPath:indexPath];
         
-        NSMutableAttributedString *attributedStringFirstTravelTime = [[NSMutableAttributedString alloc] initWithString:_data.first_TravelTime[indexPath.row]];
-        NSRange searchRange = NSMakeRange(0, [_data.first_TravelTime[indexPath.row] length]);
+        NSMutableAttributedString *attributedStringFirstTravelTime = [[NSMutableAttributedString alloc] initWithString:_data.first_TravelTime[index]];
+        NSRange searchRange = NSMakeRange(0, [_data.first_TravelTime[index] length]);
         BOOL keepGoing = YES;
         while (keepGoing) {
-            NSRange accessWord = [_data.first_TravelTime[indexPath.row] rangeOfString:@"[AP]M" options:NSRegularExpressionSearch range:searchRange];
+            NSRange accessWord = [_data.first_TravelTime[index] rangeOfString:@"[AP]M" options:NSRegularExpressionSearch range:searchRange];
             int pos = accessWord.location + 1;
             if (accessWord.location != NSNotFound) {
                 [attributedStringFirstTravelTime addAttributes:@{
@@ -100,17 +102,17 @@
                                                                  }
                                                          range:accessWord];
                 
-                searchRange = NSMakeRange(pos, [_data.first_TravelTime[indexPath.row] length] - pos);
+                searchRange = NSMakeRange(pos, [_data.first_TravelTime[index] length] - pos);
             } else {
                 keepGoing = NO;
             }
         }
         
-        NSMutableAttributedString *attributedStringSecondTravelTime = [[NSMutableAttributedString alloc] initWithString:_data.second_TravelTime[indexPath.row]];
-        searchRange = NSMakeRange(0, [_data.second_TravelTime[indexPath.row] length]);
+        NSMutableAttributedString *attributedStringSecondTravelTime = [[NSMutableAttributedString alloc] initWithString:_data.second_TravelTime[index]];
+        searchRange = NSMakeRange(0, [_data.second_TravelTime[index] length]);
         keepGoing = YES;
         while (keepGoing) {
-            NSRange accessWord = [_data.second_TravelTime[indexPath.row] rangeOfString:@"[AP]M" options:NSRegularExpressionSearch range:searchRange];
+            NSRange accessWord = [_data.second_TravelTime[index] rangeOfString:@"[AP]M" options:NSRegularExpressionSearch range:searchRange];
             int pos = accessWord.location + 1;
             if (accessWord.location != NSNotFound) {
                 [attributedStringSecondTravelTime addAttributes:@{
@@ -118,24 +120,24 @@
                                                                  }
                                                          range:accessWord];
                 
-                searchRange = NSMakeRange(pos, [_data.second_TravelTime[indexPath.row] length] - pos);
+                searchRange = NSMakeRange(pos, [_data.second_TravelTime[index] length] - pos);
             } else {
                 keepGoing = NO;
             }
         }
         
         cell.first_TravelTime.attributedText = attributedStringFirstTravelTime;
-        cell.first_Destination.text = _data.first_Destination[indexPath.row];
-        cell.first_NumOfStops.text = _data.first_NumOfStops[indexPath.row];
-        cell.first_TimeEstimate.text = _data.first_TimeEstimate[indexPath.row];
+        cell.first_Destination.text = _data.first_Destination[index];
+        cell.first_NumOfStops.text = _data.first_NumOfStops[index];
+        cell.first_TimeEstimate.text = _data.first_TimeEstimate[index];
         cell.second_TravelTime.attributedText = attributedStringSecondTravelTime;
-        cell.second_Destination.text = _data.second_Destination[indexPath.row];
-        cell.second_NumOfStops.text = _data.second_NumOfStops[indexPath.row];
-        cell.second_TimeEstimate.text = _data.second_TimeEstimate[indexPath.row];
-        cell.ratingHappyness.text = _data.ratingHappyness[indexPath.row];
-        cell.ratingForCheapest.text = _data.ratingForCheapest[indexPath.row];
-        cell.cost.text = [NSString stringWithFormat:@"$%@", _data.cost[indexPath.row]];
-        cell.flightProvider.text = _data.flightProvider[indexPath.row];
+        cell.second_Destination.text = _data.second_Destination[index];
+        cell.second_NumOfStops.text = _data.second_NumOfStops[index];
+        cell.second_TimeEstimate.text = _data.second_TimeEstimate[index];
+        cell.ratingHappyness.text = _data.ratingHappyness[index];
+        cell.ratingForCheapest.text = _data.ratingForCheapest[index];
+        cell.cost.text = [NSString stringWithFormat:@"$%@", _data.cost[index]];
+        cell.flightProvider.text = _data.flightProvider[index];
     }
     
     SkyShimmerTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"SkyShimmer" forIndexPath:indexPath];
