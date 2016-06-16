@@ -9,7 +9,7 @@
 #import "AppDelegate.h"
 #import "SkyScannerTableViewController.h"
 #import "RPJSONMapper.h"
-#import "SkyScannerRequest.h"
+#import "SkyscannerRequest.h"
 
 @interface AppDelegate ()
 
@@ -57,7 +57,7 @@
     NSData *data = [NSData dataWithContentsOfFile:filePath];
     NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
     
-    SkyScannerRequest *request = [[SkyScannerRequest alloc] init];
+    SkyscannerRequest *request = [[SkyscannerRequest alloc] init];
     [[RPJSONMapper sharedInstance] mapJSONValuesFrom:json
                                           toInstance:request
                                         usingMapping:@{

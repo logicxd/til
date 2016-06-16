@@ -12,25 +12,22 @@
 		6847A3551D0F4D68009B95FD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6847A3541D0F4D68009B95FD /* AppDelegate.m */; };
 		6847A35D1D0F4D68009B95FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6847A35C1D0F4D68009B95FD /* Assets.xcassets */; };
 		68720E531D130A9400C0CAC2 /* SkyscannerJSON.txt in Resources */ = {isa = PBXBuildFile; fileRef = 68720E521D130A9400C0CAC2 /* SkyscannerJSON.txt */; };
+		68720E561D13186700C0CAC2 /* SkyscannerRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 68720E551D13186700C0CAC2 /* SkyscannerRequest.m */; };
+		68720E591D1318DE00C0CAC2 /* SkyscannerQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 68720E581D1318DE00C0CAC2 /* SkyscannerQuery.m */; };
+		68720E5C1D1319B300C0CAC2 /* SkyscannerItinerary.m in Sources */ = {isa = PBXBuildFile; fileRef = 68720E5B1D1319B300C0CAC2 /* SkyscannerItinerary.m */; };
+		68720E601D131A7E00C0CAC2 /* SkyscannerPricingOption.m in Sources */ = {isa = PBXBuildFile; fileRef = 68720E5F1D131A7E00C0CAC2 /* SkyscannerPricingOption.m */; };
+		68720E631D131AAB00C0CAC2 /* SkyscannerBookingDetailsLink.m in Sources */ = {isa = PBXBuildFile; fileRef = 68720E621D131AAB00C0CAC2 /* SkyscannerBookingDetailsLink.m */; };
+		68720E661D131AD500C0CAC2 /* SkyscannerLeg.m in Sources */ = {isa = PBXBuildFile; fileRef = 68720E651D131AD500C0CAC2 /* SkyscannerLeg.m */; };
+		68720E691D131B1000C0CAC2 /* SkyscannerSegment.m in Sources */ = {isa = PBXBuildFile; fileRef = 68720E681D131B1000C0CAC2 /* SkyscannerSegment.m */; };
+		68720E6C1D131B3F00C0CAC2 /* SkyscannerCarrier.m in Sources */ = {isa = PBXBuildFile; fileRef = 68720E6B1D131B3F00C0CAC2 /* SkyscannerCarrier.m */; };
+		68720E6F1D131B5700C0CAC2 /* SkyscannerAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = 68720E6E1D131B5700C0CAC2 /* SkyscannerAgent.m */; };
+		68720E721D131B8600C0CAC2 /* SkyscannerPlace.m in Sources */ = {isa = PBXBuildFile; fileRef = 68720E711D131B8600C0CAC2 /* SkyscannerPlace.m */; };
+		68720E751D131BAA00C0CAC2 /* SkyscannerCurrency.m in Sources */ = {isa = PBXBuildFile; fileRef = 68720E741D131BAA00C0CAC2 /* SkyscannerCurrency.m */; };
 		68CAC7691D10722100879F92 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68CAC7651D10722100879F92 /* LaunchScreen.storyboard */; };
 		68CAC76A1D10722100879F92 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68CAC7671D10722100879F92 /* Main.storyboard */; };
 		68CAC76D1D107AB700879F92 /* FlightData.m in Sources */ = {isa = PBXBuildFile; fileRef = 68CAC76C1D107AB700879F92 /* FlightData.m */; };
 		68CAC7701D107DC600879F92 /* EmptyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 68CAC76F1D107DC600879F92 /* EmptyTableViewCell.m */; };
 		68E049771D10BB2A00A49FF7 /* SkyShimmerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E049761D10BB2A00A49FF7 /* SkyShimmerTableViewCell.m */; };
-		68E0497C1D11D7FD00A49FF7 /* SkyScannerRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E0497B1D11D7FD00A49FF7 /* SkyScannerRequest.m */; };
-		68E049811D11EC2D00A49FF7 /* SkyScannerDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E049801D11EC2D00A49FF7 /* SkyScannerDate.m */; };
-		68E049841D11EC5D00A49FF7 /* SkyScannerQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E049831D11EC5D00A49FF7 /* SkyScannerQuery.m */; };
-		68E049871D11ECC200A49FF7 /* SkyScannerId.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E049861D11ECC200A49FF7 /* SkyScannerId.m */; };
-		68E0498A1D11F1D200A49FF7 /* SkyScannerPricingOption.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E049891D11F1D200A49FF7 /* SkyScannerPricingOption.m */; };
-		68E0498D1D11F27700A49FF7 /* SkyScannerBookingDetailsLink.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E0498C1D11F27700A49FF7 /* SkyScannerBookingDetailsLink.m */; };
-		68E049931D11F2FD00A49FF7 /* SkyScannerItinerary.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E049921D11F2FD00A49FF7 /* SkyScannerItinerary.m */; };
-		68E049961D11F3C200A49FF7 /* SkyScannerLeg.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E049951D11F3C200A49FF7 /* SkyScannerLeg.m */; };
-		68E049A21D12088800A49FF7 /* SkyScannerSegment.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E049A11D12088800A49FF7 /* SkyScannerSegment.m */; };
-		68E049A51D120A0B00A49FF7 /* SkyScannerCarrier.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E049A41D120A0B00A49FF7 /* SkyScannerCarrier.m */; };
-		68E049A81D120B8900A49FF7 /* SkyScannerAgents.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E049A71D120B8900A49FF7 /* SkyScannerAgents.m */; };
-		68E049AB1D120CF800A49FF7 /* BooleanArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E049AA1D120CF800A49FF7 /* BooleanArray.m */; };
-		68E049AE1D120D5E00A49FF7 /* SkyScannerPlace.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E049AD1D120D5E00A49FF7 /* SkyScannerPlace.m */; };
-		68E049B11D120DC900A49FF7 /* SkyScannerCurrency.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E049B01D120DC900A49FF7 /* SkyScannerCurrency.m */; };
 		68E34CC11D0F538500AEE5C6 /* SkyScannerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E34CC01D0F538500AEE5C6 /* SkyScannerTableViewController.m */; };
 		68E34CC71D0F63B200AEE5C6 /* TwoPlaneFlightTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E34CC61D0F63B200AEE5C6 /* TwoPlaneFlightTableViewCell.m */; };
 /* End PBXBuildFile section */
@@ -45,6 +42,28 @@
 		6847A35C1D0F4D68009B95FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6847A3611D0F4D68009B95FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		68720E521D130A9400C0CAC2 /* SkyscannerJSON.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SkyscannerJSON.txt; sourceTree = "<group>"; };
+		68720E541D13186700C0CAC2 /* SkyscannerRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkyscannerRequest.h; sourceTree = "<group>"; };
+		68720E551D13186700C0CAC2 /* SkyscannerRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SkyscannerRequest.m; sourceTree = "<group>"; };
+		68720E571D1318DE00C0CAC2 /* SkyscannerQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkyscannerQuery.h; sourceTree = "<group>"; };
+		68720E581D1318DE00C0CAC2 /* SkyscannerQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SkyscannerQuery.m; sourceTree = "<group>"; };
+		68720E5A1D1319B300C0CAC2 /* SkyscannerItinerary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkyscannerItinerary.h; sourceTree = "<group>"; };
+		68720E5B1D1319B300C0CAC2 /* SkyscannerItinerary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SkyscannerItinerary.m; sourceTree = "<group>"; };
+		68720E5E1D131A7E00C0CAC2 /* SkyscannerPricingOption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkyscannerPricingOption.h; sourceTree = "<group>"; };
+		68720E5F1D131A7E00C0CAC2 /* SkyscannerPricingOption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SkyscannerPricingOption.m; sourceTree = "<group>"; };
+		68720E611D131AAB00C0CAC2 /* SkyscannerBookingDetailsLink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkyscannerBookingDetailsLink.h; sourceTree = "<group>"; };
+		68720E621D131AAB00C0CAC2 /* SkyscannerBookingDetailsLink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SkyscannerBookingDetailsLink.m; sourceTree = "<group>"; };
+		68720E641D131AD500C0CAC2 /* SkyscannerLeg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkyscannerLeg.h; sourceTree = "<group>"; };
+		68720E651D131AD500C0CAC2 /* SkyscannerLeg.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SkyscannerLeg.m; sourceTree = "<group>"; };
+		68720E671D131B1000C0CAC2 /* SkyscannerSegment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkyscannerSegment.h; sourceTree = "<group>"; };
+		68720E681D131B1000C0CAC2 /* SkyscannerSegment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SkyscannerSegment.m; sourceTree = "<group>"; };
+		68720E6A1D131B3F00C0CAC2 /* SkyscannerCarrier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkyscannerCarrier.h; sourceTree = "<group>"; };
+		68720E6B1D131B3F00C0CAC2 /* SkyscannerCarrier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SkyscannerCarrier.m; sourceTree = "<group>"; };
+		68720E6D1D131B5700C0CAC2 /* SkyscannerAgent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkyscannerAgent.h; sourceTree = "<group>"; };
+		68720E6E1D131B5700C0CAC2 /* SkyscannerAgent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SkyscannerAgent.m; sourceTree = "<group>"; };
+		68720E701D131B8600C0CAC2 /* SkyscannerPlace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkyscannerPlace.h; sourceTree = "<group>"; };
+		68720E711D131B8600C0CAC2 /* SkyscannerPlace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SkyscannerPlace.m; sourceTree = "<group>"; };
+		68720E731D131BAA00C0CAC2 /* SkyscannerCurrency.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkyscannerCurrency.h; sourceTree = "<group>"; };
+		68720E741D131BAA00C0CAC2 /* SkyscannerCurrency.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SkyscannerCurrency.m; sourceTree = "<group>"; };
 		68CAC7661D10722100879F92 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		68CAC7681D10722100879F92 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		68CAC76B1D107AB600879F92 /* FlightData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlightData.h; sourceTree = "<group>"; };
@@ -53,34 +72,6 @@
 		68CAC76F1D107DC600879F92 /* EmptyTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmptyTableViewCell.m; sourceTree = "<group>"; };
 		68E049751D10BB2A00A49FF7 /* SkyShimmerTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkyShimmerTableViewCell.h; sourceTree = "<group>"; };
 		68E049761D10BB2A00A49FF7 /* SkyShimmerTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SkyShimmerTableViewCell.m; sourceTree = "<group>"; };
-		68E0497A1D11D7FD00A49FF7 /* SkyScannerRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkyScannerRequest.h; sourceTree = "<group>"; };
-		68E0497B1D11D7FD00A49FF7 /* SkyScannerRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SkyScannerRequest.m; sourceTree = "<group>"; };
-		68E0497F1D11EC2D00A49FF7 /* SkyScannerDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkyScannerDate.h; sourceTree = "<group>"; };
-		68E049801D11EC2D00A49FF7 /* SkyScannerDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SkyScannerDate.m; sourceTree = "<group>"; };
-		68E049821D11EC5D00A49FF7 /* SkyScannerQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkyScannerQuery.h; sourceTree = "<group>"; };
-		68E049831D11EC5D00A49FF7 /* SkyScannerQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SkyScannerQuery.m; sourceTree = "<group>"; };
-		68E049851D11ECC200A49FF7 /* SkyScannerId.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkyScannerId.h; sourceTree = "<group>"; };
-		68E049861D11ECC200A49FF7 /* SkyScannerId.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SkyScannerId.m; sourceTree = "<group>"; };
-		68E049881D11F1D200A49FF7 /* SkyScannerPricingOption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkyScannerPricingOption.h; sourceTree = "<group>"; };
-		68E049891D11F1D200A49FF7 /* SkyScannerPricingOption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SkyScannerPricingOption.m; sourceTree = "<group>"; };
-		68E0498B1D11F27700A49FF7 /* SkyScannerBookingDetailsLink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkyScannerBookingDetailsLink.h; sourceTree = "<group>"; };
-		68E0498C1D11F27700A49FF7 /* SkyScannerBookingDetailsLink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SkyScannerBookingDetailsLink.m; sourceTree = "<group>"; };
-		68E049911D11F2FD00A49FF7 /* SkyScannerItinerary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkyScannerItinerary.h; sourceTree = "<group>"; };
-		68E049921D11F2FD00A49FF7 /* SkyScannerItinerary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SkyScannerItinerary.m; sourceTree = "<group>"; };
-		68E049941D11F3C200A49FF7 /* SkyScannerLeg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkyScannerLeg.h; sourceTree = "<group>"; };
-		68E049951D11F3C200A49FF7 /* SkyScannerLeg.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SkyScannerLeg.m; sourceTree = "<group>"; };
-		68E049A01D12088800A49FF7 /* SkyScannerSegment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkyScannerSegment.h; sourceTree = "<group>"; };
-		68E049A11D12088800A49FF7 /* SkyScannerSegment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SkyScannerSegment.m; sourceTree = "<group>"; };
-		68E049A31D120A0B00A49FF7 /* SkyScannerCarrier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkyScannerCarrier.h; sourceTree = "<group>"; };
-		68E049A41D120A0B00A49FF7 /* SkyScannerCarrier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SkyScannerCarrier.m; sourceTree = "<group>"; };
-		68E049A61D120B8900A49FF7 /* SkyScannerAgents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkyScannerAgents.h; sourceTree = "<group>"; };
-		68E049A71D120B8900A49FF7 /* SkyScannerAgents.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SkyScannerAgents.m; sourceTree = "<group>"; };
-		68E049A91D120CF800A49FF7 /* BooleanArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BooleanArray.h; sourceTree = "<group>"; };
-		68E049AA1D120CF800A49FF7 /* BooleanArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BooleanArray.m; sourceTree = "<group>"; };
-		68E049AC1D120D5E00A49FF7 /* SkyScannerPlace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkyScannerPlace.h; sourceTree = "<group>"; };
-		68E049AD1D120D5E00A49FF7 /* SkyScannerPlace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SkyScannerPlace.m; sourceTree = "<group>"; };
-		68E049AF1D120DC900A49FF7 /* SkyScannerCurrency.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkyScannerCurrency.h; sourceTree = "<group>"; };
-		68E049B01D120DC900A49FF7 /* SkyScannerCurrency.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SkyScannerCurrency.m; sourceTree = "<group>"; };
 		68E34CBF1D0F538500AEE5C6 /* SkyScannerTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkyScannerTableViewController.h; sourceTree = "<group>"; };
 		68E34CC01D0F538500AEE5C6 /* SkyScannerTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SkyScannerTableViewController.m; sourceTree = "<group>"; };
 		68E34CC51D0F63B200AEE5C6 /* TwoPlaneFlightTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwoPlaneFlightTableViewCell.h; sourceTree = "<group>"; };
@@ -161,47 +152,41 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		68720E5D1D131A5A00C0CAC2 /* Model Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				68720E5E1D131A7E00C0CAC2 /* SkyscannerPricingOption.h */,
+				68720E5F1D131A7E00C0CAC2 /* SkyscannerPricingOption.m */,
+				68720E611D131AAB00C0CAC2 /* SkyscannerBookingDetailsLink.h */,
+				68720E621D131AAB00C0CAC2 /* SkyscannerBookingDetailsLink.m */,
+			);
+			name = "Model Support Files";
+			sourceTree = "<group>";
+		};
 		68E0497D1D11E92400A49FF7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				68E0497A1D11D7FD00A49FF7 /* SkyScannerRequest.h */,
-				68E0497B1D11D7FD00A49FF7 /* SkyScannerRequest.m */,
-				68E049821D11EC5D00A49FF7 /* SkyScannerQuery.h */,
-				68E049831D11EC5D00A49FF7 /* SkyScannerQuery.m */,
-				68E049911D11F2FD00A49FF7 /* SkyScannerItinerary.h */,
-				68E049921D11F2FD00A49FF7 /* SkyScannerItinerary.m */,
-				68E049941D11F3C200A49FF7 /* SkyScannerLeg.h */,
-				68E049951D11F3C200A49FF7 /* SkyScannerLeg.m */,
-				68E049A01D12088800A49FF7 /* SkyScannerSegment.h */,
-				68E049A11D12088800A49FF7 /* SkyScannerSegment.m */,
-				68E049A31D120A0B00A49FF7 /* SkyScannerCarrier.h */,
-				68E049A41D120A0B00A49FF7 /* SkyScannerCarrier.m */,
-				68E049A61D120B8900A49FF7 /* SkyScannerAgents.h */,
-				68E049A71D120B8900A49FF7 /* SkyScannerAgents.m */,
-				68E049AC1D120D5E00A49FF7 /* SkyScannerPlace.h */,
-				68E049AD1D120D5E00A49FF7 /* SkyScannerPlace.m */,
-				68E049AF1D120DC900A49FF7 /* SkyScannerCurrency.h */,
-				68E049B01D120DC900A49FF7 /* SkyScannerCurrency.m */,
-				68E0497E1D11EC1100A49FF7 /* Support Data Files */,
+				68720E5D1D131A5A00C0CAC2 /* Model Support Files */,
+				68720E541D13186700C0CAC2 /* SkyscannerRequest.h */,
+				68720E551D13186700C0CAC2 /* SkyscannerRequest.m */,
+				68720E571D1318DE00C0CAC2 /* SkyscannerQuery.h */,
+				68720E581D1318DE00C0CAC2 /* SkyscannerQuery.m */,
+				68720E5A1D1319B300C0CAC2 /* SkyscannerItinerary.h */,
+				68720E5B1D1319B300C0CAC2 /* SkyscannerItinerary.m */,
+				68720E641D131AD500C0CAC2 /* SkyscannerLeg.h */,
+				68720E651D131AD500C0CAC2 /* SkyscannerLeg.m */,
+				68720E671D131B1000C0CAC2 /* SkyscannerSegment.h */,
+				68720E681D131B1000C0CAC2 /* SkyscannerSegment.m */,
+				68720E6A1D131B3F00C0CAC2 /* SkyscannerCarrier.h */,
+				68720E6B1D131B3F00C0CAC2 /* SkyscannerCarrier.m */,
+				68720E6D1D131B5700C0CAC2 /* SkyscannerAgent.h */,
+				68720E6E1D131B5700C0CAC2 /* SkyscannerAgent.m */,
+				68720E701D131B8600C0CAC2 /* SkyscannerPlace.h */,
+				68720E711D131B8600C0CAC2 /* SkyscannerPlace.m */,
+				68720E731D131BAA00C0CAC2 /* SkyscannerCurrency.h */,
+				68720E741D131BAA00C0CAC2 /* SkyscannerCurrency.m */,
 			);
 			name = Model;
-			sourceTree = "<group>";
-		};
-		68E0497E1D11EC1100A49FF7 /* Support Data Files */ = {
-			isa = PBXGroup;
-			children = (
-				68E049881D11F1D200A49FF7 /* SkyScannerPricingOption.h */,
-				68E049891D11F1D200A49FF7 /* SkyScannerPricingOption.m */,
-				68E0497F1D11EC2D00A49FF7 /* SkyScannerDate.h */,
-				68E049801D11EC2D00A49FF7 /* SkyScannerDate.m */,
-				68E049851D11ECC200A49FF7 /* SkyScannerId.h */,
-				68E049861D11ECC200A49FF7 /* SkyScannerId.m */,
-				68E0498B1D11F27700A49FF7 /* SkyScannerBookingDetailsLink.h */,
-				68E0498C1D11F27700A49FF7 /* SkyScannerBookingDetailsLink.m */,
-				68E049A91D120CF800A49FF7 /* BooleanArray.h */,
-				68E049AA1D120CF800A49FF7 /* BooleanArray.m */,
-			);
-			name = "Support Data Files";
 			sourceTree = "<group>";
 		};
 		9864C83DFDCA6AB898689A3A /* Frameworks */ = {
@@ -334,27 +319,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68720E561D13186700C0CAC2 /* SkyscannerRequest.m in Sources */,
+				68720E601D131A7E00C0CAC2 /* SkyscannerPricingOption.m in Sources */,
 				6847A3551D0F4D68009B95FD /* AppDelegate.m in Sources */,
-				68E0497C1D11D7FD00A49FF7 /* SkyScannerRequest.m in Sources */,
-				68E049AE1D120D5E00A49FF7 /* SkyScannerPlace.m in Sources */,
-				68E049A21D12088800A49FF7 /* SkyScannerSegment.m in Sources */,
-				68E049AB1D120CF800A49FF7 /* BooleanArray.m in Sources */,
-				68E049931D11F2FD00A49FF7 /* SkyScannerItinerary.m in Sources */,
-				68E049871D11ECC200A49FF7 /* SkyScannerId.m in Sources */,
-				68E049811D11EC2D00A49FF7 /* SkyScannerDate.m in Sources */,
-				68E049B11D120DC900A49FF7 /* SkyScannerCurrency.m in Sources */,
-				68E049A81D120B8900A49FF7 /* SkyScannerAgents.m in Sources */,
-				68E049A51D120A0B00A49FF7 /* SkyScannerCarrier.m in Sources */,
+				68720E751D131BAA00C0CAC2 /* SkyscannerCurrency.m in Sources */,
+				68720E5C1D1319B300C0CAC2 /* SkyscannerItinerary.m in Sources */,
 				68CAC7701D107DC600879F92 /* EmptyTableViewCell.m in Sources */,
 				6847A3521D0F4D68009B95FD /* main.m in Sources */,
-				68E049961D11F3C200A49FF7 /* SkyScannerLeg.m in Sources */,
 				68E34CC11D0F538500AEE5C6 /* SkyScannerTableViewController.m in Sources */,
+				68720E591D1318DE00C0CAC2 /* SkyscannerQuery.m in Sources */,
 				68E049771D10BB2A00A49FF7 /* SkyShimmerTableViewCell.m in Sources */,
 				68CAC76D1D107AB700879F92 /* FlightData.m in Sources */,
 				68E34CC71D0F63B200AEE5C6 /* TwoPlaneFlightTableViewCell.m in Sources */,
-				68E0498A1D11F1D200A49FF7 /* SkyScannerPricingOption.m in Sources */,
-				68E0498D1D11F27700A49FF7 /* SkyScannerBookingDetailsLink.m in Sources */,
-				68E049841D11EC5D00A49FF7 /* SkyScannerQuery.m in Sources */,
+				68720E661D131AD500C0CAC2 /* SkyscannerLeg.m in Sources */,
+				68720E6F1D131B5700C0CAC2 /* SkyscannerAgent.m in Sources */,
+				68720E691D131B1000C0CAC2 /* SkyscannerSegment.m in Sources */,
+				68720E6C1D131B3F00C0CAC2 /* SkyscannerCarrier.m in Sources */,
+				68720E721D131B8600C0CAC2 /* SkyscannerPlace.m in Sources */,
+				68720E631D131AAB00C0CAC2 /* SkyscannerBookingDetailsLink.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
