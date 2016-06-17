@@ -17,3 +17,14 @@ From [What's the best way to explain parsing to a new programmer](http://stackov
 Insert code here for parsing without libraries
 ```
 
+* Example 2: By using a mapping library
+
+```
+Insert usage of RPJSONMapper
+```
+
+* Example 3: By using a different mapping library
+
+```
+Insert usage of other JSON mapping library
+```
