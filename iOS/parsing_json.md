@@ -80,7 +80,7 @@ if([startDateString isKindOfClass:[NSString class]]) {
 ```
 **Explanation**
 
-* ```json``` is a **dictionary** whose **keys** are being assigned with **objects**: ```@"Key" : @"Object"```
+* ```json``` is a **dictionary** whose **keys** are being assigned with **value**: ```@"Key" : Value```
 * The **properties** are being defined by the **object** returned by ```[json objectForKey:@"Key"];```
         
 * ```[json objectForKey:@"Key"];``` : Yields the **object** associated with the **key** inside the ```json``` dictionary. 
