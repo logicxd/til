@@ -13,6 +13,3 @@ From [What's the best way to explain parsing to a new programmer](http://stackov
 
 * There are many ways to parse and map **JSON** to objects
 
-**Example 2**: Making use of an [API](https://github.com/AlaricGonzales/til/blob/Alaric/iOS/API.md)
-
-* **HTTP API**s often communicate in JSON. If you were to make use of an API to create your own features, you'd **parse** the data so that Objective-C can implement the API in your app.
