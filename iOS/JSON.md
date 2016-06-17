@@ -2,7 +2,7 @@
 
 **JSON**: **J**ava**S**cript **O**bject **N**otation
 
-* JSON is a [* structure that stores information in an organized, easy-to-access manner.*](http://www.copterlabs.com/json-what-it-is-how-it-works-how-to-use-it/)
+* JSON is a [*structure that stores information in an organized, easy-to-access manner.*](http://www.copterlabs.com/json-what-it-is-how-it-works-how-to-use-it/)
 * Most websites own JSON files that contains the websites data.
 	* Fun Fact: Adding ".json" to the end of many websites will reveal its raw JSON file.
 * It is used to load data swiftly and reliably.
