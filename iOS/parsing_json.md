@@ -11,10 +11,53 @@ From [What's the best way to explain parsing to a new programmer](http://stackov
 
 ### How do we parse [JSON](https://github.com/AlaricGonzales/til/blob/Alaric/iOS/JSON.md)?
 
-* Example 1: By iterating, using `objectForKey:`, and many `if-else` statements
+**Example 1**: By iterating, using `objectForKey:`, and many `if-else` statements
 
-```
-Insert code here for parsing without libraries
+
+
+
+```Objective-C
+// Given //
+@interface Person : NSObject
+@property (nonatomic, copy) NSString *givenName;
+@property (nonatomic, copy) NSString *familyName;
+@property (nonatomic, strong) NSNumber *yearsOld;
+@end
+
+NSDictionary *json = @{
+        @"firstName" : @"John",
+        @"lastName" : @"Jacob",
+        @"age" : @25,
+};
+
+//-------------------------------------------------//
+
+Person *person = [Person new];
+person.givenName = [json objectForKey:@"firstName"];
+person.familyName = [json objectForKey:@"lastName"];
+person.yearsOld = [json objectForKey:@"age"];
+
+NSNumber *zipNumber = [json objectForKey:@"zip"];
+if([zipNumber isKindOfClass:[NSNumber class]]
+        person.zip = [zipNumber stringValue];
+
+NSString *socialSecurityNumber = [json objectForKey:@"socialSecurityNumber"];
+if([socialSecurityNumber isKindOfClass:[NSString class]])
+    person.ssn = socialSecurityNumber;
+
+NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+
+NSString *birthDateString = [json objectForKey:@"birthDate"];
+if([birthDateString isKindOfClass:[NSString class]]) {
+    [dateFormatter setDateFormat:@"MM-dd-yyyy"];
+    person.birthDate = [dateFormatter dateFromString:birthDateString];
+}
+
+NSString *startDateString = [json objectForKey:@"startDate"];
+if([startDateString isKindOfClass:[NSString class]]) {
+    [dateFormatter setDateFormat:@"MMM dd yyyy"];
+    person.startDate = [dateFormatter dateFromString:startDateString];
+}
 ```
 
 * Example 2: By using a mapping library
