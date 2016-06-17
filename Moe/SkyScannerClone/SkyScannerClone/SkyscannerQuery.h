@@ -21,9 +21,9 @@
 @property (nonatomic, copy) NSString *cabinClass;
 @property (nonatomic, copy) NSString *country;
 @property (nonatomic) BOOL groupPricing;
-@property (nonatomic, copy) SkyscannerCurrency *currencyCode;
-@property (nonatomic, copy) SkyscannerPlace *originPlace;
-@property (nonatomic, copy) SkyscannerPlace *destinationPlace;
+@property (nonatomic, strong) NSString *currencyCode;
+@property (nonatomic, strong) SkyscannerPlace *originPlace;
+@property (nonatomic, strong) SkyscannerPlace *destinationPlace;
 @property (nonatomic, copy) NSString *inboundDate;
 @property (nonatomic, copy) NSString *outboundDate;
 

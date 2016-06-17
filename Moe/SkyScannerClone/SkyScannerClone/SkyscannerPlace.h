@@ -10,11 +10,11 @@
 
 @interface SkyscannerPlace : NSObject
 
-@property (nonatomic, copy) NSString *placeCode;
-@property (nonatomic, copy) NSString *placeType;
-@property (nonatomic, copy) NSString *placeName;
-@property (nonatomic, strong) NSNumber *placeID;
-@property (nonatomic, strong) NSNumber *parentID;
+@property (nonatomic, copy) NSString *code;
+@property (nonatomic, copy) NSString *type;
+@property (nonatomic, copy) NSString *name;
+@property (nonatomic, strong) NSNumber *id;
+@property (nonatomic, strong) SkyscannerPlace *parent;
 
 @end
 

@@ -17,6 +17,6 @@
 @property (nonatomic, strong) NSNumber *roundingCoefficient;
 @property (nonatomic, strong) NSNumber *decimalDigits;
 @property (nonatomic) BOOL symbolOnLeft;
-@property (nonatomic) BOOL spacebetweenAmountAndSymbol;
+@property (nonatomic) BOOL spaceBetweenAmountAndSymbol;
 
 @end

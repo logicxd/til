@@ -16,7 +16,8 @@
 @property (nonatomic, copy) NSString *journeyMode;
 @property (nonatomic, strong) NSNumber *duration;
 @property (nonatomic, copy) NSString *directionality;
-@property (nonatomic, strong) NSNumber *flightNumber;
+@property (nonatomic, strong) NSString *flightNumber;
+@property (nonatomic, strong) NSNumber *segmentID;
 @property (nonatomic, strong) SkyscannerPlace *originStation;
 @property (nonatomic, strong) SkyscannerPlace *destinationStation;
 @property (nonatomic, copy) NSString *timeDeparture;

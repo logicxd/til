@@ -25,6 +25,7 @@
 @property (nonatomic, strong) NSArray <SkyscannerCarrier *> *carrierID;
 @property (nonatomic, strong) SkyscannerPlace *originStation;
 @property (nonatomic, strong) SkyscannerPlace *destinationStation;
-@property (nonatomic, strong) NSString *timeDeparture;
+@property (nonatomic, copy) NSString *timeDeparture;
+@property (nonatomic, copy) NSString *timeArrival;
 
 @end

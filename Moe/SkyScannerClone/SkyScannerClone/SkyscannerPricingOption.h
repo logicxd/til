@@ -15,6 +15,6 @@
 @property (nonatomic, strong) NSArray <SkyscannerAgent *> *agents;
 @property (nonatomic, strong) NSNumber *quoteAgeInMinutes;
 @property (nonatomic, strong) NSNumber *price;
-@property (nonatomic, strong) NSString *deeplinkURL;
+@property (nonatomic, copy) NSString *deeplinkURL;
 
 @end
