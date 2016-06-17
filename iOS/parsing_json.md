@@ -1,7 +1,7 @@
 
 ### Why do we parse JSON?
 
-We translate JSON into models we defined in iOS.
+To map data into models
 
 As [LukeN](http://stackoverflow.com/users/280656/luken) says
 > parsing is the process of translating some data into another kind of data that we can use
