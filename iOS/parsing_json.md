@@ -15,9 +15,8 @@ From [What's the best way to explain parsing to a new programmer](http://stackov
 
 
 
-
+*Given*
 ```Objective-C
-// Given //
 @interface Person : NSObject
 @property (nonatomic, copy) NSString *givenName;
 @property (nonatomic, copy) NSString *familyName;
