@@ -60,10 +60,24 @@ if([startDateString isKindOfClass:[NSString class]]) {
 }
 ```
 
-* Example 2: By using a mapping library
+**Example 2**: By using a mapping library (Provided by [reygonzales / RPJSONMapper] (https://github.com/reygonzales/RPJSONMapper))
 
-```
-Insert usage of RPJSONMapper
+```Objective-C
+
+Person *person = [Person new];
+[[RPJSONMapper sharedInstance] mapJSONValuesFrom:json toInstance:person usingMapping:@{
+        @"firstName" : @"givenName",
+        @"lastName" : @"familyName",
+        @"age" : @"yearsOld",
+        @"heightInInches" : @"heightInInches",
+        @"phoneNumber" : @"phone",
+        @"state" : @"state",
+        @"city" : @"city",
+        @"zip" : [[RPJSONMapper sharedInstance] boxValueAsNSStringIntoPropertyWithName:@"zip"],
+        @"socialSecurityNumber" : @"ssn",
+        @"birthDate" : [[RPJSONMapper sharedInstance] boxValueAsNSDateIntoPropertyWithName:@"birthDate" usingDateFormat:@"MM-dd-yyyy"],
+        @"startDate" : [[RPJSONMapper sharedInstance] boxValueAsNSDateIntoPropertyWithName:@"startDate" usingDateFormat:@"MMM dd yyyy"]
+}];
 ```
 
 * Example 3: By using a different mapping library
