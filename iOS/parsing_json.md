@@ -11,5 +11,9 @@ From [What's the best way to explain parsing to a new programmer](http://stackov
 
 ### How do we parse [JSON](https://github.com/AlaricGonzales/til/blob/Alaric/iOS/JSON.md)?
 
-* There are many ways to parse and map **JSON** to objects
+* Example 1: By iterating, using `objectForKey:`, and many `if-else` statements
+
+```
+Insert code here for parsing without libraries
+```
 
