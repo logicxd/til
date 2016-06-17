@@ -8,6 +8,7 @@
 
 #import "TwoPlaneFlightTableViewCell.h"
 #import "Masonry.h"
+#import "TTTAttributedLabel.h"
 
 @interface TwoPlaneFlightTableViewCell()
 
@@ -25,6 +26,7 @@
     if ((self = [super initWithStyle:style reuseIdentifier:reuseIdentifier])) {
         self.first_ImageIcon = [[UIView alloc] init];
         self.first_ImageIcon.backgroundColor = [UIColor blueColor];
+<<<<<<< HEAD
         [self addSubview:self.first_ImageIcon];
         
         self.first_TravelTime = [[UILabel alloc] init];
@@ -66,7 +68,11 @@
         self.flightProvider = [[UILabel alloc] init];
         [self.flightProvider setFont:[UIFont systemFontOfSize:10.f]];
         [self addSubview:self.flightProvider];
+=======
+        [self.contentView addSubview:self.first_ImageIcon];
+>>>>>>> Alaric
     }
+    
     
     return self;
 }
