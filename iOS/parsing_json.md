@@ -11,10 +11,6 @@ From [What's the best way to explain parsing to a new programmer](http://stackov
 
 ### How do we parse [JSON](https://github.com/AlaricGonzales/til/blob/Alaric/iOS/JSON.md)?
 
-**Example 1**: By iterating, using `objectForKey:`, and many `if-else` statements
-
-
-
 *Given*
 ```Objective-C
 @interface Person : NSObject
@@ -48,6 +44,9 @@ NSDictionary *json = @{
         @"startDate" : @"Nov 05 2012"
 };
 ```
+
+
+**Example 1**: By iterating, using `objectForKey:`, and many `if-else` statements
 
 ```Objective-C
 Person *person = [Person new];
