@@ -22,21 +22,43 @@ From [What's the best way to explain parsing to a new programmer](http://stackov
 @property (nonatomic, copy) NSString *givenName;
 @property (nonatomic, copy) NSString *familyName;
 @property (nonatomic, strong) NSNumber *yearsOld;
+@property (nonatomic, strong) NSNumber *heightInInches;
+@property (nonatomic, copy) NSString *languageKnown;
+@property (nonatomic, copy) NSString *phone;
+@property (nonatomic, copy) NSString *state;
+@property (nonatomic, copy) NSString *city;
+@property (nonatomic, copy) NSString *zip;
+@property (nonatomic, copy) NSString *ssn;
+@property (nonatomic, strong) NSDate *birthDate;
+@property (nonatomic, strong) NSDate *startDate;
 @end
+
+...
 
 NSDictionary *json = @{
         @"firstName" : @"John",
         @"lastName" : @"Jacob",
         @"age" : @25,
+        @"heightInInches" : @68.5,
+        @"phoneNumber" : @"415-555-1234",
+        @"state" : @"California",
+        @"city" : @"Daly City",
+        @"zip" : @94015,
+        @"socialSecurityNumber" : [NSNull null],
+        @"birthDate" : @"11-08-1988",
+        @"startDate" : @"Nov 05 2012"
 };
+```
 
-//-------------------------------------------------//
-
+```Objective-C
 Person *person = [Person new];
 person.givenName = [json objectForKey:@"firstName"];
 person.familyName = [json objectForKey:@"lastName"];
 person.yearsOld = [json objectForKey:@"age"];
-
+person.heightInInches = [json objectForKey:@"heightInInches"];
+person.phone = [json objectForKey:@"phoneNumber"];
+person.state = [json objectForKey:@"state"];
+person.city = [json objectForKey:@"city"];
 NSNumber *zipNumber = [json objectForKey:@"zip"];
 if([zipNumber isKindOfClass:[NSNumber class]]
         person.zip = [zipNumber stringValue];
