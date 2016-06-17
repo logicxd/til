@@ -83,7 +83,7 @@ if([startDateString isKindOfClass:[NSString class]]) {
 * ```json``` is a **dictionary** whose **keys** are being assigned with **value**: ```@"Key" : Value```
 * The **properties** are set by the **value** returned by ```[json objectForKey:@"Key"];```
         
-* ```[json objectForKey:@"Key"];``` : Yields the **object** associated with the **key** inside the ```json``` dictionary. 
+* ```[json objectForKey:@"Key"];``` Yields the **object** associated with the **key** inside the ```json``` dictionary. 
 * ```[json objectForKey:@"firstName"]``` returns ```@"John"```.
 
 **Example 2**: By using a mapping library (Provided by [reygonzales / RPJSONMapper] (https://github.com/reygonzales/RPJSONMapper))
