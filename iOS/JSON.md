@@ -10,4 +10,4 @@
 	* [Read more on Objective C's native libraries for JSONs](https://www.raywenderlich.com/5492/working-with-json-in-ios-5)
 
 #### What do we do with JSON?
-* In objective-C, we **parse** the JSON file (of a website, for example) to map and synchronize its data into our application.
+* In iOS App Development, we **parse** the JSON file (of a website, for example) to map and synchronize its data into our application.
