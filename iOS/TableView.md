@@ -20,3 +20,31 @@
 
 (Note: These instructions are taken from [Codeschool.com : Try-iOS](https://www.codeschool.com/courses/try-ios))
 
+###Implementation Example:
+
+**ProjectNameTableViewController.m**
+
+```Objective-C
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+  return 1; // Returns 1 section //
+ }
+ 
+- (NSInteger)tableView:(UITableView *)tableView
+  numberOfRowsInSection:(NSInteger)section {
+   return 5; // Returns 5 rows (cells) //
+  }
+  
+- (UITableViewCell *)tableView:(UITableView *)tableView
+    cellForRowAtIndexPath:(NSIndexPath *)indexPath
+```
+
+
+
+
+
+
+
+
+
+
+
