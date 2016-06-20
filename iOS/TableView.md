@@ -44,7 +44,7 @@
       // If there are no cells of style "Title" that can be reused, 
       // allocate a new cell with the reuseIdentifier:@"Title"
       if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UItableViewCellStyleDefault
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
                                         reuseIdentifier:@"Title"];
         } 
         
