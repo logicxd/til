@@ -1,6 +1,0 @@
-platform :ios, '8.2'
-
-target 'RedditCopy' do
-	pod 'Masonry'
-	pod 'TTTAttributedLabel'
-end
