@@ -8,9 +8,13 @@
 
 #import "TwoPlaneFlightTableViewCell.h"
 #import "Masonry.h"
+<<<<<<< HEAD
 #import "TTTattributedLabel.h"
 #import "FBShimmeringView.h"
 
+=======
+#import "TTTAttributedLabel.h"
+>>>>>>> origin/master
 
 @interface TwoPlaneFlightTableViewCell()
 
@@ -26,7 +30,18 @@
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     if ((self = [super initWithStyle:style reuseIdentifier:reuseIdentifier])) {
+<<<<<<< HEAD
         [self setSelectionStyle:UITableViewCellSelectionStyleNone];
+=======
+        self.first_ImageIcon = [[UIView alloc] init];
+        self.first_ImageIcon.backgroundColor = [UIColor blueColor];
+<<<<<<< HEAD
+        [self addSubview:self.first_ImageIcon];
+        
+        self.first_TravelTime = [[UILabel alloc] init];
+        [self.first_TravelTime setFont:[UIFont boldSystemFontOfSize:11.f]];
+        [self addSubview:self.first_TravelTime];
+>>>>>>> origin/master
         
         
         self.firstImageIcon = [[UIView alloc] init];
@@ -70,6 +85,7 @@
         
         self.flightProvider = [[UILabel alloc] init];
         [self.flightProvider setFont:[UIFont systemFontOfSize:10.f]];
+<<<<<<< HEAD
         [self.flightProvider setTextColor:[UIColor grayColor]];
         [self.contentView addSubview:self.flightProvider];
         
@@ -101,7 +117,14 @@
         [self.secondTimeEstimate setTextColor:[UIColor grayColor]];
         [self.contentView addSubview:self.secondTimeEstimate];
         
+=======
+        [self addSubview:self.flightProvider];
+=======
+        [self.contentView addSubview:self.first_ImageIcon];
+>>>>>>> Alaric
+>>>>>>> origin/master
     }
+    
     
     return self;
 }

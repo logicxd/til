@@ -55,6 +55,7 @@
     return 50;
 }
 
+<<<<<<< HEAD
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     UILabel *headerLabel = [[UILabel alloc] init];
     headerLabel.backgroundColor = [UIColor colorWithWhite:.90f alpha:1];
@@ -142,5 +143,8 @@
     
     return cell;
 }
+=======
+
+>>>>>>> origin/master
 
 @end
