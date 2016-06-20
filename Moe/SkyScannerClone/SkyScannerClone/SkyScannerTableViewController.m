@@ -8,24 +8,31 @@
 
 #import "SkyScannerTableViewController.h"
 #import "TwoPlaneFlightTableViewCell.h"
+#import "EmptyTableViewCell.h"
+#import "FlightData.h"
+#import "SkyScannerShimmerTableViewCell.h"
 
 @interface SkyScannerTableViewController ()
 
 @property (strong, nonatomic) UITableView *view;
+@property FlightData *data;
 
 @end
 
 @implementation SkyScannerTableViewController
 
-- (void) loadView {
+- (void)loadView {
     self.view = [[UITableView alloc] init];
     
     [self.view registerClass:[TwoPlaneFlightTableViewCell class] forCellReuseIdentifier:@"TwoPlaneFlight"];
-    
+    [self.view registerClass:[EmptyTableViewCell class] forCellReuseIdentifier:@"EmptyCell"];
+    [self.view registerClass:[SkyScannerShimmerTableViewCell class] forCellReuseIdentifier:@"SkyShimmer"];
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    _data = [[FlightData alloc] init];
     
     self.view.delegate = self;
     self.view.dataSource = self;
@@ -37,67 +44,103 @@
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-
     return 20;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    return 50;
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    UILabel *headerLabel = [[UILabel alloc] init];
+    headerLabel.backgroundColor = [UIColor colorWithWhite:.90f alpha:1];
+    NSString *headerString = @"428 of 428 results shown sorted by Price";
+    NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:headerString];
+    [attributedString addAttributes:@{
+                                      NSFontAttributeName:[UIFont boldSystemFontOfSize:13]
+                                      }
+                              range:[headerString rangeOfString:@"Price"]];
+    headerLabel.font = [UIFont systemFontOfSize:12.f];
+    headerLabel.textColor = [UIColor grayColor];
+    headerLabel.attributedText = attributedString;
+    headerLabel.textAlignment = NSTextAlignmentCenter;
+    return headerLabel;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.row%2 == 1) {
+        return 7;
+    } else if (indexPath.row == 0 || indexPath.row == 2) {
+        return 160;
+    }
+    return 60;
+}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TwoPlaneFlight" forIndexPath:indexPath];
+    if (indexPath.row%2 == 1) {
+        EmptyTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"EmptyCell" forIndexPath:indexPath];
+        return cell;
+    } else if (indexPath.row == 0 || indexPath.row == 2) {
+        TwoPlaneFlightTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TwoPlaneFlight" forIndexPath:indexPath];
+        
+        NSMutableAttributedString *attributedStringFirstTravelTime = [[NSMutableAttributedString alloc] initWithString:_data.first_TravelTime[indexPath.row]];
+        NSRange searchRange = NSMakeRange(0, [_data.first_TravelTime[indexPath.row] length]);
+        BOOL keepGoing = YES;
+        while (keepGoing) {
+            NSRange accessWord = [_data.first_TravelTime[indexPath.row] rangeOfString:@"[AP]M" options:NSRegularExpressionSearch range:searchRange];
+            int pos = accessWord.location + 1;
+            if (accessWord.location != NSNotFound) {
+                [attributedStringFirstTravelTime addAttributes:@{
+                                                                 NSFontAttributeName:[UIFont systemFontOfSize:10.f]
+                                                                 }
+                                                         range:accessWord];
+                
+                searchRange = NSMakeRange(pos, [_data.first_TravelTime[indexPath.row] length] - pos);
+            } else {
+                keepGoing = NO;
+            }
+        }
+        
+        NSMutableAttributedString *attributedStringSecondTravelTime = [[NSMutableAttributedString alloc] initWithString:_data.second_TravelTime[indexPath.row]];
+        searchRange = NSMakeRange(0, [_data.second_TravelTime[indexPath.row] length]);
+        keepGoing = YES;
+        while (keepGoing) {
+            NSRange accessWord = [_data.second_TravelTime[indexPath.row] rangeOfString:@"[AP]M" options:NSRegularExpressionSearch range:searchRange];
+            int pos = accessWord.location + 1;
+            if (accessWord.location != NSNotFound) {
+                [attributedStringSecondTravelTime addAttributes:@{
+                                                                  NSFontAttributeName:[UIFont systemFontOfSize:10.f]
+                                                                  }
+                                                          range:accessWord];
+                
+                searchRange = NSMakeRange(pos, [_data.second_TravelTime[indexPath.row] length] - pos);
+            } else {
+                keepGoing = NO;
+            }
+        }
+        
+        cell.firstTravelTime.attributedText = attributedStringFirstTravelTime;
+        cell.firstDestination.text = _data.first_Destination[indexPath.row];
+        cell.firstNumOfStops.text = _data.first_NumOfStops[indexPath.row];
+        cell.firstTimeEstimate.text = _data.first_TimeEstimate[indexPath.row];
+        cell.secondTravelTime.attributedText = attributedStringSecondTravelTime;
+        cell.secondDestination.text = _data.second_Destination[indexPath.row];
+        cell.secondNumOfStops.text = _data.second_NumOfStops[indexPath.row];
+        cell.secondTimeEstimate.text = _data.second_TimeEstimate[indexPath.row];
+        cell.ratingHappyness.text = _data.ratingHappyness[indexPath.row];
+        cell.ratingForCheapest.text = _data.ratingForCheapest[indexPath.row];
+        cell.cost.text = [NSString stringWithFormat:@"$%@", _data.cost[indexPath.row]];
+        cell.flightProvider.text = _data.flightProvider[indexPath.row];
+    }
     
-    cell.textLabel.text = @"efeaf";
+    SkyScannerShimmerTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"SkyShimmer" forIndexPath:indexPath];
+    
     
     return cell;
 }
-
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Shimmer.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>TTTAttributedLabel.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -22,17 +27,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>13656EB745859A23AD082FE537069165</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>3B239278AD1AF52C9F6B5AC1319500DA</key>
+		<key>095C8CE9B0512DF9FB6B65E8FCEBB290</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>53480ED0BE09FF49E34B1702D485CAAB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7B2B1EFAFE22E9A35FD711DA26E0595D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7FE09D53B621DE5102078A037434ABC1</key>
 		<dict>
 			<key>primary</key>
 			<true/>

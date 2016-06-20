@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2F17BC8F6B9543D60C27A845 /* libPods-SkyScannerClone.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3077DE0EDB544C6C3D45F391 /* libPods-SkyScannerClone.a */; };
+		2E1648C643C132EE620B5E15 /* libPods-SkyScannerClone.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D1CC900ECA37FB1B0B83366 /* libPods-SkyScannerClone.a */; };
 		6847A3521D0F4D68009B95FD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6847A3511D0F4D68009B95FD /* main.m */; };
 		6847A3551D0F4D68009B95FD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6847A3541D0F4D68009B95FD /* AppDelegate.m */; };
 		6847A35B1D0F4D68009B95FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6847A3591D0F4D68009B95FD /* Main.storyboard */; };
@@ -15,11 +15,13 @@
 		6847A3601D0F4D68009B95FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6847A35E1D0F4D68009B95FD /* LaunchScreen.storyboard */; };
 		68E34CC11D0F538500AEE5C6 /* SkyScannerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E34CC01D0F538500AEE5C6 /* SkyScannerTableViewController.m */; };
 		68E34CC71D0F63B200AEE5C6 /* TwoPlaneFlightTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E34CC61D0F63B200AEE5C6 /* TwoPlaneFlightTableViewCell.m */; };
+		6D4DFCB31D11C98100D7BEC3 /* FlightData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D4DFCB21D11C98100D7BEC3 /* FlightData.m */; };
+		6D4DFCB91D11CA5400D7BEC3 /* EmptyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D4DFCB81D11CA5400D7BEC3 /* EmptyTableViewCell.m */; };
+		6DCAA8CF1D10BA9B00382A94 /* SkyScannerShimmerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DCAA8CE1D10BA9B00382A94 /* SkyScannerShimmerTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3077DE0EDB544C6C3D45F391 /* libPods-SkyScannerClone.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SkyScannerClone.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		39DFEA6F5B72AC15C7AB2B3F /* Pods-SkyScannerClone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkyScannerClone.release.xcconfig"; path = "Pods/Target Support Files/Pods-SkyScannerClone/Pods-SkyScannerClone.release.xcconfig"; sourceTree = "<group>"; };
+		2CE1532A79E62E7F3DA1DE14 /* Pods-SkyScannerClone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkyScannerClone.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SkyScannerClone/Pods-SkyScannerClone.debug.xcconfig"; sourceTree = "<group>"; };
 		6847A34D1D0F4D68009B95FD /* SkyScannerClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SkyScannerClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6847A3511D0F4D68009B95FD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6847A3531D0F4D68009B95FD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -32,7 +34,14 @@
 		68E34CC01D0F538500AEE5C6 /* SkyScannerTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SkyScannerTableViewController.m; sourceTree = "<group>"; };
 		68E34CC51D0F63B200AEE5C6 /* TwoPlaneFlightTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwoPlaneFlightTableViewCell.h; sourceTree = "<group>"; };
 		68E34CC61D0F63B200AEE5C6 /* TwoPlaneFlightTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwoPlaneFlightTableViewCell.m; sourceTree = "<group>"; };
-		EAEC808992365887784152C4 /* Pods-SkyScannerClone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkyScannerClone.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SkyScannerClone/Pods-SkyScannerClone.debug.xcconfig"; sourceTree = "<group>"; };
+		6D4DFCB11D11C98100D7BEC3 /* FlightData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlightData.h; sourceTree = "<group>"; };
+		6D4DFCB21D11C98100D7BEC3 /* FlightData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlightData.m; sourceTree = "<group>"; };
+		6D4DFCB71D11CA5400D7BEC3 /* EmptyTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmptyTableViewCell.h; sourceTree = "<group>"; };
+		6D4DFCB81D11CA5400D7BEC3 /* EmptyTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmptyTableViewCell.m; sourceTree = "<group>"; };
+		6DCAA8CD1D10BA9B00382A94 /* SkyScannerShimmerTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkyScannerShimmerTableViewCell.h; sourceTree = "<group>"; };
+		6DCAA8CE1D10BA9B00382A94 /* SkyScannerShimmerTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SkyScannerShimmerTableViewCell.m; sourceTree = "<group>"; };
+		8D1CC900ECA37FB1B0B83366 /* libPods-SkyScannerClone.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SkyScannerClone.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF96AE544C49837E2670AF08 /* Pods-SkyScannerClone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkyScannerClone.release.xcconfig"; path = "Pods/Target Support Files/Pods-SkyScannerClone/Pods-SkyScannerClone.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,20 +49,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2F17BC8F6B9543D60C27A845 /* libPods-SkyScannerClone.a in Frameworks */,
+				2E1648C643C132EE620B5E15 /* libPods-SkyScannerClone.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0DEB254DD5953AC3EBA757C2 /* Pods */ = {
+		1EC4E739B9A3FF39612D8651 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				EAEC808992365887784152C4 /* Pods-SkyScannerClone.debug.xcconfig */,
-				39DFEA6F5B72AC15C7AB2B3F /* Pods-SkyScannerClone.release.xcconfig */,
+				8D1CC900ECA37FB1B0B83366 /* libPods-SkyScannerClone.a */,
 			);
-			name = Pods;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		6847A3441D0F4D68009B95FD = {
@@ -61,8 +69,8 @@
 			children = (
 				6847A34F1D0F4D68009B95FD /* SkyScannerClone */,
 				6847A34E1D0F4D68009B95FD /* Products */,
-				0DEB254DD5953AC3EBA757C2 /* Pods */,
-				9864C83DFDCA6AB898689A3A /* Frameworks */,
+				C7E96AD237CCD056D64E67FA /* Pods */,
+				1EC4E739B9A3FF39612D8651 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,15 +87,15 @@
 			children = (
 				6847A3531D0F4D68009B95FD /* AppDelegate.h */,
 				6847A3541D0F4D68009B95FD /* AppDelegate.m */,
-				68E34CBF1D0F538500AEE5C6 /* SkyScannerTableViewController.h */,
-				68E34CC01D0F538500AEE5C6 /* SkyScannerTableViewController.m */,
-				68E34CC51D0F63B200AEE5C6 /* TwoPlaneFlightTableViewCell.h */,
-				68E34CC61D0F63B200AEE5C6 /* TwoPlaneFlightTableViewCell.m */,
-				6847A3591D0F4D68009B95FD /* Main.storyboard */,
-				6847A35C1D0F4D68009B95FD /* Assets.xcassets */,
-				6847A35E1D0F4D68009B95FD /* LaunchScreen.storyboard */,
-				6847A3611D0F4D68009B95FD /* Info.plist */,
+				6D56623C1D11BEED00347CC0 /* Shimmer */,
+				6D56623B1D11BEC700347CC0 /* ViewController */,
+				6D56623A1D11BEA200347CC0 /* TwoPlane TableView */,
+				6D5662391D11BE7400347CC0 /* Ignore */,
 				6847A3501D0F4D68009B95FD /* Supporting Files */,
+				6D4DFCB11D11C98100D7BEC3 /* FlightData.h */,
+				6D4DFCB21D11C98100D7BEC3 /* FlightData.m */,
+				6D4DFCB71D11CA5400D7BEC3 /* EmptyTableViewCell.h */,
+				6D4DFCB81D11CA5400D7BEC3 /* EmptyTableViewCell.m */,
 			);
 			path = SkyScannerClone;
 			sourceTree = "<group>";
@@ -100,12 +108,51 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		9864C83DFDCA6AB898689A3A /* Frameworks */ = {
+		6D5662391D11BE7400347CC0 /* Ignore */ = {
 			isa = PBXGroup;
 			children = (
-				3077DE0EDB544C6C3D45F391 /* libPods-SkyScannerClone.a */,
+				6847A35C1D0F4D68009B95FD /* Assets.xcassets */,
+				6847A35E1D0F4D68009B95FD /* LaunchScreen.storyboard */,
+				6847A3611D0F4D68009B95FD /* Info.plist */,
+				6847A3591D0F4D68009B95FD /* Main.storyboard */,
 			);
-			name = Frameworks;
+			name = Ignore;
+			sourceTree = "<group>";
+		};
+		6D56623A1D11BEA200347CC0 /* TwoPlane TableView */ = {
+			isa = PBXGroup;
+			children = (
+				68E34CC51D0F63B200AEE5C6 /* TwoPlaneFlightTableViewCell.h */,
+				68E34CC61D0F63B200AEE5C6 /* TwoPlaneFlightTableViewCell.m */,
+			);
+			name = "TwoPlane TableView";
+			sourceTree = "<group>";
+		};
+		6D56623B1D11BEC700347CC0 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				68E34CBF1D0F538500AEE5C6 /* SkyScannerTableViewController.h */,
+				68E34CC01D0F538500AEE5C6 /* SkyScannerTableViewController.m */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		6D56623C1D11BEED00347CC0 /* Shimmer */ = {
+			isa = PBXGroup;
+			children = (
+				6DCAA8CD1D10BA9B00382A94 /* SkyScannerShimmerTableViewCell.h */,
+				6DCAA8CE1D10BA9B00382A94 /* SkyScannerShimmerTableViewCell.m */,
+			);
+			name = Shimmer;
+			sourceTree = "<group>";
+		};
+		C7E96AD237CCD056D64E67FA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2CE1532A79E62E7F3DA1DE14 /* Pods-SkyScannerClone.debug.xcconfig */,
+				BF96AE544C49837E2670AF08 /* Pods-SkyScannerClone.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -115,12 +162,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6847A3641D0F4D68009B95FD /* Build configuration list for PBXNativeTarget "SkyScannerClone" */;
 			buildPhases = (
-				850E252AED6588DDE84A4076 /* Check Pods Manifest.lock */,
+				09D7A8F5B1377D03F3897CF3 /* [CP] Check Pods Manifest.lock */,
 				6847A3491D0F4D68009B95FD /* Sources */,
 				6847A34A1D0F4D68009B95FD /* Frameworks */,
 				6847A34B1D0F4D68009B95FD /* Resources */,
-				DB8DE36F1520C06730689CF2 /* Embed Pods Frameworks */,
-				F390981DDC575BBB74F63568 /* Copy Pods Resources */,
+				F5829206A37D2419222FD498 /* [CP] Embed Pods Frameworks */,
+				0FCBC20ABC616DF6AA4BD072 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -177,14 +224,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		850E252AED6588DDE84A4076 /* Check Pods Manifest.lock */ = {
+		09D7A8F5B1377D03F3897CF3 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -192,34 +239,34 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		DB8DE36F1520C06730689CF2 /* Embed Pods Frameworks */ = {
+		0FCBC20ABC616DF6AA4BD072 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SkyScannerClone/Pods-SkyScannerClone-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F390981DDC575BBB74F63568 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SkyScannerClone/Pods-SkyScannerClone-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F5829206A37D2419222FD498 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SkyScannerClone/Pods-SkyScannerClone-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -230,9 +277,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				6847A3551D0F4D68009B95FD /* AppDelegate.m in Sources */,
+				6D4DFCB31D11C98100D7BEC3 /* FlightData.m in Sources */,
 				6847A3521D0F4D68009B95FD /* main.m in Sources */,
+				6D4DFCB91D11CA5400D7BEC3 /* EmptyTableViewCell.m in Sources */,
 				68E34CC11D0F538500AEE5C6 /* SkyScannerTableViewController.m in Sources */,
 				68E34CC71D0F63B200AEE5C6 /* TwoPlaneFlightTableViewCell.m in Sources */,
+				6DCAA8CF1D10BA9B00382A94 /* SkyScannerShimmerTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,7 +392,7 @@
 		};
 		6847A3651D0F4D68009B95FD /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EAEC808992365887784152C4 /* Pods-SkyScannerClone.debug.xcconfig */;
+			baseConfigurationReference = 2CE1532A79E62E7F3DA1DE14 /* Pods-SkyScannerClone.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SkyScannerClone/Info.plist;
@@ -354,7 +404,7 @@
 		};
 		6847A3661D0F4D68009B95FD /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 39DFEA6F5B72AC15C7AB2B3F /* Pods-SkyScannerClone.release.xcconfig */;
+			baseConfigurationReference = BF96AE544C49837E2670AF08 /* Pods-SkyScannerClone.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SkyScannerClone/Info.plist;

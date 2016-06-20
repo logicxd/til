@@ -7,9 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Masonry.h"
+#import "TTTattributedLabel.h"
+#import "FBShimmeringView.h"
+
+
 
 @interface SkyScannerTableViewController : UITableViewController
 
-@property CGRect skyScannerRect;
+//@property CGRect skyScannerRect;
 
 @end

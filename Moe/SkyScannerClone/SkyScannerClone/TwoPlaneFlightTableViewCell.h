@@ -7,24 +7,27 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FBShimmeringView.h"
+
 
 @interface TwoPlaneFlightTableViewCell : UITableViewCell
 
-@property (strong, nonatomic) UIView *first_ImageIcon;
-@property (strong, nonatomic) UILabel *first_TravelTime;
-@property (strong, nonatomic) UILabel *first_Destination;
-@property (strong, nonatomic) UILabel *first_NumOfStops;
-@property (strong, nonatomic) UILabel *first_TimeEstimate;
+@property (strong, nonatomic) UIView  *firstImageIcon;
+@property (strong, nonatomic) UILabel *firstTravelTime;
+@property (strong, nonatomic) UILabel *firstDestination;
+@property (strong, nonatomic) UILabel *firstNumOfStops;
+@property (strong, nonatomic) UILabel *firstTimeEstimate;
 
-@property (strong, nonatomic) UIView *second_ImageIcon;
-@property (strong, nonatomic) UILabel *second_TravelTime;
-@property (strong, nonatomic) UILabel *second_Destination;
-@property (strong, nonatomic) UILabel *second_NumOfStops;
-@property (strong, nonatomic) UILabel *second_TimeEstimate;
+@property (strong, nonatomic) UIView  *secondImageIcon;
+@property (strong, nonatomic) UILabel *secondTravelTime;
+@property (strong, nonatomic) UILabel *secondDestination;
+@property (strong, nonatomic) UILabel *secondNumOfStops;
+@property (strong, nonatomic) UILabel *secondTimeEstimate;
 
 @property (strong, nonatomic) UILabel *ratingHappyness;
 @property (strong, nonatomic) UILabel *ratingForCheapest;
 @property (strong, nonatomic) UILabel *cost;
 @property (strong, nonatomic) UILabel *flightProvider;
+
 
 @end
