@@ -45,6 +45,8 @@
         cell = [[UITableViewCell alloc] initWithStyle:UItableViewCellStyleDefault
                                         reuseIdentifier:@"Title"];
         } 
+        
+        return cell; // Return the cell so it can be delivered to the table //
     }
 ```
 
