@@ -23,7 +23,6 @@
 ###Implementation Example:
 
 **ProjectNameTableViewController.m**
-
 ```Objective-C
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
   return 1; // Returns 1 section //
@@ -35,7 +34,18 @@
   }
   
 - (UITableViewCell *)tableView:(UITableView *)tableView
-    cellForRowAtIndexPath:(NSIndexPath *)indexPath
+    cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+      // Checks to see if there are any cells of style "Title" we can reuse //
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Title"];
+    
+      // If there are no cells of style "Title" that can be reused, 
+      // allocate a new cell with the reuseIdentifier:@"Title"
+      if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UItableViewCellStyleDefault
+                                        reuseIdentifier:@"Title"];
+        } 
+    }
 ```
 
 
