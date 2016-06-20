@@ -1,6 +1,6 @@
 #Creating a TableViewController
 
-**Note: These instructions are taken from [Codeschool.com : Try-iOS](https://www.codeschool.com/courses/try-ios))**
+**Note: These instructions are taken from [Codeschool.com : Try-iOS](https://www.codeschool.com/courses/try-ios)**
 
 
 ###Create the file by doing the following in Xcode:
