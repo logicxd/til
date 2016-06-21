@@ -1,3 +1,4 @@
+```Objective-C
 char * getLine(void) {
 	////////////////Memory size//////////////
 	const size_t INCREMENT_VALUE = 30;				//The amount of bytes to increase by. Each char is 1 byte.
@@ -47,3 +48,4 @@ char * getLine(void) {
 	
 	return line;
 }
+```

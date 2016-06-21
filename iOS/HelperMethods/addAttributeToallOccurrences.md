@@ -1,3 +1,4 @@
+```Objective-C
 - (NSMutableAttributedString *)addAttributeToAllOccurrences:(NSString *)str target:(NSString *)target option:(NSStringCompareOptions)option withAttributes:(NSDictionary *)attributes{
     //Make an attributedString out of the original string.
     NSMutableAttributedString *attributedStr = [[NSMutableAttributedString alloc] initWithString:str];
@@ -34,3 +35,4 @@
     
     return attributedStr;
 }
+```
