@@ -9,5 +9,5 @@
 * <a href ="https://github.com/logicxd/til/blob/master/iOS/Properties.md">Properties.md</a>
 
 ###Mac OS
-* <a href="https://github.com/logicxd/til/blob/master/MacOS/HiddenFiles.md">TemperatureReading.md</a>
+* <a href="https://github.com/logicxd/til/blob/master/MacOS/HiddenFiles.md">HiddenFiles.md</a>
 * <a href="https://github.com/logicxd/til/blob/master/MacOS/TemperatureReading.md">TemperatureReading.md</a>
