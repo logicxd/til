@@ -1,6 +1,6 @@
 # Today I learned (til)
 
-### Mac OS
+### MacOS
 * [HiddenFiles.md](https://github.com/logicxd/til/blob/master/MacOS/HiddenFiles.md)
 * [TemperatureReading.md](https://github.com/logicxd/til/blob/master/MacOS/TemperatureReading.md)
 * [ThemesForIDEs](https://github.com/logicxd/til/blob/master/MacOS/ThemesForIDEs.md)
