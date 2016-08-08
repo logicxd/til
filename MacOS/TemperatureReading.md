@@ -1,3 +1,3 @@
-#Macbook Temperature
+# Macbook Temperature
 
-Download here: <a href="https://github.com/Chris911/iStats">iStats</a>
+Download here: [iStats](https://github.com/Chris911/iStats) 
