@@ -1,4 +1,4 @@
-#Show/Hide Hidden Files
+# Show/Hide Hidden Files
 
 Show: `defaults write com.apple.finder AppleShowAllFiles -bool true` 
 
