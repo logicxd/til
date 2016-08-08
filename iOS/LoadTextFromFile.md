@@ -1,4 +1,4 @@
-# Loading File Into Xcode Project
+# Load Text File Into Xcode Project
 
 1. Add your file to the project by `File > Add Files to ...` (Optional?)
 2. Add the file to `Build Phases > Copy Files > the "+" button`. Change **Destination** from `Absolute Path` to `Products Directory`. 
