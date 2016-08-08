@@ -1,14 +1,15 @@
-#Today I learned
+# Today I learned (til)
 
-###iOS
+### Mac OS
+* [HiddenFiles.md](https://github.com/logicxd/til/blob/master/MacOS/HiddenFiles.md)
+* [TemperatureReading.md](https://github.com/logicxd/til/blob/master/MacOS/TemperatureReading.md)
+* [ThemesForIDEs](https://github.com/logicxd/til/blob/master/MacOS/ThemesForIDEs.md)
+
+### iOS
 * API.md
-* <a href ="https://github.com/logicxd/til/blob/master/iOS/JSON.md">JSON.md</a>
-* <a href="https://github.com/logicxd/til/blob/master/iOS/Nullability.md">Nullability.md</a>
-* <a href="https://github.com/logicxd/til/blob/master/iOS/TableView.md">TableView.md</a>
-* <a href="https://github.com/logicxd/til/blob/master/iOS/Parsing_JSON.md">Parsing_JSON.md</a>
-* <a href ="https://github.com/logicxd/til/blob/master/iOS/Properties.md">Properties.md</a>
-
-###Mac OS
-* <a href="https://github.com/logicxd/til/blob/master/MacOS/HiddenFiles.md">HiddenFiles.md</a>
-* <a href="https://github.com/logicxd/til/blob/master/MacOS/TemperatureReading.md">TemperatureReading.md</a>
-* <a href="https://github.com/logicxd/til/blob/master/MacOS/ThemesForIDEs.md">ThemesForIDEs.md</a>
+* [JSON.md](https://github.com/logicxd/til/blob/master/iOS/JSON.md)
+* [LoadFile.md](https://github.com/logicxd/til/blob/master/iOS/LoadFile.md)
+* [Nullability.md](https://github.com/logicxd/til/blob/master/iOS/Nullability.md)
+* [Parsing_JSON.md](https://github.com/logicxd/til/blob/master/iOS/Parsing_JSON.md)
+* [Properties](https://github.com/logicxd/til/blob/master/iOS/Properties.md)
+* [TableView.md](https://github.com/logicxd/til/blob/master/iOS/TableView.md) 
