@@ -7,6 +7,8 @@
 
 ### iOS
 * API.md
+* [AddAttributesToAllOccurrences.md](https://github.com/logicxd/til/blob/master/iOS/AddAttributesToAllOccurrences.md)
+* [GetLineInC.md](https://github.com/logicxd/til/blob/master/iOS/GetLineInC.md)
 * [JSON.md](https://github.com/logicxd/til/blob/master/iOS/JSON.md)
 * [LoadTextFromFile.md](https://github.com/logicxd/til/blob/master/iOS/LoadTextFromFile.md)
 * [Nullability.md](https://github.com/logicxd/til/blob/master/iOS/Nullability.md)
