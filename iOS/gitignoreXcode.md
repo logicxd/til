@@ -3,7 +3,7 @@
 Taken from [Reynaldo Gonzales](https://github.com/reygonzales)
 
 
-```Objective-C
+```Shell
 # Xcode
 .DS_Store
 build/
