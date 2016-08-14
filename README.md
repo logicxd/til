@@ -15,3 +15,4 @@
 * [Parsing_JSON.md](https://github.com/logicxd/til/blob/master/iOS/Parsing_JSON.md)
 * [Properties](https://github.com/logicxd/til/blob/master/iOS/Properties.md)
 * [TableView.md](https://github.com/logicxd/til/blob/master/iOS/TableView.md) 
+* [gitignoreXcode.md](https://github.com/logicxd/til/blob/master/iOS/gitignoreXcode.md)
