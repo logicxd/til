@@ -2,7 +2,6 @@
 # .gitignore For Xcode projects.
 Taken from [Reynaldo Gonzales](https://github.com/reygonzales)
 
-
 ```Shell
 # Xcode
 .DS_Store
