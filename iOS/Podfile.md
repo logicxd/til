@@ -3,7 +3,7 @@
 Create a `Podfile` file without any extension. Add the pods that you want from this list.
 
 ```Shell
-platform :ios, '8.2'
+platform :ios, '9.3'
 
 target 'SkyscannerLivePricing' do
         pod 'RPJSONMapper'
@@ -11,6 +11,7 @@ target 'SkyscannerLivePricing' do
         pod 'TTTAttributedLabel'
         pod 'Shimmer'
         pod 'AFNetworking', '~> 3.0'
+        pod 'CustomIOSAlertView', '~> 0.9.4'
 end
 ```
 
