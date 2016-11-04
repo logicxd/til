@@ -4,7 +4,7 @@ Nonlinear data structure.
 
 * Left child: less than or equal to the parent. `[2i + 1]`.
 * Right child: greater than the parent. `[2i + 2]`.
-* Parent: `(i-1)/2` where i is the index of the child.
+* Parent: `floor( (i-1)/2 )` where i is the index of the child.
 * The number of nodes in a perfect binary tree is `2^(h+1) - 1` where h is the height.
 * Height: leaf nodes start at 0, their parents go up by 1 and so on.
 * Depth: root node start at 0, their children go up by 1 and so on.
