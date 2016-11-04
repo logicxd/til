@@ -1,6 +1,6 @@
-# AJAX to POST
+# POST using .ajax
 
-POST using x-www-form-urlencoded
+## POST using x-www-form-urlencoded
 ```
 $.ajax({
               type: "POST",
@@ -22,7 +22,7 @@ $.ajax({
           });
 ```
 
-POST using JSON
+## POST using JSON
 
 ```
 $.ajax({
@@ -44,7 +44,8 @@ $.ajax({
       });
 ```
 
-**IMPORTANT** - In the Controller, you need [FromBody] inside the parameter like this for JSON.
+**IMPORTANT** - In the Controller, you need `[FromBody]` inside the parameter like this for JSON.
+
 ```C#
 [HttpPost]
     public IActionResult Index([FromBody] FacebookAccount account)
