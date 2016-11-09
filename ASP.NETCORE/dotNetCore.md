@@ -6,7 +6,7 @@
 * Controllers: Classes that handle browser requests, retrieve model data, and then specify view templates that return a response to the browser. Handles and responds to user input and interaction.
 
 ### A Controller in an MVC App
-```C#
+```Csharp
 using Microsoft.AspNetCore.Mvc;
 using System.Text.Encodings.Web;
 
@@ -36,7 +36,7 @@ namespace MvcMovie.Controllers
 * Every `public` method in a controller is callable as an HTTP endpoint.
 * URL routing logic used by MVC uses a format like: `/[Controller]/[ActionName]/[Parameters]`. For example `http://localhost:55967/HelloWorld/Welcome`
    - Can change the format in the __Startup.cs__ file.
-```
+```Csharp
 app.UseMvc(routes =>
 {
     routes.MapRoute(
@@ -47,7 +47,7 @@ app.UseMvc(routes =>
 
 ### Parameters in URL
 Change the above method into the following:
-```C#
+```Csharp
 public string Welcome(string name, int numTimes = 1)
 {
     return HtmlEncoder.Default.Encode($"Hello {name}, numTimes: {numTimes}");
@@ -62,7 +62,7 @@ Now you can run the link `http://localhost:55967/HelloWorld/Welcome?name=Rick&nu
 Blends C# and HTML with templates.
 
 Change the above method into the following:
-```C#
+```Csharp
 public IActionResult Index()
 {
     return View();

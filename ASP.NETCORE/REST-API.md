@@ -11,10 +11,10 @@ Ex: transition class, user class, account class, ...
 
 ## API Calling
 
+`/Facebook/AccountType?id=value1&name=value2`
+
 #### GET
 Information retrieval. All URL requests are GET by default (I'm not too sure on this).
-
-`/Facebook/AccountType?id=value1&name=value2`
 
 * GET requests can be cached
 * GET requests remain in the browser history

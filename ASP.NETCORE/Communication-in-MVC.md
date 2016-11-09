@@ -20,3 +20,11 @@ Using Facebook authentication as an example
 2. The server will query the database through Handler by passing the ID and socialMediaCode("FB") - which is stored in the Controller/Handler.
 3. The response of the query will be then passed back to the view which can be displayed.
   * Each of Facebook account will have a socialMediaAccountId, access_token, etc..., BUT only render the socialMediaAccountId. You don't want to show sensitive information to the View. You can create a class just for returning back information.
+
+## Sending data from View to Server.
+
+## Sending data from Server to View.
+http://www.c-sharpcorner.com/uploadfile/abhikumarvatsa/various-ways-to-pass-data-from-controller-to-view-in-mvc/
+
+### View->Server->View
+Use ajax. 
