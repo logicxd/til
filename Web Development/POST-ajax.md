@@ -26,22 +26,31 @@ $.ajax({
 
 ```
 $.ajax({
-          type: "POST",
-          url: "Facebook/Edit/",
-          data: JSON.stringify({
-              ID: response.authResponse.accessToken,
-              Name: "JSON Post"
-          }),
-          contentType: "application/json",
-          success: function (msg) {
-              console.log('UID: ' + response.authResponse.userID);
-              console.log('ID: ' + response.authResponse.accessToken);
-          },
-          error: function (msg) {
-              console.log("ERROR: " + msg.statusText);
-
-          }
-      });
+    type: 'POST',
+    url: '/Facebook',
+    dataType: "json",
+    data: JSON.stringify({
+        AccessToken: response.authResponse.accessToken
+    }),
+    contentType: "application/json; charset=utf-8",
+    success: function (result)
+    {
+        console.log('SUCCESS ajax: ' + result.msg);
+        if (result.isError != true)
+        {
+            var webHTML = '@Url.Action("AccountTypes", "Facebook")?id=' + result.socialMediaAccountId;
+            window.location.replace(webHTML);
+        }
+        else
+        {
+            document.getElementById('status').innerHTML = "Could not connect";
+        }
+    },
+    error: function (result)
+    {
+        console.log('ERROR ajax: ' + result.statusText);
+    }
+});
 ```
 
 **IMPORTANT** - In the Controller, you need `[FromBody]` inside the parameter like this for JSON.
