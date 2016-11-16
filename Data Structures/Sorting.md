@@ -11,6 +11,8 @@ There are sorting by comparison and sorting that does not require comparison.
 
 *Stability* is an attribute that keeps the relative order (i.e. obj A is on the left of obj B) if the two objects are equal.
 
+# Comparison Sort O(NLog2(N))
+
 ## Selection Sort
 
 <img src="https://cloud.githubusercontent.com/assets/12219300/20023078/cddd7406-a29a-11e6-94a3-03172651ba2a.gif" width="300px"/>
@@ -209,29 +211,53 @@ swap(a,l,high);  //swap the pivot back where it belongs a[l] is > pivot
 return l;        //the position of the pivot
 ```
 
+# Non-comparison Sort O(N)
+
+These sorting methods do not use comparison to sort the data.
+They work well for integers but don't work well for other kinds of data.
+We will use these two variables:
+* N - the size of the data.
+* M - the range of the sorting values.
+
 ## Bucket Sort
 
-Our first non-comparison sort. For the next 2 sorting algorithms, we there will be these two variables:
-* N
-* M
+Good when N >> M.
+If M is not given, you can find M by searching through the array for the B(biggest) and S(smallest) value.
+Then if you subtract every value by S, then you can get the range to be `0 to B-S`.
+Sort these values, and then add S back to every value.
 
-
-
-Good when N >> M. M is the range of the sorting values. N is the size of the array.
-An array from 0 - N. Put a 0 in each spot.
+How to do a Bucket Sort:
+1. Make an int histogram array with indices 0 to B-S and initialize each to 0. Another way of saying it is make an int array of size M + 1. You need to add 1 because the the value M is included. O(M)
+2. Iterate through the data, N. For each value in the data, add one to the index of the histogram array that has the same value as the data. `histogramArray[value] += 1`. O(N)
+3. Iterate through the histogram array. At each index, if the element is not 0, add that array index to the sorted array. O(N + M)
 
 ## Radix Sort
 
-We have an array of size 11, values 0 - 10. Each element is a queue.
-Scan through all the values to be sorted, and get the last digit.
-The last digit is used to put into the array.
-Ex: 305 -> last digit is 5.
-Put 305 in the array index of 5.
+It repeatedly does something like Bucket Sort, but always ensuring that N >> M to make sure it's effective.
 
-Then starting from index 0, copy out the values from the queue inside each bucket.
-The copied values are sorted in order by the last digit.
-The values are stable as it is in queue (i.e. left of th)
+Pseudo-code for Radix Sort:
+```
+Create an array of 10 buckets, each storing an empty queue
 
+for every "place" (10 digit numbers: 1s, 10s, 100s, 1,000s, ... 1,000,000,000s)
+  for every value in the array to sort
+    add it at the end of the queue in the correct bucket, according to the
+      digit in the current "place"
+  for every bucket (in order from 0 to 9)
+    move all the values in this queue back into the array to sort, left to
+    right in the array (leaving the queue empty)
+```
+
+* Complexity:
+  * Worst: O(N Log10 N)
+  * Best: O(N + M) = O(N).
+* Space:
+  * Requires O(N) extra storage for the queues at any time. (Might be bigger depending on the structure of the queues)
+* Comparison:
+  * No comparisons.
+  * O(N Log10 N) data movements in all cases.
+* Stability:
+  * Stable
 ---
 
 ## Credit(s)
