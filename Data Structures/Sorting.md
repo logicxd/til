@@ -237,20 +237,21 @@ It repeatedly does something like Bucket Sort, but always ensuring that N >> M t
 
 Pseudo-code for Radix Sort:
 ```
-Create an array of 10 buckets, each storing an empty queue
+void radix_sort(int a[], int length) {
+  Create an array of 10 buckets, each storing an empty queue (use ArrayQueue)
+  for every place (6 digit numbers: 1s, 10s, 100s, 1,000s, 10,000s, and 100,000s)
+    for every value in array a
+      put it in the correct bucket using select_digit (for the current place)
+    for every bucket (in the order 0 to 9)
+      move each of the values, from its queue, back into the array a
+      (leaving all the queues empty)
+}
 
-for every "place" (10 digit numbers: 1s, 10s, 100s, 1,000s, ... 1,000,000,000s)
-  for every value in the array to sort
-    add it at the end of the queue in the correct bucket, according to the
-      digit in the current "place"
-  for every bucket (in order from 0 to 9)
-    move all the values in this queue back into the array to sort, left to
-    right in the array (leaving the queue empty)
 ```
 
 * Complexity:
   * Worst: O(N Log10 N)
-  * Best: O(N + M) = O(N).
+  * Best: O(N + M) = O(N). (Basically a bucket sort)
 * Space:
   * Requires O(N) extra storage for the queues at any time. (Might be bigger depending on the structure of the queues)
 * Comparison:
@@ -258,6 +259,8 @@ for every "place" (10 digit numbers: 1s, 10s, 100s, 1,000s, ... 1,000,000,000s)
   * O(N Log10 N) data movements in all cases.
 * Stability:
   * Stable
+
+
 ---
 
 ## Credit(s)
