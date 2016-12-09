@@ -36,4 +36,9 @@ So compare left child first, or compare both left and right if it has both child
 
 "Offline" algorithms receive ALL THEIR INPUTS before they are required to process any of them.
 Can achieve building a heap in O(N) time by creating two smaller heaps, combine them side by side, and then add a value to the top.
-This needs more research and clarification. 
+How it works:
+* Start from the rightmost leaf node.
+* Make sure that node and all it's children are following heap structure and property. Heapify if it doesn't.
+* After, go to the node on the left of the current node on the same height.
+  * If there are no more nodes on the left, go to the rightmost of the higher height.
+* Keep going until it reaches the root node.

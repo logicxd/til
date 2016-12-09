@@ -11,7 +11,7 @@ There are sorting by comparison and sorting that does not require comparison.
 
 *Stability* is an attribute that keeps the relative order (i.e. obj A is on the left of obj B) if the two objects are equal.
 
-# Comparison Sort O(NLog2(N))
+# Comparison Sort O(Best NLog2(N))
 
 ## Selection Sort
 

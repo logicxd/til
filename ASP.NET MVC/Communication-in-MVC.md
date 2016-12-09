@@ -27,4 +27,4 @@ Using Facebook authentication as an example
 http://www.c-sharpcorner.com/uploadfile/abhikumarvatsa/various-ways-to-pass-data-from-controller-to-view-in-mvc/
 
 ### View->Server->View
-Use ajax. 
+Use ajax.
