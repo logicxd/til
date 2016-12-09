@@ -28,3 +28,13 @@ http://www.c-sharpcorner.com/uploadfile/abhikumarvatsa/various-ways-to-pass-data
 
 ### View->Server->View
 Use ajax.
+
+### View->Server
+```
+<form  asp-controller="Post" asp-action="Post" data-ajax="true" data-ajax-method="POST" >
+    <textarea id="Content" name="Content" class="form-control no-border" rows="3" placeholder="What do you want to share?"></textarea>
+    <input type="file" name="MediaFile" id="MediaFile" />
+    <input name="SocialMediaCode" id="SocialMediaCode" />
+    <input type="submit" name="submit" value="Send"/>
+</form>
+```
