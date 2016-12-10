@@ -1,6 +1,5 @@
 # General and Special Trees
 
-
 ## N-ary Trees as Binary Trees
 
 Trees that can have any number (N) of children.

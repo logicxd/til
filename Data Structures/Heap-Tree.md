@@ -32,10 +32,10 @@ So compare left child first, or compare both left and right if it has both child
 
 ## "Online" vs "Offline"
 
-"Online" algorithms receive their inputs one at a time and have to completely update their data structure before the next value is received and processed.
+"Online" algorithms receive their inputs one at a time and have to completely update their data structure before the next value is received and processed. O(NLogN) time.
 
 "Offline" algorithms receive ALL THEIR INPUTS before they are required to process any of them.
-Can achieve building a heap in O(N) time by creating two smaller heaps, combine them side by side, and then add a value to the top.
+Can achieve building a heap in O(N) time by creating two smaller heaps, combine them side by side, and then add a value to the top. O(N) time.
 How it works:
 * Start from the rightmost leaf node.
 * Make sure that node and all it's children are following heap structure and property. Heapify if it doesn't.

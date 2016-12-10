@@ -1,4 +1,4 @@
-# Equivalence Relations
+# Equivalence Class
 
 http://www.ics.uci.edu/~pattis/ICS-46/lectures/notes/equivalence.txt
 

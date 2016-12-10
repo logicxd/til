@@ -110,12 +110,4 @@ Kruskal's Algorithm for MST
           If its origin and destination nodes are in two DIFFERENT equivalence
             classes, add the edge to MST and merge the equivalence classes of
             the origin and destination nodes.
-```
-
-## Dijkstra's Algorithm
-
-Can use to find the shortest path from one to another.
-Input is an `info` map which gets put into `answer` map.
-The answer map guarantees that it has the shortest path.
-
-Put all the info's in the priority queue and dequeue them.  
+```  
