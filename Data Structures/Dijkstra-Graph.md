@@ -3,7 +3,7 @@
 Given a starting node and a graph, it computes the shortest paths to all the nodes that can be reached in the graph.
 It computes just the cost for all the shortest paths but omits information for reconstructing the paths.
 * Directed graph.
-* Edges are weighted (non-negative values); they have some value. 
+* Edges are weighted (non-negative values); they have some value.
 * The length of a path is the sum-of-the-weights of all edges on the path.
 
 # Extended Dijsktra (Pattis Edition)
@@ -19,18 +19,18 @@ Most data is stored as `Info` class
 
 `distGraph` is the graph contains information for all the nodes and their edges.
     This is the information that is provided for the dijkstra to use.
-    
+
 There are three collections that are used two Maps and a Priority Queue.
 A graph `distGraph` that contains information for all the nodes and edges is to be provided which
 is the information that dijkstra uses.
-* `answer_map` is a map with key `string` to hold the node name, and value `Info`. 
+* `answer_map` is a map with key `string` to hold the node name, and value `Info`.
     This map holds the shortest path from the starting node to any given node.
     Contains nodes whose minimum distance IS KNOWN.
 * `info_map` is a map with key `string` to hold the node name, and value `Info`.
     This map holds the unexplored nodes in the graph.
     Contains nodes whose minimum distance IS NOT YET KNOWN.
-* `info_pq` is a min-heap priority queue that contains a list of `Info`. 
-    This is used to determine the next node to visit based on the lowest cost. 
+* `info_pq` is a min-heap priority queue that contains a list of `Info`.
+    This is used to determine the next node to visit based on the lowest cost.
 
 
 Basic Algorithm:
@@ -66,7 +66,7 @@ Basic Algorithm:
               -initally the start node.
             If its cost is infinity, then no more nodes in info_map are
               reachable, so terminate.
-            If its node is already in answer_map, skip this node. 
+            If its node is already in answer_map, skip this node.
 
        3c2) Call "min_node" the node from this Info and "min_cost" its cost. We
               are now guaranteed to know the least costly path from the start
@@ -76,12 +76,12 @@ Basic Algorithm:
 
        3c4) For every node d that is a destination from the min_node and not
               already in the answer_map.
-              
+
               (1) Get d's Info using info_map
               (2) if the cost is infinite or greater than the cost of the path from
                     the start node to min_node plus the cost of the edge from
                     min_node to d.
-                    
+
                     (a) In info_map for d, update the cost in Info to this smaller number,
                     and update the predecessor of d to be min_node.
                     (b) Add the updated Info to the info_pq.
@@ -101,5 +101,3 @@ Basic Algorithm:
      we can reconstruct a queue containing the entire minimimum cost path, from
      the start node to any reachable node.
 ```
-
-
