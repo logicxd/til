@@ -1,4 +1,4 @@
-# Rest API
+# Rest
 
 **REST Protocol** allows you to transfer JSON data over the HTTP protocol. Allows transfer from mobile application to the server.
 
