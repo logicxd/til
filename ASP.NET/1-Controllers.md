@@ -1,12 +1,7 @@
-# .NetCoreApp
-
-### MVC
-* Model: Classes that represent the data of the app and that use validation logic to enforce business rules for that data. Typically, model objects retrieve and store model state in a database.
-* Views: Displays. UI part.
-* Controllers: Classes that handle browser requests, retrieve model data, and then specify view templates that return a response to the browser. Handles and responds to user input and interaction.
+# Introduction into Controllers
 
 ### A Controller in an MVC App
-```Csharp
+```CS
 using Microsoft.AspNetCore.Mvc;
 using System.Text.Encodings.Web;
 
@@ -14,17 +9,13 @@ namespace MvcMovie.Controllers
 {
     public class HelloWorldController : Controller
     {
-        //
         // GET: /HelloWorld/
-
         public string Index()
         {
             return "This is my default action...";
         }
 
-        //
         // GET: /HelloWorld/Welcome/
-
         public string Welcome()
         {
             return "This is the Welcome action method...";
@@ -36,7 +27,7 @@ namespace MvcMovie.Controllers
 * Every `public` method in a controller is callable as an HTTP endpoint.
 * URL routing logic used by MVC uses a format like: `/[Controller]/[ActionName]/[Parameters]`. For example `http://localhost:55967/HelloWorld/Welcome`
    - Can change the format in the __Startup.cs__ file.
-```Csharp
+```CS
 app.UseMvc(routes =>
 {
     routes.MapRoute(
@@ -62,7 +53,7 @@ Now you can run the link `http://localhost:55967/HelloWorld/Welcome?name=Rick&nu
 Blends C# and HTML with templates.
 
 Change the above method into the following:
-```Csharp
+```CS
 public IActionResult Index()
 {
     return View();

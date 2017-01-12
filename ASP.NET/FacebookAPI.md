@@ -14,13 +14,12 @@
 6. The JS function will pass the function to the API (controller).
 7. The controller(backend) will query the database for the access_token, internally called the FB API based on w.e informatiion you want, and then the response from the FB is sent back to the view where the JS is calling.
 
-
-
 Calls like these are possible: the one with dots for inner fields to select more fields. But I haven't tested it yet.
 
 ` https://graph.facebook.com/?fields=albums.fields(photos.fields(source))`
 
 ---
+
 ## Sources
 
 * Check Postman for sample API calls.

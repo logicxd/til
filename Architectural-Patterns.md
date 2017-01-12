@@ -7,7 +7,9 @@
 
 ## Model-View-Controller (MVC)
 
-
+* **Model**: classes that represent the data of the app and that use validation logic to enforce business rules for that data. Typically, model objects retrieve and store model state in a database.
+* **Views**: displays UI part to the user.
+* **Controllers**: classes that handle browser requests, retrieve model data, and then specify view templates that return a response to the browser. Handles and responds to user input and interaction.
 
 ## Model-View-ViewModel (MVVM)
 
