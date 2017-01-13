@@ -17,4 +17,24 @@ Ex: Roll a pair of dice. Then, `S = {(1,1), (1,2), (1,3), ... , (6,5), (6,6)}`.
 Or also S = `{(x,y) : x = 1,2,...,5,6, y = 1,2,...,5,6}`.
 
 **Event (sample point)**: a subset of the sample space. An empty set is also an event.
-Ex: The event A can be the event that the number the die lands on is greater than 4. Therefore A = {5,6}. 
+Ex: The event A can be the event that the number the die lands on is greater than 4. Therefore A = {5,6}.
+
+The empty set ∅ is also an event.
+
+## Probability
+
+**Probability distribution**: denoted as P( ). Follows these set of rules
+* `0 < P(s) <= 1 for all s ∈ S`.
+* `The sum of P(s) for all s ∈ S = 1`.
+
+## Set Theory Basics
+
+**Mutually Exclusive**: Two sets cannot occur at the same time. `A ∩ B = ∅`
+
+## Probability Theory Basics
+
+Some axions:
+* `P(S) = 1`
+* `If A ⊆ B then P(A) ≤ P(B)`
+* `P(A ∪ B) = P(A) + P(B) − P(A ∩ B)`
+* `P (A) + P (Ac ) = 1`
