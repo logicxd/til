@@ -8,9 +8,19 @@
 * A database schema in the ER Model can be represented pictorially.
 * Can map an ER diagram into a relational schema.
 
-(Insert picture of Entity and Relationship model)
-Entities are represented by a rectangle shape.
-Relationships are represented by a trapezoid shape.
+![ER-Model](https://cloud.githubusercontent.com/assets/12219300/21962034/f1046bd0-dace-11e6-8102-fae03c43f0b9.png)
+
+### Some key terms
+* Single-value Attribute: the attribute can only be represented in a particular way.
+* Multi-value Attribute: the attribute can be represented in different ways (i.e. phone number can have the area code or not, the country code).
+
+
+* Atomic Attribute: an attribute is complete and final; it cannot be broken down into smaller specific attributes.
+* Composite Attribute: an attribute that can be further broken down into more specific attributes.
+
+
+* Base/Stored Attribute: the data is stored.
+* Derived Attribute: the data is not actually stored in the database but it's derived/computed from other factors.
 
 ## Model Basics
 
@@ -49,4 +59,26 @@ This is basically foreign key. The weak entities are represented by a bolded bor
 
 You can have more than 2-way relationships. Ternary relationships are 3-way relationship. (e.g. a patient, a doctor, and a drug).
 
+## Generalization
+
+![Generalization](https://cloud.githubusercontent.com/assets/12219300/21962325/fb1caa3e-dad7-11e6-9afb-f7ad85dc7708.png)
+
+A number of entities have similar attributes that can be generalized by one entity.
+
+## Specialization
+
+![ISA-Relationship](https://cloud.githubusercontent.com/assets/12219300/21962084/160fa668-dad1-11e6-940e-4fdd2e5d5774.png)
+
+Entity can be further subdivided based on their attributes.
+
 ## ISA ("is a") Hierarchies
+
+If entity A ISA B, then every A entity is also considered to be a B entity.
+
+* Covering constraints: ISA relationship has a covering constraint if for example: every Person entity HAS to belong to one of its subclasses (so either Student or a Teacher). Denoted by "Student AND Teacher COVERS Person".
+* Overlap constraints: ISA relationship has a overlap constraint if for example: Person can be both a Student AND a Teacher. Denoted by "Student OVERLAPS Teacher".
+
+---
+## Credits
+
+* Images citation https://github.com/logicxd/til/issues/2
