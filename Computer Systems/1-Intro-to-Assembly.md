@@ -56,6 +56,7 @@ Addition
 ```
 add REGISTER, VALUE 		// REGISTER = REGISTER + VALUE
 add REGISTER1, REGISTER2	// REGISTER1 = REGISTER1 + REGISTER2
+add						 // Adds the top two values in the stack.
 ```
 
 Subtraction
@@ -74,6 +75,11 @@ Multiplication - Note if you multiple two registers that are both 32 bits, your 
 ```
 imul REGISTER1, REGISTER2					// REGISTER1 = REGISTER1 * REGISTER2
 imul REGISTER1, REGISTER2, VALUE			 // REGISTER1 = REGISTER1 * REGISTER2 * VALUE
+```
+
+Division -
+```
+idiv reg
 ```
 
 ## Bitwise Operation Instructions
@@ -151,7 +157,7 @@ cmp REGISTER, VALUE					// cmp eax, 2
 cmp REGISTER1, REGISTER2			   // cmp eax, ecx
 ```
 
-Conditional Jumps. Compare arg1 t oarg2; must immediately precede any of the conditional jump instructions.
+Conditional Jumps. Compare arg1 to arg2; must immediately precede any of the conditional jump instructions.
 * `je label`: Jump to label if arg1 == arg2
 * `jne label`: Jump to label if arg1 != arg2
 * `jg label`: Jump to label if arg1 > arg2
