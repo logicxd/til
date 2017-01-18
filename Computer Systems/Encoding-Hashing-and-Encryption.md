@@ -8,7 +8,9 @@ When you visit websites and you see some characters are missing or looking funky
 
 ## Encoding
 
-There are many different type of character encoding. Encoding is useful when converting a character into some bits array.
+There are many different type of character encoding.
+Encoding is useful when converting a character into some bits array for textual representation.
+Do not use encoding for binary data, use `Convert.ToBase64String` and `Convert.FromBase64String` instead for C#.
 
 ### ASCII
 
@@ -21,14 +23,46 @@ Covers all characters by assigning every character a unique number called a code
 ## Hashing
 
 ### SHA1
-Fast hashing but not as secure. Can use [SHA1 hash online](http://www.sha1-online.com) tool to see the results.
+Fast hashing. Can use [SHA1 hash online](http://www.sha1-online.com) tool to see the results.
 ```csharp
-(TODO: insert the code sample that works here)
+using (var sha1 = SHA1.Create())
+{
+    var bytes = Encoding.UTF8.GetBytes(value);
+    var hash = sha1.ComputeHash(bytes);
+    password = BitConverter.ToString(hash).Replace("-", "");
+}
 ```
+
+### MD5
+Try to avoid - pretty insecure.
 
 ## Encryption
 
+Useful for any information that you need to encrypt and also be able to get the actual value back from decrypting.
 
+### Symmetric Encryptions
+
+#### AES (Advanced Encryption Standard)
+
+Example [here](https://msdn.microsoft.com/en-us/library/system.security.cryptography.aes(v=vs.110).aspx).
+You can store the `key` somewhere safe.
+Append the `IV` to the encrypted data before storing so when you pull back data, you can use the `IV` by extracting it out.
+
+#### 3DES
+
+
+### Asymmetric Encryptions
+
+#### RSA
+
+
+### AES
+
+
+## Byte representation vs String representation
+
+Never use text encoding (like Unicode or ASCII) on binary data (like cryptographic key or ciphertext).
+Use `Convert.ToBase64String` and `Convert.FromBase64String` instead for C#.
 
 ---
 
