@@ -142,5 +142,32 @@ add eax, ebx
 jmp Label_1
 ```
 
-Comparison
-`cmp REGISTER, VALUE` compares values. Based on the values, it sends event flags.
+## Comparison
+
+Sets the CPU flags (EFLAGS) according to the outcome. Can be used for conditional jumping.
+
+```
+cmp REGISTER, VALUE					// cmp eax, 2
+cmp REGISTER1, REGISTER2			   // cmp eax, ecx
+```
+
+Conditional Jumps. Compare arg1 t oarg2; must immediately precede any of the conditional jump instructions.
+* `je label`: Jump to label if arg1 == arg2
+* `jne label`: Jump to label if arg1 != arg2
+* `jg label`: Jump to label if arg1 > arg2
+* `jge label`: arg1 >= arg2 (signed)
+* `jl label`: arg1 < arg2 (signed)
+* `jle label`: arg1 <= arg2 (signed)
+* `ja label`: arg1 > arg2 (unsigned)
+* `jae label`: arg1 >= arg2 (unsigned)
+* `jb label`: arg1 < arg2 (unsigned)
+* `jbe label`: arg1 <= arg2 (unsigned)
+
+Example:
+```
+cmp eax, 2
+je eq_label
+
+eq_label: add eax, ebx
+		  mov ecx, eax
+```
