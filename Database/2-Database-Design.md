@@ -75,8 +75,16 @@ Entity can be further subdivided based on their attributes.
 
 If entity A ISA B, then every A entity is also considered to be a B entity.
 
-* Covering constraints: ISA relationship has a covering constraint if for example: every Person entity HAS to belong to one of its subclasses (so either Student or a Teacher). Denoted by "Student AND Teacher COVERS Person".
-* Overlap constraints: ISA relationship has a overlap constraint if for example: Person can be both a Student AND a Teacher. Denoted by "Student OVERLAPS Teacher".
+* Covering constraints: e.g. every Person entity HAS to belong to one of its subclasses (so either Student or a Teacher) then its Denoted by "Student AND Teacher COVERS Person".
+* Overlap constraints: e.g. a Person can be both a Student AND a Teacher then its denoted by "Student OVERLAPS Teacher".
+
+## Aggregation
+
+Have a relationship with an entity and a complex set of entities and relationships. Similar to having a relationship of relationships.
+
+Aggregate vs ternary relationship
+* Aggregate relationship is a distinct relationship and has its own attributes.
+* Each aggregate relationship set can in relationship with 0 or more of the aggregate relationship.
 
 ---
 ## Credits

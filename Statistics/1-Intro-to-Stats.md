@@ -52,7 +52,16 @@ With respect to A1, A2, ..., Am
 The probability of an event occurring given that another event is already known to have occurred.
 The notation is: `A|B` which means the event A occurring given B has occurred.
 
-P(A|B) - the probability of A occurring given that B has occurred.
+* P(A|B) - the probability of A occurring given that B has occurred.
+* B is given to you.
 
 Baye's Theorem - to compute conditional probability
 * P(A|B) = P(A ∩ B) / P(B)
+* P(A ∩ B) = P(A|B)P(B) = P(B|A)P(A)
+
+Independent probability - two events are independent from each other.
+* P(A|B) = P(A) and also show that P(B|A) = P(B).
+* As a result, P(A ∩ B) = P(A)P(B)
+* P(A ∩ B ∩ C) = P(A)P(B)P(C)
+
+## 
