@@ -29,15 +29,16 @@ Probability distribution: denoted as P( ). Follows these set of rules
 
 ## Set Theory Basics
 
-Mutually Exclusive: Two sets cannot occur at the same time. `A ∩ B = ∅`
+**Mutually Exclusive**
+* Two sets cannot occur at the same time. `A ∩ B = ∅`.
+* A and B are dependent.
 
 ## Probability Theory Basics
 
 Some axions:
 * `P(S) = 1`
 * `If A ⊆ B then P(A) ≤ P(B)`
-* `P(A ∪ B) = P(A) + P(B) − P(A ∩ B)`
-* `P (A) + P (Ac ) = 1`
+* `P (A) + P (A^c) = 1`
 
 ## Probability of an event with respect to something else
 
@@ -56,12 +57,11 @@ The notation is: `A|B` which means the event A occurring given B has occurred.
 * B is given to you.
 
 Baye's Theorem - to compute conditional probability
-* P(A|B) = P(A ∩ B) / P(B)
-* P(A ∩ B) = P(A|B)P(B) = P(B|A)P(A)
+* `P(A|B) = P(A ∩ B) / P(B)`
+* `P(A ∩ B) = P(A|B)P(B) = P(B|A)P(A)`
 
 Independent probability - two events are independent from each other.
-* P(A|B) = P(A) and also show that P(B|A) = P(B).
-* As a result, P(A ∩ B) = P(A)P(B)
-* P(A ∩ B ∩ C) = P(A)P(B)P(C)
-
-## 
+* `P(A|B) = P(A)` and also show that `P(B|A) = P(B)`.
+* As a result, `P(A ∩ B) = P(A)P(B)`
+* `P(A ∩ B) = P(A)P(B)`
+* `P(A ∪ B) = P(A) + P(B) − P(A ∩ B)`
