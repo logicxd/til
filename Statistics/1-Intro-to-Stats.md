@@ -60,8 +60,7 @@ Baye's Theorem - to compute conditional probability
 * `P(A|B) = P(A ∩ B) / P(B)`
 * `P(A ∩ B) = P(A|B)P(B) = P(B|A)P(A)`
 
-Independent probability - two events are independent from each other.
+## Independent probability - two events are independent from each other.
 * `P(A|B) = P(A)` and also show that `P(B|A) = P(B)`.
-* As a result, `P(A ∩ B) = P(A)P(B)`
 * `P(A ∩ B) = P(A)P(B)`
 * `P(A ∪ B) = P(A) + P(B) − P(A ∩ B)`
