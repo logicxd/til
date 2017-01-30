@@ -39,4 +39,23 @@ Variable
 
 Random variable
 * A variable that may assume different values with certain probabilities.
-* Can think of it as a function that assigns a real number to each outcome in the sample space.
+* Can think of it as a function that assigns a **real number** to each outcome in the sample space.
+* Random variable has countably many outcomes.
+
+Support
+* The **support** of X is the space of values which X has a positive probability of occurring.
+* Notationally, X : S -> S(sub x)
+* S(sub x) = {0,1,2,3}
+
+## Distribution
+
+**Cumulative distribution function (cdf)**: the sum of all probabilities which have X <= x.
+
+Example:
+```
+F(3) = P(X <= 3) = P(X=1) + P(X=2) + P(X=3).
+```
+
+**probability distribution function (pmf)**:
+
+**expectation** of X: mean or average of X.

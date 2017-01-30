@@ -67,10 +67,8 @@ ICs are based upon the semantics of the real world.
 
 Must follow these conditions:
 * No two distinct tuples can have same values in all key fields.
-*
 
 ### Candidate Key
-
 
 
 ### Foreign Key
@@ -84,3 +82,50 @@ One of the follow can happen:
 * Delete all the relations that pointing to it. Known as **CASCADE**
 * Prevent it from being deleted. Known as **NO ACTION** `ON DELETE NO ACTION/RESTRICT`
 * **SET NULL / SET DEFAULT**
+
+## ISA Hierarchy Translation Options
+
+1. **Delta table** approach:
+  * Emps (ssn, name, lot).
+  * Hourly_Emps (ssn, wages, hrs_worked).
+  * Contract_Emps (ssn, contractid).
+  * `ssn` is a foreign key to the parent table. Only new attributes are stored in the tables.
+  * Overlap is fine for here.
+
+2. **Union of tables** approach:
+  * Emps (ssn, name, lot).
+  * Hourly_Emps (ssn, name, lot, wages, hrs_worked).
+  * Contract_Emps (ssn, name, lot, contractid).
+  * Parent attributes plus new attributes are stored in the table. Each table has it's own primary key, and I believe there are no foreign keys to the parent table.
+
+3. **Mashup table** approach:
+  * Emps (*kind*, ssn, name, lot, wages, hrs_worked, contractid).
+  * Has all the attributes in one table with an additional field `kind`. That would describe what type of ISA type the instance is.
+  * Overlap is fine but the `kind` would have to be changed a little bit.
+
+## Multi-valued, composite, and derived attributes representations
+
+* Multi-valued attributes:
+  * Make a separate table to hold the multi-valued attributes. Similar to representing it as another entity. This would create a clean and neat representation. The primary key for the multi-valued attribute table would be the (primary key of the main entity, phone id).
+* Composite attributes:
+  * Create more columns/fields to hold the attributes.
+  * You can also separate out the attributes to a new table and make a foreign key to that table.
+  * Ex: ssn, name, address_num, address_name, address_street, ...
+* Derived attributes:
+  * Can use views (see below).
+
+## SQL Views (and security)
+
+* A **view** is just a relation, but we store its definition rather than storing the set of tuples.
+* Views can be used to present needed information while hiding details of underlying table(s).
+```SQL
+CREATE VIEW YoungActiveStudents (name, grade)
+AS SELECT S.name, E.grade
+   FROM Students S, Enrolled E
+   WHERE S.sid = E.sid AND S.age < 21
+```
+
+Uses
+* Derived attributes
+* Simplify/eliminate `JOIN` paths
+* Make "Mashup table" look nicer.

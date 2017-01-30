@@ -177,3 +177,85 @@ je eq_label
 eq_label: add eax, ebx
 		  mov ecx, eax
 ```
+## Multiply by Shifting
+
+```
+0   0  0  1  0 0 1 0
+123 64 32 16 8 4 2 1  (position value = 2^i)
+0   0  0  16 0 0 2 0  (digit * position value)
+18
+
+Shift 1 bit to the left
+0   0  1  0  0 1 0 0
+123 64 32 16 8 4 2 1  (position value = 2^i)
+0   0  32 0  0 4 0 0  (digit * position value)
+36
+```
+Multiply by power of 2
+* Shifting an integer by n bits to the left equals multiplying that number by 2^n.
+* Shifting an integer by n bits to the right equals dividing that number by 2^n.
+
+Multiply N by M
+Convert the number into N * M.
+
+## Setting Bits
+
+OR - Can use to change the bits into 1.
+* Use 1 to change bits into 1.
+* Use 0 to leave it as it is.
+```
+   10010010
+OR 11110000   <-- this is called the mask.
+   ________
+	 11110010
+```
+
+AND - Can use to clear even bits of an integer by using 0.
+* For even bits/odd bits: 1010101010101 or 01010101010 as mask (needs to be 32 bits)
+* Use 1 to leave it as it is.
+* Use 0 to change bits into 0.
+* Or `0xaaaaaaaa` in Hex.
+
+In assembly
+```
+and cl, 0x08
+cmp cl, 0
+jnz not_zero
+```
+
+## If statements
+```
+test negated condition
+
+If true jump to EndOfIf
+	<<statement>>
+EndOfIf
+```
+
+## While statements
+```
+BeginningOfWhile:
+	test for negated condition
+	jxx EndOfIf<<loop body>>
+	jmp BeginningOfWhile
+EndOfIf:
+```
+
+## For statements
+```
+initialization;
+BeginningOfWhile:
+	test for negated condition
+	jxx EndOfIf<<loop body>>
+	jmp BeginningOfWhile
+EndOfIf:
+```
+
+## Memory
+
+From a programmer's POV, the memory is a big array of elements.
+The index of each element in the array is called an ADDRESS.
+
+Multi-dimensional array
+* Represents the Multi-dimensional array as one line of array.
+* Each row is added to the address, from the row index of 0 until the end.
