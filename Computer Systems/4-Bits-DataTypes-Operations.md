@@ -164,9 +164,23 @@ It is often convenient ot write binary (base-2) numbers as hexadecimal (base-16)
 * Less error prone -- easy to corrupt long string of 1's and 0's.
 
 ## Converting from Binary to Hexadecimal
-Every 4 bits is a hex digit.
-* start grouping from the right-hand side.
+Hexadecimal numbers can be 0-9, or A-F (16 in total). 
+* Group every 4 bits to turn into a hex digit.
+* Start grouping from the right-hand side.
+* If the converting binary doesn't have 4 bits, then append extra 0's to the left front until it has 4 bits.
 
+A 4-bit example
+```
+1010                        (binary number)
+8 + 0 + 2 + 0 = 10          (convert into decimal)
+Since 10 > 9, 10 = A.       (Hexadecimal)
+
+10 = A
+11 = B
+12 = C ... etc
+```
+
+More than 4-bit example
 ```
 | 011 | 1101 | 0111 |
 | --- | --- | --- |
