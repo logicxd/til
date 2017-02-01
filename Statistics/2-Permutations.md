@@ -56,6 +56,14 @@ Example:
 F(3) = P(X <= 3) = P(X=1) + P(X=2) + P(X=3).
 ```
 
-**probability distribution function (pmf)**:
+**Probability distribution function (pmf)**: determines the probability distribution of a discrete random variable.
 
-**expectation** of X: mean or average of X.
+## Expectation**
+The mean or average of X.
+* Notation: E(X), the expectation of X.
+* E(a + bX) = a + bE(X)
+* E(aX + bY) = aE(X) + bE(Y)
+
+## Variance
+The average squared deviation from the mean.
+* X = sigma
