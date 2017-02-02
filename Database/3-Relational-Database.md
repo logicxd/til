@@ -67,9 +67,15 @@ ICs are based upon the semantics of the real world.
 
 Must follow these conditions:
 * No two distinct tuples can have same values in all key fields.
+* This is also know as the **minimal superkey**.
 
 ### Candidate Key
 
+A column or set of column that can uniquely identify any database record without referring to any other data.
+* Each table may have one or more candidate key.
+* One of the fields is a primary key, the rest of the fields are unique identifiers.
+
+A **superkey** is a set of columns within a table whose values can be used to uniquely identify a row.
 
 ### Foreign Key
 

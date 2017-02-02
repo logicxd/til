@@ -60,6 +60,64 @@ Then:
 * If no non-trivial FDs hold: there is no redundancy here.
 * Given A -> B:
 
+F+ (Closure of F)
+* The set of functional dependencies ...
+
 ## Normal Forms
 
-Normal Forms are relations that 
+Normal Forms are relations that
+
+## Decomposition
+
+Decomposition is splitting up R into X and Y.
+It is **dependency preserving** if (Fx union Fy)+ = F+.
+
+**lossless** join:
+
+## BCNF
+In functional dependency, left part MUST be a super key.
+
+Consider relation R with FDs F. If X->Y violates BCNF, decompose R into R-Y and XY.
+
+## Minimal cover
+Minimal cover G for a set of FDs F: sometimes denoted F-.
+* Closure of F = closure of G, i.e., F+ = G+
+* RHS of each FD in G is a single attribute.
+* If we modify G by deleting an FD or by deleting attributes from a LHS of a FD in G, the closure changes (so we can't).
+
+## Example
+```
+Workers (ssn, name, lot, since, did, dname, budget)
+primary key (ssn, did)  // This says (ssn,did) -> ssn, name, lot, since, did, dname, budget.
+
+a. Every worker has their own unique ssn.
+b. Workers also have a name and an assigned parking lot.
+  // a and b says that ssn -> name, lot.
+
+c. Department ids are unique for departments.
+d. A department has a name and a budget.
+  // c and d says that did -> dname and budget.
+
+e. An employee works in a department (as of some starting date).
+  // (ssn, did) -> since
+
+f. If two employees are in the same department their lots are the same.
+  // did -> lot
+g. Different departments with the same name always have different budgets.
+  // (dname, budget) -> did
+
+What are the candidate keys here?
+(ssn, did) and (ssn, dname, budget)
+
+```
+
+Formal rules.
+First, Second, Third, and Normal forms always possible.
+You want to achieve BCNF UNLESS lossless join and dependency preserving.
+
+Trying to decompose means:
+* Avoids redundancy.
+* BCNF means no redundancy.
+
+Closure
+*
