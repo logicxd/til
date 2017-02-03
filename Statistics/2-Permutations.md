@@ -66,4 +66,18 @@ The mean or average of X.
 
 ## Variance
 The average squared deviation from the mean.
-* X = sigma
+* var(X) = E[ (X − E(X))^2] = E[(X − μ)^2].
+* var(X) = E(X^2) - [E(X)]^2.
+* variance is based on expectation of something.
+
+If c is a constant
+* var(c) = 0
+* var(cX) = c^2 * var(X)
+
+If X and Y are independent random variables.
+* var(X + Y) = var(X) + var(Y)
+
+
+P =
+
+.

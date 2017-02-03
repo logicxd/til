@@ -9,8 +9,12 @@ Ascii table can provide a mapping of 8 bits to characters.
 
 ## Transistors
 
-* N-MOS: close - High voltage. Open - low voltage.
-* P-MOS: close - Low voltage. Open - high voltage.
+* N-MOS
+  * Close - high voltage.
+  * Open - low voltage.
+* P-MOS
+  * Close - low voltage.
+  * Open - high voltage.
 
 ## Gate Implementation
 
