@@ -18,6 +18,7 @@ Or also S = `{(x,y) : x = 1,2,...,5,6, y = 1,2,...,5,6}`.
 
 Event (sample point): a subset of the sample space. An empty set is also an event.
 Ex: The event A can be the event that the number the die lands on is greater than 4. Therefore A = {5,6}.
+* S = `2^n` for coin flips (so 2 possible answers) 100 times.
 
 The empty set ∅ is also an event.
 
