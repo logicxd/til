@@ -15,7 +15,7 @@ Let `A` be an event from a sample space `S`.
 
 Double check these. Compare with discrete math notes.
 `Pn,r`: Out of the total amount n, select r amount for permutation.
-* `Pn,r: n!/(n-1)!`
+* `Pn,r: n!/(n-r)!`
 
 ## Combinations
 
