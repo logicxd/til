@@ -70,6 +70,6 @@ Result schema returns a list of all the records where the fields from A matches 
 
 
 ## TRC Formulas
-* R.
+*
 
-## 
+## SQL
