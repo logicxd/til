@@ -12,26 +12,28 @@ Ex: There's a 99% chance that I will be on time for work (Number of times: 1000)
 
 ## Set Theory
 
-Sample space: the set of all possible outcomes in a random experiment.
+**Sample space**: the set of all possible outcomes in a random experiment.
 Ex: Roll a pair of dice. Then, `S = {(1,1), (1,2), (1,3), ... , (6,5), (6,6)}`.
 Or also S = `{(x,y) : x = 1,2,...,5,6, y = 1,2,...,5,6}`.
-
-Event (sample point): a subset of the sample space. An empty set is also an event.
-Ex: The event A can be the event that the number the die lands on is greater than 4. Therefore A = {5,6}.
 * S = `2^n` for coin flips (so 2 possible answers) 100 times.
 
-The empty set ∅ is also an event.
+**Event (sample point)**: a subset of the sample space. The empty set ∅ is also an event.
+Ex: The event A can be the event that the number the die lands on is greater than 4. Therefore A = {5,6}.
 
 ## Probability
 
 Probability distribution: denoted as P( ). Follows these set of rules
 * `0 < P(s) <= 1 for all s ∈ S`.
 * `The sum of P(s) for all s ∈ S = 1`.
+* **Disjoint**: If P(A AND B) = 0
+* **Independent**: If P(A AND B) = P(A)P(B)
 
 ## Set Theory Basics
 
 **Mutually Exclusive**
-* Two sets cannot occur at the same time. `A ∩ B = ∅`.
+* `A ∩ B = ∅`.
+* `P(A ∩ B) = 0`.
+* Two sets cannot occur at the same time.
 * A and B are dependent.
 
 ## Probability Theory Basics

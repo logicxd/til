@@ -12,7 +12,7 @@
 
 **Probability Mass Function (pmf)** - determines the probability distribution of a discrete random variable. In other words, the pmf of X assigns a number to all values in the support of X such that:
 * P(X)
-* 0 <= P(X=x) <= 1
+* 0 < P(X=x) <= 1
 * Sum of all the P(X=x) in the support equals to 1.
 
 **Cumulative Distribution Function (cdf)** - the sum of all probabilities which have X <= x.
@@ -44,6 +44,17 @@
 **Standard Deviation**
 * σ
 * `σ = sqrt(var(X))`
+
+## Bernoulli Distribution
+* `n = 1` - the number of independent trials.
+* `p` - the probability for each trail.
+* `x` - the number of success among n trails.
+* `X` is the sum of n many independent and identically distributed.
+
+Formulas
+**PMF P(X=x)** = `(p^x) (1-p)^(1-x)`
+* **E(x)** = `p`
+* **var(x)** = `p(1-p)`
 
 ## Binomial Distribution
 * `n` - the number of independent trials
