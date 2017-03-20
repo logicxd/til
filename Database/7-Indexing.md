@@ -1,27 +1,12 @@
-# Indexing
-An index on a file speeds up selections on the search key fields for the index. An index contains a collection of data entries, and it supports efficient retrieval of all data entries k* with a given key value k.
-* Any subset of the fields of a relation can serve as the search key for an index on the relation.
-* Search key is not the same as a “key” (i.e., it’s not the primary key, it’s just a field we’re very interested in).
+# Understanding Disks Before Getting to Indexing.
 
 ## Accessing a Disk Page
-
 Time to access (read/write) a disk block:
-* Seek time (moving arms to position disk head on track). Varies from 1 to 20 ms
-* Rotational delay (waiting for block to rotate under head). Varies from 0 to 10 ms
-* Transfer time (actually moving data to/from disk surface). < 1 ms per 4 KB pages
+* **Seek time** (moving arms to position disk head on track). Varies from 1 to 20 ms
+* **Rotational delay** (waiting for block to rotate under head). Varies from 0 to 10 ms
+* **Transfer time** (actually moving data to/from disk surface). < 1 ms per 4 KB pages
 
-## Index Classifications
-* **Primary index** - if the search key contains the primary key.
-* **Unique index** - if the search key contains a candidate key.
-
-* **Clustered index** - if order of data records is the same as, or *close to*, the order of stored data records. Cost of retrieving data records via an index varies greatly based on this.
-  * A table can be clustered on at most one search key.
-* **Unclustered index** - if order of data records is everywhere.
-
-## Indexing in MySql
-Ex: `CREATE INDEX salIndex ON Emp (sal) USING BTREE;`
-
-## B+ Tree
+# B+ Tree
 Used to find indexes faster. Good for range-searches and also good for equality searches.
 
 * Non-leaf nodes are index pages that will be used to find which page to check.
@@ -70,6 +55,70 @@ Step 2:
 
 
 ## Hash indexing
-Excellent for equality searching, but cannot do range searches.
+Excellent for equality searching, but cannot do range searches. Static and dynamic hashing exists.
 
-...
+Variables
+* `h()` = hashing function
+* `N` = # of buckets
+* `k` = key
+
+Hashing implementation
+* `h(k) mod N = bucket (or the page)`  to which data entry with key k belongs.
+
+# Indexing
+An index on a file speeds up selections on the search key fields for the index. An index contains a collection of data entries, and it supports efficient retrieval of all data entries k* with a given key value k.
+* Any subset of the fields of a relation can serve as the search key for an index on the relation.
+* Search key is not the same as a “key” (i.e., it’s not the primary key, it’s just a field we’re very interested in).
+
+## Index Classifications
+* **Primary index** - if the search key contains the primary key.
+* **Unique index** - if the search key contains a candidate key.
+
+* **Clustered index** - if order of data records is the same as, or *close to*, the order of stored data records. Cost of retrieving data records via an index varies greatly based on this.
+  * A table can be clustered on at most one search key.
+* **Unclustered index** - if order of data records is everywhere.
+
+## Indexing in MySql
+Ex: `CREATE INDEX salIndex ON Emp (sal) USING BTREE;`
+
+## Query Refinement
+
+How to make better optimized queries:
+* Indexing matters
+* Clustered vs unclustered
+* How frequent are these informations being called.
+* Design decisions (B+ tree?)
+
+## Understanding the workload
+
+For each query in the workload:
+* Which relations does it access?
+* Which attributes are retrieved?
+* Which attributes are involved in selection/join conditions? (And how selective are these conditions expected to be?)
+
+For each update in the workload:
+* The type of update and the attributes that are affected by it.
+
+## Clustered vs unclustered
+Clustered - if order of data records is the same as, or 'close to', the order of stored data records, then is called a clustered index. (Usually a lot faster).
+Unclustered - data is searched almost from everywhere in different orders. It searches multiple pages multiple times.
+
+## Indexes
+Indexes can make queries go faster, but updates will become slower.
+
+### Index selection guides
+Attributes in WHERE clause are candidates for the index keys.
+* Exact match condition, -> hashed index (or B+ tree if not available).
+* Range query -> B+ tree index.
+(there's more info)
+
+Examples:
+```
+Select EDNO FROM EMP E WHERE E.Age > 4O.
+Select E.dno, count(*) FROM EMP e WHERE GROUP BY e.dno // double check from slide.
+```
+
+### Joins
+* Index Nested Loop join (INLJ)
+* Sort-Merge
+* Hash index
