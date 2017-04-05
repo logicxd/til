@@ -14,6 +14,7 @@
 * P(X)
 * 0 < P(X=x) <= 1
 * Sum of all the P(X=x) in the support equals to 1.
+* Any P(x) is non-negative.
 
 **Cumulative Distribution Function (cdf)** - the sum of all probabilities which have X <= x.
 * F(X)
