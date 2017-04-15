@@ -1,5 +1,7 @@
 # Information Retrieval(IR)
-Information is knowledge about a particular subject, issue, event or process.
+Information is **knowledge** about a particular subject, issue, event or process.
+Information retrieval is finding material of an unstructured nature (usually text) that
+satisfies an information need from within large collections (usually stored on computers)
 
 ## Web Search Engine
 * Scalability.
@@ -35,3 +37,9 @@ Evolution of the Web
 * User-generated content (Web 2.0)
   * Javascript and single-page Web applications.
 * Mobile: HTTP without Web browsers.
+
+**Inverted Index Construction**
+1. Collect the documents to be indexed.
+2. Tokenize the text.
+3. Do linguistic preprocessing (parse) of tokens.
+4. Index the documents.
