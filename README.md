@@ -20,3 +20,10 @@
 * Typical LifeCycles ?? Maybe
 * Networking/API calling.
 * Using auto-constraints with Masonry
+
+---
+
+## Credit(s)
+
+### Images
+* Login background: https://unsplash.com/search/movie
