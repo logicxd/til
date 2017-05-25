@@ -23,20 +23,21 @@ CPU Scheduler
 * **Preemptive scheduling**
   * Process can be interrupted to release the CPU.
 
+  Calculations
+  * **Waiting time**: The time the process starts executing - the time the process arrived. Measures idle time of job. Lower better
+  * **Turnaround time**: The time the process finishes executing - the time the process arrived. Measures latency. Lower better
+  * **Response time**: The time the process arrived - the time the process started executing. Lower better
+  * **CPU Utilization**: The number of units used for processes / the total number of units ran. A percentage. Higher better
+  * **Throughput**: The total number of processes / the total number of units ran. # of processes / ms. Higher better
+  * **Overhead**: How much extra cost do we incur to schedule -- depends on algorithm.
+    * Context switches -- a fixed cost of switching processes.
+    * Conflict resolution -- could be extra cost to resolve conflicts.
+
 ### First-Come, First-Served (FCFS) Scheduling
 Process that requests the CPU FIRST is allocated the CPU first.
 * Non-preemptive algorithm.
 * Implementation: FIFO queues.
 * Performance: average waiting time in queue.
-
-Calculations
-* **Waiting time**: The time the process starts executing - the time the process arrived. Measures idle time of job.
-* **Turnaround time**: The time the process finishes executing - the time the process arrived. Measures latency.
-* **Response time**: The time the process arrived - the time the process started executing.
-* **CPU Idle Time**: Utilization.
-* **Overhead**: How much extra cost do we incur to schedule -- depends on algorithm.
-  * Context switches -- a fixed cost of switching processes.
-  * Conflict resolution -- could be extra cost to resolve conflicts.
 
 ### Shortest-Job-First (SJF) Scheduling
 Determine which processes to go first based on their CPU burst time.
@@ -50,18 +51,20 @@ Determine which processes to go first based on their CPU burst time.
 
 ### Priority Scheduling
 A priority value is given to each process and the CPU executes them in order based on
+* Can be preemptive or Non-preemptive.
 * Cost to user
 * Importance to user
 * Aging (This makes sure lower priority processes do get executed as time increases)
 * % CPU time used in last X hours.
-* Can be preemptive or Non-preemptive
 * Do the lowest priority job at the arrival and finish it (Non-preemptive)
 
 ### Round Robin (q=20)
 Every process shows up at the same time. We know how much time left on these jobs.
+* Preemptive
 * `q` represents how long each process should run.
 * So with `q` = 20, it runs all the processes for 20 bursts or until finish and then goes to next one.
 * Repeat until every process is done.
+
 
 ## Job scheduling on multiple processors
 Goal: Given `k` jobs, and `n` processors, schedule each job `j` on some processor `p(sub k)` within time `T`

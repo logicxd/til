@@ -11,6 +11,3 @@ Users take turns (in a round-robin fashion), each one periodically getting the e
 
 * **Guard time**: small timing variations between each turn.
 * **STDM**: Statistical Time Division Multiplexing. Similar except that the individual streams contribute to the multiplexed stream not on a fixed schedule, but according to the statistics of their demand.
-
-## Code Division Multiplexing (CDM)
-A form of **spread spectrum** communication in which a narrowband signal is spread out over a wider frequency band.
