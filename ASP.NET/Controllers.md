@@ -47,7 +47,7 @@ public string Welcome(string name, int numTimes = 1)
 Now you can run the link `http://localhost:55967/HelloWorld/Welcome?name=Rick&numtimes=4` to get "Hello Rick, NumTimes is: 4"
 
 * `$"Hello {name}, numTimes: {numTimes}"` is an [Interpolated String](https://msdn.microsoft.com/en-us/library/dn961160.aspx). Similar to the Java `printf` method but the variable is used inside the string itself.
-* `HtmlEncoder.Default.Encode` is to protecct the app from malicious input (namely Javascript).
+* `HtmlEncoder.Default.Encode` is to protect the app from malicious input (namely Javascript).
 
 ### Razor
 Blends C# and HTML with templates.
