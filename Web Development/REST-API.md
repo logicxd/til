@@ -1,21 +1,10 @@
 # Rest
 
-**REST Protocol** allows you to transfer JSON data over the HTTP protocol. Allows transfer from mobile application to the server.
-
-## MVC
-* **Model**: Store the structure of the data between the server and the client.
-Ex: transition class, user class, account class, ...
-* **View**: The client. Shows data and interact with the user.
-* **Controller**: Accepts the call from the client and handles it.
-
-
-## API Calling
-
-`/Facebook/AccountType?id=value1&name=value2`
-
 #### GET
-Information retrieval. All URL requests are GET by default (I'm not too sure on this).
+Retrieves a copy of the resource. All URL requests are GET by default.
 
+* Return status code 200 on success.
+* Return 404 on fail.
 * GET requests can be cached
 * GET requests remain in the browser history
 * GET requests can be bookmarked
@@ -24,14 +13,46 @@ Information retrieval. All URL requests are GET by default (I'm not too sure on 
 * GET requests should be used only to retrieve data
 
 #### POST
-Changes the state of the server.
+Creates a new resource.
 
+* Return 201 (Created) on success.
+* Return 400 (Bad Request) on fail.
 * POST requests are never cached
 * POST requests do not remain in the browser history
 * POST requests cannot be bookmarked
 * POST requests have no restrictions on data length
 
+#### PUT
+Replace or updates the resource specified.
+
+* Return 204 (No Content) on success. Alternatively, 200 or 201 is fine if it returns data for new resources.
+* Return 400 (Bad Request) on fail.
+* Can also return 415 (Unsupported Media Type).
+* Strictly speaking, the PUT request completely replaces the existing data with the data specified by the request.
+
+#### DELETE
+Removes the resource specified.
+
+* Return 204 (No Content) or 200 on success if synchronously. Can also return 202 (Accepted) if the deletion is performed asynchronously.
+* Return 404 (Not Found) on fail.
+
+## Status Codes
+### Success
+* 200 - Ok.
+* 201 - Created.
+* 202 - Accepted. The request is valid and will be processed but has not been completed. Used for asynchronously executed information.
+* 204 - No Content. Modifications that were successful but the response body contains no information.
+* 206 - Partial Content. The response contains partial information from the GET request.
+
+### Client-side error (4xx)
+* 400 - Bad Request.
+* 404 - Not Found.
+$ 410 - Gone. Expired, archived, or deleted resources.
+* 415 - Unsupported Media Type. Cannot handle the type specified in the 'Content-Type'.
+
+### Server-side error (5xx)
+*
+
 #### Content-Type
 Tells the server what type of data is being sent.
-
 `Content-Type = "application/json"`
