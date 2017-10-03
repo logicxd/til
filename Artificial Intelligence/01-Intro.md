@@ -88,3 +88,84 @@ To design a task environment, we specify the PEAS (with automated taxi system as
 * Environment - City streets, freeways, traffic, pedestrians, weathers.
 * Actuators - Steering, brakes, accelerator, horn.
 * Sensors - Video, sonar, radar, GPS/navigation, keyboard.
+
+## Environment Types
+
+Fully observable (vs partially observable)
+* The agent's sensors give it access to the complete state of the environment at each point in time.
+* The environment is **unobservable** if the agent has no sensors at all.
+
+Single agent (vs multi-agent)
+* Single agent if an agent is operating by itself in an environment.
+* Multi-agent if there are other agents that interfere with an agent's performance measure.
+
+Deterministic (vs stochastic)
+* The next state of the environment is completely determined by the current state and the action executed by the agent.
+* Environment is **strategic** if the environment is deterministic except for the actions of the others.
+
+Episodic (vs sequential)
+* Decisions do not depend on previous decisions/actions.
+* The agent's experience is divided into atomic episodes. Each episode, the agent receives a percept and then performs a single action. So the next episode does not depend on the actions taken in previous episodes.
+
+Static (vs dynamic)
+* The environment is unchanged while an agent is deliberating.
+* **Semidynamic** is when the environment does not change but the agent's performance score does.
+
+Discrete (vs continuous)
+* A limited number of distinct, clearly defined percepts and actions.
+
+Known (vs unknown)
+* The outcomes (or outcome probabilities if the environment is stochastic) for all actions are given.
+* Not a strict property of the environment.
+
+## Agent Types
+Five basic types in order of increasing generality.
+* Table Driven agents
+* Simple reflex agents
+* Model-based reflex agents
+* Goal-based agents
+* Utility-based agents
+
+Table Driven agent
+* Implements the desired agent function.
+* Looks up the entire table of actions.
+* Impractical; usually this approach does not work since the table would have too many entries to fill.
+
+Simple reflex agent
+* Selects actions on the basis of the current percept, ignoring the rest of the percept history.
+* **condition-action rule** - ex: **if** car-in-front-is-braking **then** initiate-braking.
+* Requires fully observable environment. Seriously goes wrong with even a little bit of un-observability.
+
+Model-based reflex agent
+* **Internal state** - keeps track of part of the world it can't see now which depends on the percept history and reflects at least some of the unobserved aspects of the current state.
+* Keeps knowledge about *how the world works* by keeping internal states.
+* Depends on two things:
+    * How the world evolves independently of the agent.
+    * How the agent's own actions affect the world.
+
+Goal-based reflex agent
+* Reason to prefer one action over the other.
+* Describes situations that are desirable.
+* Involves consideration of the future.
+* Need plan & search.
+
+Utility-based agents
+* Some solutions to goal states are better than others.
+* Chooses the best solutions for the agent that they will like.
+* **Utility function** - an internalization of the performance measure.
+
+Learning agents
+* Agent improves over time.
+* Can start in an initially unknown environment and then can be more competent than its initial knowledge might allow.
+* **Learning element** - responsible for making improvements.
+* **Performance element** - responsible for selecting external actions.
+
+
+
+
+
+
+### Other vocabs
+
+State
+* Remembered information/events.
