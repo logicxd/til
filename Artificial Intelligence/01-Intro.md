@@ -159,14 +159,3 @@ Learning agents
 * Can start in an initially unknown environment and then can be more competent than its initial knowledge might allow.
 * **Learning element** - responsible for making improvements.
 * **Performance element** - responsible for selecting external actions.
-
-### Other vocabs
-
-State (also known as representation)
-* Reveals important features.
-* Hides irrelevant detail.
-* Exposes useful constraints.
-* Makes frequent operations easy to do.
-* Supports local inferences from local features.
-    * Also called "soda straw" principle or "locality" principle.
-* Rapidly or efficiently computable.
