@@ -160,12 +160,13 @@ Learning agents
 * **Learning element** - responsible for making improvements.
 * **Performance element** - responsible for selecting external actions.
 
-
-
-
-
-
 ### Other vocabs
 
-State
-* Remembered information/events.
+State (also known as representation)
+* Reveals important features.
+* Hides irrelevant detail.
+* Exposes useful constraints.
+* Makes frequent operations easy to do.
+* Supports local inferences from local features.
+    * Also called "soda straw" principle or "locality" principle.
+* Rapidly or efficiently computable.

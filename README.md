@@ -1,5 +1,5 @@
 # Today I learned (til)
-
+<!--
 ### MacOS
 * [HiddenFiles.md](https://github.com/logicxd/til/blob/master/MacOS/HiddenFiles.md)
 * [TemperatureReading.md](https://github.com/logicxd/til/blob/master/MacOS/TemperatureReading.md)
@@ -19,7 +19,7 @@
 * JSON parsing with RPJsonMapper
 * Typical LifeCycles ?? Maybe
 * Networking/API calling.
-* Using auto-constraints with Masonry
+* Using auto-constraints with Masonry -->
 
 ---
 
