@@ -65,6 +65,17 @@ Time and space complexity are measured in terms of
 * d: depth of the least-cost solution.
 * m: maximum depth of the state space (may be infinity).
 
+## When to do goal test
+
+After node is popped from queue.
+* If you care about finding the optimal path
+* AND your search space may have both short expensive and long cheap paths to a goal.
+* Ex: Uniform-cost search
+
+Otherwise, do goal test before node is pushed to queue.
+* For all other cases.
+* Ex: breath-first search, depth-first search, or uniform cost search when cost is a non-decreasing function of depth only.
+
 ## Tree search
 
 Basic idea
@@ -73,6 +84,7 @@ Basic idea
 * Repeated states (can visit the same state multiple times)
     * Problem since it can turn a linear problem into an exponential problem.
     * And can be loopy (infinite loop)
+* Goal test after pop.
 
 ## Graph search
 
@@ -80,6 +92,7 @@ Similar to tree search except
 * Faster but memory inefficient.
 * Remembers all the states visited (not loopy).
 * Frontier separates the state-space graph into the explored region and the unexplored region.
+* Goal test after pop.
 
 ## Uninformed search (blind search)
 
@@ -103,6 +116,13 @@ Can be easily implemented using a **FIFO queue**.
 * Optimal? Yes if the path cost is a nondecreasing function of the depth of the node. (I think this means that the step costs are equal).
 * Time? O(b^(d+1)). Bad
 * Space? O(b^d). Bad
+* Goal test before push.
+
+Implementation
+* Have a queue to explore and a list of visited nodes.
+* Start from the top node and add to the queue.
+* Get the children of the top of the queue, add the top of the queue to visited nodes, and then pop the queue.
+* Repeat ^ until you pass the goal test.
 
 ### Uniform-cost search
 
@@ -113,20 +133,33 @@ Expands the node n with the lowest path cost g(n). It stores the frontier as a *
 * Optimal? Yes.
 * Time? O(b^(1+floor(C*/E))) where C* = the cost of the optimal solution and E = some small positive constant to prevent loopy-ness.
 * Space? Same as time.
+* Goal test after pop.
 
 ### Depth-first search
 
 Highlight: Space.
 
-Expands the deepest node **LIFO queue**. The properties depend strongly on whether graph-search or tree-search version is used.
+Expands the deepest node **LIFO**. The properties depend strongly on whether graph-search or tree-search version is used.
 * Complete? Yes for finite state spaces using graph-search. No for tree-search, can get stuck in infinity loop.
 * Optimal? No.
 * Time? O(b^d).
 * Space? O(bm). Really good.
 
+Implementation
+* Have a stack to explore and a list of visited nodes.
+* Start from the top node and add to the stack.
+* Get the children of the top of the stack, add the top of the stack to visited nodes, and then pop the stack.
+* Repeat ^ until you pass the goal test.
+
 ### Iterative Deepening Search (IDS)
 
+Uses Depth-first search.
 
+* Goal test before push.
+
+### Bidirectional search
+
+Uses either breath-first or uniform-cost search.
 
 ## Heuristic search (informed search)
 
@@ -140,8 +173,8 @@ Problem-specific heuristics to improve efficiency
 * A* is quick and easy to code, and often works **very** well.
 
 Heuristic function h(n)
-* g(n) - known path cost so far to node n.
-* h(n) - estimate of (optimal) cost to goal from node n.
+* g(n) - known path cost so far to node n. Actual path cost so far.
+* h(n) - estimate of (optimal) cost to goal from node n. Estimate path cost to goal.
 * f(n) - g(n) + h(n) = estimate of total cost to goal through n.
 
 ### Greedy best-first search (sometimes just called "best-first")
@@ -161,6 +194,15 @@ Properties
 * Time/Space? O(b^m)
 * Optimal? Yes
 * Optimally efficient? Yes
+
+Implementation
+0. Must have estimate path cost, and actual path costs available. Each node will store the previous node, the g(n), the h(n), (and maybe f(n) or compute it each time).
+1. Have a priority queue to explore and a list of expanded nodes.
+2. Start from the top node and add to the priority queue.
+3. Compute the g(n), h(n) to get f(n) for all nodes in priority queue.
+4. Add the children of the least f(n) to the priority queue, add the most priority node to list of expanded nodes, and pop from priority queue.
+5. If there are duplicate nodes in the priority queue (multiple paths to reach the node) then you find a path that has a lower path cost and remove the more expensive nodes.
+6. Repeat 3, 4, and 5 until the target node is in expanded nodes or priority queue is empty.
 
 ---
 
