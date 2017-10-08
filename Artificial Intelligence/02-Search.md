@@ -206,6 +206,6 @@ Implementation
 
 ---
 
-## Other vocabs
+## Other Vocabs
 
 * Frontier - The set of all leaf nodes available for expansion at any given point.
