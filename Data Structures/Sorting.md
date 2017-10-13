@@ -24,7 +24,7 @@ The algorithm scans forwards from the 1st unsorted index to the end of the array
 * Complexity:
   * Worst: O(N^2)
   * Best: O(N^2)
-  * Average: O(N^2)  
+  * Average: O(N^2)
 * Space:
   * In-place O(1). Just needs a few extra local variables in the method
 * Comparison:
@@ -41,6 +41,8 @@ if (index_to_update != index_of_min)
 
 ## Insertion Sort
 ![](https://cloud.githubusercontent.com/assets/12219300/20023447/3b6e9d90-a29d-11e6-8e8c-82cc2a899393.gif)
+
+Good to use if the array is "almost sorted".
 
 Place boundary between the 0 index and 1 index. Left of the boundary is sorted, right of the boundary is unsorted.
 
@@ -59,7 +61,6 @@ The algorithm moves/swaps the value in the 1st unsorted index backwards, until i
   * Stable
 
 Improving efficiency: instead of swapping each adjacent values that are smaller, save the value that is being moved and just moved the values that are smaller to the right until it finds a place where it belongs, and then do the swap.
-
 
 ## Heap Sort
 

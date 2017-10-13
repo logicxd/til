@@ -1,4 +1,4 @@
-# Search
+# Uninformed and Informed Search
 
 What is search?
 * The process of looking for a sequence of actions that reaches the goal.
@@ -68,9 +68,9 @@ Time and space complexity are measured in terms of
 ## When to do goal test
 
 After node is popped from queue.
-* If you care about finding the optimal path
+* If you care about finding the optimal path.
 * AND your search space may have both short expensive and long cheap paths to a goal.
-* Ex: Uniform-cost search
+* Ex: Uniform-cost search.
 
 Otherwise, do goal test before node is pushed to queue.
 * For all other cases.
