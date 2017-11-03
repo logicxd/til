@@ -140,7 +140,7 @@ void merge (T a[],
 }
 ```
 
-## Quick Sort
+## Quick Sort (can have middle as pivot)
 ![quick_sort](https://cloud.githubusercontent.com/assets/12219300/20159654/f8e73c68-a696-11e6-8bf6-1f8a09b9d729.gif)
 
 Also a "Divide and conquer" sort. Uses partitioning to divide up the problem and returns a pivot point. And then call recursive quick_sort to the left side of the pivot and to the right side.
@@ -212,6 +212,9 @@ swap(a,l,high);  //swap the pivot back where it belongs a[l] is > pivot
 return l;        //the position of the pivot
 ```
 
+## Quick Sort (only first or last as pivot)
+
+
 # Non-comparison Sort O(N)
 
 These sorting methods do not use comparison to sort the data.
@@ -220,7 +223,7 @@ We will use these two variables:
 * N - the size of the data.
 * M - the range of the sorting values.
 
-## Bucket Sort
+## Counting Sort
 
 Good when N >> M.
 If M is not given, you can find M by searching through the array for the B(biggest) and S(smallest) value.
@@ -232,9 +235,14 @@ How to do a Bucket Sort:
 2. Iterate through the data, N. For each value in the data, add one to the index of the histogram array that has the same value as the data. `histogramArray[value] += 1`. O(N)
 3. Iterate through the histogram array. At each index, if the element is not 0, add that array index to the sorted array. O(N + M)
 
+## Bucket Sort
+
+
+
 ## Radix Sort
 
-It repeatedly does something like Bucket Sort, but always ensuring that N >> M to make sure it's effective.
+Sort by 1's digit, 10's digit, 100's digit, ...
+Ensures that N >> M to make sure it's effective.
 
 Pseudo-code for Radix Sort:
 ```
@@ -251,7 +259,7 @@ void radix_sort(int a[], int length) {
 ```
 
 * Complexity:
-  * Worst: O(N Log10 N)
+  * Worst: O(N Log N)
   * Best: O(N + M) = O(N). (Basically a bucket sort)
 * Space:
   * Requires O(N) extra storage for the queues at any time. (Might be bigger depending on the structure of the queues)
@@ -260,6 +268,24 @@ void radix_sort(int a[], int length) {
   * O(N Log10 N) data movements in all cases.
 * Stability:
   * Stable
+
+# External Sorting
+
+All the sorting previously stated assumes that all the data can fit in memory.
+As the memory gets bigger and bigger, need to do external sort (due to increasing number of page faults for replacing data for sorting).
+
+* 'n' - total number of records.
+* `m` - number of records that can fit in memory.
+* `f` - number of input files that can open at once.
+
+## Polyphase Merge
+
+Phase 1 (sorting)
+1. Read in groups of m records.
+2. Sort each group
+3. Write each sorted group to a separate output file.
+
+Phase 2 (combining)
 
 
 ---

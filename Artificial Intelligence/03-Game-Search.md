@@ -2,7 +2,6 @@
 
 * State
 * Step size
-*
 
 ## Hill Climbing Generally
 Initialize current_state, current_score = store(current_state);
@@ -15,6 +14,9 @@ Algorithm
 * If the picked neighbor's score is lower than the current score, keep the current_score. Otherwise, update the score to the neighbor.
 * If the difference in the score from current to the next is smaller than some Epsilon constant number, exit search.
 
+Disadvantage
+* Can get stuck at local maximum.
+
 ## Simulated Annealing
 Initialize current_sol, current_cost = cost(current_sol);
 
@@ -23,4 +25,4 @@ Algorithm
 * Find the cost of the neighbor.
 * Pick the neighbor that:
     * If cost(next_sol) > cost(current_sol) current_sol = neighbor; current_cost =  next_cost;
-    * Else 
+    * Else

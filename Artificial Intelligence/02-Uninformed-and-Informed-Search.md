@@ -70,7 +70,7 @@ Time and space complexity are measured in terms of
 After node is popped from queue.
 * If you care about finding the optimal path.
 * AND your search space may have both short expensive and long cheap paths to a goal.
-* Ex: Uniform-cost search.
+* Ex: Uniform-cost search, and A*.
 
 Otherwise, do goal test before node is pushed to queue.
 * For all other cases.
@@ -114,14 +114,31 @@ Highlight: Easy to implement.
 Can be easily implemented using a **FIFO queue**.
 * Complete? Yes.
 * Optimal? Yes if the path cost is a nondecreasing function of the depth of the node. (I think this means that the step costs are equal).
-* Time? O(b^(d+1)). Bad
+* Time? O(b^d). Bad
 * Space? O(b^d). Bad
-* Goal test before push.
+* Goal test? Check children before adding it to the queue.
 
 Implementation
 * Have a queue to explore and a list of visited nodes.
 * Start from the top node and add to the queue.
 * Get the children of the top of the queue, add the top of the queue to visited nodes, and then pop the queue.
+* Repeat ^ until you pass the goal test.
+
+### Depth-first search
+
+Highlight: Space.
+
+Expands the deepest node **LIFO**. The properties depend strongly on whether graph-search or tree-search version is used.
+* Complete? Yes for finite state spaces using graph-search. No for tree-search, can get stuck in infinity loop.
+* Optimal? No.
+* Time? O(b^m).
+* Space? O(b^m). Really good.
+* Goal test? Check children before adding it to the stack.
+
+Implementation
+* Have a stack to explore and a list of visited nodes.
+* Start from the top node and add to the stack.
+* Get the children of the top of the stack, add the top of the stack to visited nodes, and then pop the stack.
 * Repeat ^ until you pass the goal test.
 
 ### Uniform-cost search
@@ -131,35 +148,26 @@ Highlight: Optimal.
 Expands the node n with the lowest path cost g(n). It stores the frontier as a **priority queue** ordered by g.
 * Complete? Yes if the cost of every step exceeds some small positive number so that it doesn't get stuck in an infinity loop.
 * Optimal? Yes.
-* Time? O(b^(1+floor(C*/E))) where C* = the cost of the optimal solution and E = some small positive constant to prevent loopy-ness.
+* Time? O(b^(1+floor(C*/E))) where C* = the cost of the optimal solution and E = some small positive constant to prevent loopy-ness. ~= O(b^(d+1))
 * Space? Same as time.
-* Goal test after pop.
-
-### Depth-first search
-
-Highlight: Space.
-
-Expands the deepest node **LIFO**. The properties depend strongly on whether graph-search or tree-search version is used.
-* Complete? Yes for finite state spaces using graph-search. No for tree-search, can get stuck in infinity loop.
-* Optimal? No.
-* Time? O(b^d).
-* Space? O(bm). Really good.
-
-Implementation
-* Have a stack to explore and a list of visited nodes.
-* Start from the top node and add to the stack.
-* Get the children of the top of the stack, add the top of the stack to visited nodes, and then pop the stack.
-* Repeat ^ until you pass the goal test.
+* Goal test? Check when popping.
 
 ### Iterative Deepening Search (IDS)
 
-Uses Depth-first search.
-
-* Goal test before push.
+Uses Depth-first search at an increasing maximum depth level on each iteration.
+* Complete?
+* Optimal?
+* Time? O(b^d).
+* Space? O(bd). Really good.
+* Goal test? Check children before adding it to the stack.
 
 ### Bidirectional search
 
 Uses either breath-first or uniform-cost search.
+* Complete?
+* Optimal?
+* Time? O(b^(d/2)).
+* Space? O(b^(d/2)).
 
 ## Heuristic search (informed search)
 
@@ -182,6 +190,11 @@ Heuristic function h(n)
 * Expands the node that appears to be closest to goal.
 * Priority queue sort function = h(n)
 
+* Complete?
+* Optimal?
+* Time? O(b^m).
+* Space? O(b^m).
+* Goal test? Doesn't matter, will be the same result.
 
 ### A* search
 * Idea: avoid expanding paths that are already expensive.
@@ -194,6 +207,7 @@ Properties
 * Time/Space? O(b^m)
 * Optimal? Yes
 * Optimally efficient? Yes
+* Goal test? Check children on popping.
 
 Implementation
 0. Must have estimate path cost, and actual path costs available. Each node will store the previous node, the g(n), the h(n), (and maybe f(n) or compute it each time).
@@ -208,4 +222,6 @@ Implementation
 
 ## Other vocabs
 
+* Admissible - If h(n) <= h'(n) where h'(n) is the true cost to reach the goal state from n.
+* Consistent - If f(n) is a non-decreasing function. Same as h(n) <= c(n, a, n') + h'(n).
 * Frontier - The set of all leaf nodes available for expansion at any given point.
