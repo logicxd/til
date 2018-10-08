@@ -127,7 +127,7 @@ the memory used for the instance variable is allocated, and then freed when the 
 
   * Instance variables, by convention, are given the same name of the property prexied by an underscore `_`
   
-** How do you access Instance Variables?**
+**How do you access Instance Variables?**
 * Instance variables are accessed directly in the implementation of any of the methods the instance variable belongs to.
 
 [Useful Explanation of Instance Variables & Usage](https://teamtreehouse.com/community/what-is-an-instance-variable-in-objective-c)
