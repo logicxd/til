@@ -189,6 +189,10 @@ as a property for Person.
   then sending the **getter** method `fullName` to `myName`, which reads the value of `myName` and returns whatever 
   value `myName` is.
 
+#### Synthesize
+
+Depending in the attributes that you put for your properties, the compiler (GCC won't do it, LLVM does) will automatically generate instance variable `_myVariable` for you. You can explicitely state it to do so by `@synthesize myVariable = _myVariable;` There are a few cases in which the compiler won't synthesize for you. Check out https://stackoverflow.com/a/19795328 and similar links for more info. 
+
 **Links to quick overview of property types and attributes of properties**
 
 [Attributes: iOS-Blog](http://www.ios-blog.co.uk/tutorials/objective-c/objective-c-property-attribute-reference-guide/)
