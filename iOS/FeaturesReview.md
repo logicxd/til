@@ -1,6 +1,6 @@
 # Features Review
 
-Categories, extensions, and protocols.
+A quick overview of some features in Objective-C.
 
 ## Categories
 
@@ -69,4 +69,20 @@ void main() {
 // (your interface signatures)
 @end
 ```
+
+## Selector
+
+* Method name.
+* Use `@selector`
+
+``` Objective-c
+if ([someObj respondsToSelector:@selector(uppercaseString)]) {
+  // someObj has a method named 'uppercaseString'
+}
+```
+
+## Id
+
+* Generic pointer that can refer to any object.
+
 
