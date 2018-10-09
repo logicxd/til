@@ -11,9 +11,35 @@
 * **Views**: displays UI part to the user.
 * **Controllers**: classes that handle browser requests, retrieve model data, and then specify view templates that return a response to the browser. Handles and responds to user input and interaction.
 
+### View Layer
+
+What the user sees and interacts with. Inspect the view layer for:
+> * Does it interact with the model layer?
+> * Does it contain any business logic?
+> * Does it try to do anything not related to UI?
+>
+> If you answer “yes” to any of these questions, you probably have an opportunity to clean up and refactor.
+
+Useful link: https://www.raywenderlich.com/1073-model-view-controller-mvc-in-ios-a-modern-approach
+
+### Controller Layer
+
+The brain of the apop. This layer usually decides:
+> * What should be accessed first: the persistence or the network?
+> * How often should you refresh the app?
+> * What should the next screen be and in what circumstances?
+> * If the app goes to the background, what should be cleaned?
+
+### Model Layer
+
+Data as well as:
+> * **Network Code**. The shape should be something like this. Ideally, you’d only use a single class for network communication across your entire app.
+> * **Persistence Code**. You would implement this with Core Data or simply by saving an NSData blob directly to disk.
+> * **Parsing Code**. Any objects that parse network responses and the like should be included in the Model layer as well.
+
 ## Model-View-ViewModel (MVVM)
 
-![MVVC Pattern](https://user-images.githubusercontent.com/12219300/30954332-a189d1e6-a3e4-11e7-8a30-65b969944711.png)
+![MVVM Pattern](https://user-images.githubusercontent.com/12219300/30954332-a189d1e6-a3e4-11e7-8a30-65b969944711.png)
 
 * **Model**: represents the entities that live on the server as well as the objects that are responsible for interacting with the data store your application uses and filling entities with data.
 * **View**: the View's responsibilities include displaying data and collecting data from end users. A given View isn't responsible for retrieving data, performing any business rules or validating data.
@@ -41,3 +67,4 @@ Cons
 
 * Image citations are taken from else where, citations stated here https://github.com/logicxd/til/issues/1
 * MVVM abstracted from tutorial: https://weblogs.asp.net/dwahlin/getting-started-with-the-mvvm-pattern-in-silverlight-applications
+* Other source: https://www.raywenderlich.com/1073-model-view-controller-mvc-in-ios-a-modern-approach 
