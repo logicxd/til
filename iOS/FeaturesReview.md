@@ -43,7 +43,18 @@ void main() {
 @end
 
 @implementation MyFormatter
-// (your class implementation.)
+// (your class implementation)
+@end
+```
+
+This is another and easier way of doing so
+``` Objective-c
+// 'MyFormatter.m'
+
+@implementation MyFormatter {
+ // (Private properties and instances goes here)
+}
+// (your class implementation)
 @end
 ```
 
