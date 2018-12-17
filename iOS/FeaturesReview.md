@@ -63,6 +63,7 @@ This is another and easier way of doing so
 * Same as interfaces in Java.
 * A list of methods that you want an object to perform without needing inheritance.
   * The methods are only signatures. Up to the person implementing to create the methods.
+  * The `<NSObject>` is a protocol. This means that the protocol you're making is also extending from NSObject. It gives the protocol useful methods to use. 
 
 ``` Objective-c
 // 'Eraser.h'
