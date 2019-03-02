@@ -55,6 +55,7 @@ indicating the attributes of the property and what type of object this property 
 
 * `assign`
    * This is used for primitives. Tells compiler how to set the setter method for assignment. 
+   * Use assign to set a property's pointer to the address of the object without retaining it or otherwise curating it; use weak to have the property point to nil automatically if the object assigned to it is deallocated.
 
 * `retain` (Might not be used anymore after ARC-Auto Reference Counting)
    * This is used when the attribute is a pointer to an object.
